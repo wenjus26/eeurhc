@@ -138,10 +138,39 @@ body {
   gap: 1rem;
 }
 
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
 .top-bar-left .motto {
   font-weight: 600;
   letter-spacing: 0.05em;
   color: #CBD5E1;
+}
+
+.top-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(229, 57, 53, 0.16);
+  border: 1px solid rgba(229, 57, 53, 0.35);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #FF8A8C;
+  letter-spacing: 0.03em;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--red-urhc-bright);
+  box-shadow: 0 0 6px var(--red-urhc-bright);
+  animation: pulse-dot 2.5s infinite ease-in-out;
 }
 
 .top-bar-center {
@@ -271,6 +300,25 @@ body {
   color: var(--text-muted);
   max-width: 320px;
   line-height: 1.25;
+}
+
+.brand-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--red-urhc);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 1px;
+}
+
+.tag-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--red-urhc);
 }
 
 /* Navigation principale */
@@ -485,6 +533,37 @@ body {
 
 .hero-content {
   color: var(--white);
+}
+
+.hero-conception-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(10px);
+  padding: 0.45rem 1.15rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.hero-conception-badge .badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--red-urhc-bright);
+  box-shadow: 0 0 10px rgba(229, 57, 53, 0.85);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+.hero-conception-badge .badge-text {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--white);
+  text-transform: uppercase;
 }
 
 .hero-title {
@@ -1322,6 +1401,12 @@ body {
   font-size: 0.82rem;
   color: #64748B;
   flex-wrap: wrap;
+}
+
+.footer-conception-note {
+  color: #FF8A8C;
+  font-weight: 600;
+  margin-left: 0.35rem;
 }
 
 .footer-legal-links {
