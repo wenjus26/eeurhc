@@ -1,0 +1,1063 @@
+/* ==========================================================================
+   ÉGLISE ÉVANGÉLIQUE UNION RENAISSANCE D'HOMMES EN CHRIST (URHC)
+   Landing Page Officielle de Pré-lancement
+   Direction Artistique : Institutionnel chrétien premium & contemporain
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES CSS (PALETTE OFFICIELLE & PARAMÈTRES PERSONNALISABLES)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Couleurs échantillonnées directement sur le logo officiel URHC */
+  --blue-urhc: #0D2F5C;
+  --red-urhc: #B10B0E;
+
+  /* Palette Chromatique Fondatrice */
+  --blue-night-deep: #0A111F;
+  --blue-night: #101B30;
+  --blue-night-surface: #14223B;
+  --blue-night-card: #182846;
+  --blue-night-border: rgba(215, 184, 117, 0.18);
+
+  /* Or Champagne (accents rares : croix, filets, liserés) */
+  --gold-champagne: #D7B875;
+  --gold-light: #F4E4C1;
+  --gold-dark: #A98743;
+  --gold-gradient: linear-gradient(135deg, #F5E5C4 0%, #D7B875 50%, #B89248 100%);
+  --gold-glow: rgba(215, 184, 117, 0.22);
+
+  /* Couleurs de Texte, Fonds Clairs & Contraste */
+  --ivory-luminous: #FAF8F2;
+  --ivory-card: #FDFBF7;
+  --gray-soft: #D9DEE7;
+  --gray-muted: #9EABBE;
+  --white: #FFFFFF;
+
+  /* Typographies */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Rayons & Élévations */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+
+  /* Ombres */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 0 25px rgba(215, 184, 117, 0.25);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. RÉINITIALISATION & STYLES GLOBAUX
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--blue-night-deep);
+  color: var(--ivory-luminous);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Accessibilité Clavier (Skip Link) */
+.skip-link {
+  position: absolute;
+  top: -70px;
+  left: 20px;
+  background: var(--gold-champagne);
+  color: var(--blue-night-deep);
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top var(--transition-fast);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 20px;
+}
+
+/* Sélection de texte aux couleurs institutionnelles */
+::selection {
+  background-color: rgba(215, 184, 117, 0.3);
+  color: var(--white);
+}
+
+/* Focus visible pour l'accessibilité */
+:focus-visible {
+  outline: 2px solid var(--gold-champagne);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   3. EN-TÊTE INSTITUTIONNEL (HEADER)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(10, 17, 31, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(215, 184, 117, 0.15);
+  transition: background-color var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.site-header.scrolled {
+  background: rgba(8, 14, 26, 0.96);
+  border-bottom: 1px solid rgba(215, 184, 117, 0.25);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Marque & Logo officiel sur pastille blanche/ivoire */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-fast);
+}
+
+.brand:hover {
+  opacity: 0.92;
+}
+
+.brand-logo-badge {
+  background-color: var(--white);
+  border: 1px solid rgba(215, 184, 117, 0.45);
+  padding: 4px 7px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.brand:hover .brand-logo-badge {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(215, 184, 117, 0.35);
+}
+
+.brand-logo-img {
+  width: 48px;
+  height: auto;
+  max-height: 44px;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-acronym {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-champagne);
+  line-height: 1.1;
+}
+
+.brand-full-name {
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--gray-soft);
+  max-width: 330px;
+  line-height: 1.25;
+}
+
+/* Indicateur d'état : Site officiel en conception */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(215, 184, 117, 0.08);
+  border: 1px solid rgba(215, 184, 117, 0.28);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-light);
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--gold-champagne);
+  box-shadow: 0 0 8px var(--gold-champagne);
+  animation: pulse-dot 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. SECTION PRINCIPALE (HERO)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7.5rem 1.5rem 4rem;
+  overflow: hidden;
+}
+
+/* Fond cinématique avec voile bleu nuit */
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.72) saturate(1.1);
+  transform: scale(1.03);
+  transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 17, 31, 0.78) 0%,
+    rgba(16, 27, 48, 0.88) 50%,
+    rgba(10, 17, 31, 0.98) 100%
+  );
+}
+
+.hero-radial-glow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 820px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(215, 184, 117, 0.12) 0%, rgba(16, 27, 48, 0) 70%);
+  pointer-events: none;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyebrow / Ligne décorative */
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow-line {
+  width: 38px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-champagne));
+}
+
+.hero-eyebrow .eyebrow-line:last-child {
+  background: linear-gradient(90deg, var(--gold-champagne), transparent);
+}
+
+.eyebrow-text {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+}
+
+/* Titre Hero */
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 1.6rem;
+}
+
+.gold-gradient-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  display: inline-block;
+}
+
+/* Badge central "NOTRE SITE ARRIVE BIENTÔT" */
+.hero-badge-wrap {
+  margin-bottom: 1.8rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(215, 184, 117, 0.12);
+  border: 1px solid var(--gold-champagne);
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(215, 184, 117, 0.18);
+}
+
+.badge-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--gold-champagne);
+}
+
+/* Descriptif Hero */
+.hero-description {
+  font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray-soft);
+  max-width: 720px;
+  margin-bottom: 2.6rem;
+}
+
+/* Boutons d'action */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.95rem 2rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.btn-primary {
+  background: var(--gold-gradient);
+  color: var(--blue-night-deep);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(215, 184, 117, 0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(215, 184, 117, 0.42);
+  color: #060A12;
+}
+
+.btn-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ivory-luminous);
+  border: 1px solid rgba(215, 184, 117, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: rgba(215, 184, 117, 0.14);
+  border-color: var(--gold-champagne);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Indicateur de défilement */
+.scroll-cue {
+  margin-top: 3.5rem;
+}
+
+.scroll-cue a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.scroll-cue a:hover {
+  color: var(--gold-champagne);
+}
+
+.scroll-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.scroll-indicator-line {
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(180deg, var(--gold-champagne), transparent);
+  animation: scroll-bob 2s infinite ease-in-out;
+}
+
+@keyframes scroll-bob {
+  0%, 100% {
+    transform: scaleY(0.7);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTION CITATION BIBLIQUE
+   -------------------------------------------------------------------------- */
+.scripture-section {
+  position: relative;
+  background: var(--blue-night);
+  border-top: 1px solid var(--blue-night-border);
+  border-bottom: 1px solid var(--blue-night-border);
+  padding: 5.5rem 1.5rem;
+  overflow: hidden;
+}
+
+.section-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.scripture-card {
+  position: relative;
+  background: radial-gradient(circle at center, rgba(215, 184, 117, 0.08) 0%, rgba(20, 34, 60, 0.65) 100%);
+  border: 1px solid rgba(215, 184, 117, 0.28);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.scripture-cross-emblem {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 1.5rem;
+  opacity: 0.85;
+}
+
+.scripture-quote {
+  position: relative;
+  margin: 0 auto 1.6rem;
+  max-width: 780px;
+}
+
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--gold-champagne);
+  line-height: 0;
+  vertical-align: -0.3em;
+  opacity: 0.75;
+}
+
+.quote-text {
+  display: inline;
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--white);
+  letter-spacing: 0.01em;
+}
+
+.scripture-reference {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--gold-champagne);
+  text-transform: uppercase;
+}
+
+.ref-ornament {
+  font-size: 0.65rem;
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   6. SECTION MESSAGE DE BIENVENUE & PILIERS
+   -------------------------------------------------------------------------- */
+.welcome-section {
+  padding: 6.5rem 1.5rem;
+  background-color: var(--blue-night-deep);
+}
+
+.welcome-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 4rem;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gold-champagne);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.welcome-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.1rem, 3.8vw, 3rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+}
+
+.divider-gold {
+  width: 56px;
+  height: 2px;
+  background: var(--gold-gradient);
+  margin: 0 auto 1.6rem;
+  border-radius: var(--radius-full);
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--gray-soft);
+  font-weight: 300;
+}
+
+/* Grille des 3 Piliers */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.pillar-card {
+  background: rgba(24, 40, 70, 0.45);
+  border: 1px solid rgba(215, 184, 117, 0.16);
+  border-radius: var(--radius-md);
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(215, 184, 117, 0.38);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.pillar-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(215, 184, 117, 0.12);
+  border: 1px solid rgba(215, 184, 117, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-champagne);
+  margin-bottom: 1.4rem;
+}
+
+.pillar-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pillar-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.pillar-description {
+  font-size: 0.94rem;
+  color: var(--gray-soft);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* --------------------------------------------------------------------------
+   7. SECTION CONTACT & INFORMATIONS OFFICIELLES
+   -------------------------------------------------------------------------- */
+.contact-section {
+  padding: 5rem 1.5rem 7rem;
+  background: linear-gradient(180deg, var(--blue-night-deep) 0%, var(--blue-night) 100%);
+}
+
+.contact-card {
+  background: var(--blue-night-surface);
+  border: 1px solid rgba(215, 184, 117, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.contact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  font-size: 1.02rem;
+  color: var(--gray-soft);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* Grille d'éléments d'information */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info-item {
+  background: rgba(10, 17, 31, 0.65);
+  border: 1px solid rgba(215, 184, 117, 0.16);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-item-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(215, 184, 117, 0.1);
+  border: 1px solid rgba(215, 184, 117, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-champagne);
+  flex-shrink: 0;
+}
+
+.info-item-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.info-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gray-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.info-status-placeholder {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--gold-light);
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* Bloc d'avertissement Réseaux Sociaux */
+.socials-notice-block {
+  text-align: center;
+  background: rgba(16, 27, 48, 0.55);
+  border: 1px dashed rgba(215, 184, 117, 0.24);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.socials-heading {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--gold-champagne);
+  margin-bottom: 0.6rem;
+}
+
+.socials-note {
+  font-size: 0.92rem;
+  color: var(--gray-soft);
+  max-width: 650px;
+  margin: 0 auto 1.4rem;
+  line-height: 1.65;
+}
+
+.socials-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.social-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--gray-muted);
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.social-chip .chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gray-muted);
+}
+
+/* --------------------------------------------------------------------------
+   8. PIED DE PAGE (FOOTER)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: #070B14;
+  border-top: 1px solid rgba(215, 184, 117, 0.14);
+  padding: 3.5rem 1.5rem 2.5rem;
+  color: var(--gray-muted);
+  font-size: 0.88rem;
+}
+
+.footer-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+}
+
+.footer-logo-badge {
+  background-color: var(--white);
+  border: 1px solid rgba(215, 184, 117, 0.35);
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-logo-img {
+  width: 40px;
+  height: auto;
+  max-height: 36px;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-acronym {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.16em;
+  color: var(--gold-champagne);
+}
+
+.footer-full-name {
+  font-size: 0.9rem;
+  color: var(--gray-soft);
+  max-width: 480px;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  font-style: italic;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}
+
+.footer-divider {
+  width: 100%;
+  max-width: 380px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(215, 184, 117, 0.25), transparent);
+  margin: 0 auto 1.8rem;
+}
+
+.footer-copyright {
+  font-size: 0.82rem;
+  color: var(--gray-muted);
+  margin-bottom: 0.35rem;
+}
+
+.footer-subtext {
+  font-size: 0.76rem;
+  color: rgba(158, 171, 190, 0.65);
+}
+
+/* --------------------------------------------------------------------------
+   9. ANIMATIONS & MICRO-INTERACTIONS
+   -------------------------------------------------------------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.75rem 1rem;
+  }
+
+  .brand-full-name {
+    display: none; /* Allège l'en-tête sur petits écrans */
+  }
+
+  .brand-logo-img {
+    width: 40px;
+    max-height: 36px;
+  }
+
+  .status-indicator .status-label {
+    font-size: 0.72rem;
+  }
+
+  .hero-section {
+    padding: 6.5rem 1.25rem 3.5rem;
+  }
+
+  .hero-eyebrow {
+    gap: 0.5rem;
+  }
+
+  .eyebrow-line {
+    width: 20px;
+  }
+
+  .eyebrow-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .scripture-card {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .quote-text {
+    font-size: 1.55rem;
+  }
+
+  .contact-card {
+    padding: 2.2rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-indicator {
+    padding: 0.35rem 0.65rem;
+  }
+
+  .status-label {
+    font-size: 0.68rem;
+  }
+
+  .hero-badge {
+    font-size: 0.72rem;
+    padding: 0.45rem 0.95rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. ACCESSIBILITÉ : PREFERS-REDUCED-MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-bg-img {
+    transform: none !important;
+  }
+
+  .status-dot, .scroll-indicator-line {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <filter id="favShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Dark navy rounded badge background -->
+  <rect width="64" height="64" rx="14" fill="#0D1525"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="#FFFFFF" stroke="#D7B875" stroke-width="1.5"/>
+
+  <!-- URHC Letters in official colors (U: Red, R: Navy, H: Red, C: Navy) -->
+  <g font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="21" letter-spacing="-0.5">
+    <!-- Isometric shadow effect -->
+    <text x="5" y="38" fill="#D1D5DB">U</text>
+    <text x="17" y="38" fill="#D1D5DB">R</text>
+    <text x="31" y="38" fill="#D1D5DB">H</text>
+    <text x="45" y="38" fill="#D1D5DB">C</text>
+
+    <!-- Foreground letters -->
+    <text x="8" y="35" fill="#BA131A">U</text>
+    <text x="20" y="35" fill="#103766">R</text>
+    <text x="34" y="35" fill="#BA131A">H</text>
+    <text x="48" y="35" fill="#103766">C</text>
+  </g>
+
+  <!-- Subtitle URHC -->
+  <g font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="10" letter-spacing="0">
+    <text x="14" y="47" fill="#BA131A">U</text>
+    <text x="22" y="47" fill="#103766">R</text>
+    <text x="31" y="47" fill="#BA131A">H</text>
+    <text x="40" y="47" fill="#103766">C</text>
+  </g>
+
+  <!-- Church initials line -->
+  <rect x="14" y="52" width="36" height="1.5" fill="#D7B875" rx="0.75"/>
+</svg>

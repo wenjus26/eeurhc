@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" width="240" height="260">
+  <defs>
+    <!-- Subtle drop shadow for shield -->
+    <filter id="shieldShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D3748"/>
+      <stop offset="50%" stop-color="#1A202C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Shield Outline -->
+  <path d="M 24 24 C 70 18, 170 18, 216 24 C 218 105, 205 178, 120 242 C 35 178, 22 105, 24 24 Z" 
+        fill="#FFFFFF" 
+        stroke="url(#shieldBorder)" 
+        stroke-width="5" 
+        filter="url(#shieldShadow)"/>
+
+  <!-- Inner delicate stroke -->
+  <path d="M 28 28 C 72 23, 168 23, 212 28 C 214 103, 201 174, 120 236 C 39 174, 26 103, 28 28 Z" 
+        fill="none" 
+        stroke="#E2E8F0" 
+        stroke-width="1.5"/>
+
+  <!-- Top Large Letters URHC -->
+  <!-- U (Red) -->
+  <text x="38" y="118" font-family="'Impact', 'Arial Black', 'Montserrat', sans-serif" font-weight="900" font-size="94" fill="#C62828" letter-spacing="-2">U</text>
+  <!-- R (Navy) -->
+  <text x="82" y="118" font-family="'Impact', 'Arial Black', 'Montserrat', sans-serif" font-weight="900" font-size="94" fill="#152C5B" letter-spacing="-2">R</text>
+  <!-- H (Red) -->
+  <text x="131" y="118" font-family="'Impact', 'Arial Black', 'Montserrat', sans-serif" font-weight="900" font-size="94" fill="#C62828" letter-spacing="-2">H</text>
+  <!-- C (Navy) -->
+  <text x="175" y="118" font-family="'Impact', 'Arial Black', 'Montserrat', sans-serif" font-weight="900" font-size="94" fill="#152C5B" letter-spacing="-2">C</text>
+
+  <!-- Middle Subtitle URHC -->
+  <g transform="translate(120, 160)" text-anchor="middle">
+    <!-- U -->
+    <text x="-48" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#C62828">U</text>
+    <!-- R -->
+    <text x="-16" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#152C5B">R</text>
+    <!-- H -->
+    <text x="16" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#C62828">H</text>
+    <!-- C -->
+    <text x="48" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#152C5B">C</text>
+  </g>
+
+  <!-- Bottom Official Church Name in Shield -->
+  <text x="120" y="196" font-family="'Georgia', 'Times New Roman', serif" font-size="11.5" font-weight="700" fill="#1E293B" text-anchor="middle" letter-spacing="0.2">Église Union Renaissance</text>
+  <text x="120" y="214" font-family="'Georgia', 'Times New Roman', serif" font-size="11" font-weight="700" fill="#1E293B" text-anchor="middle" letter-spacing="0.2">d'Hommes en Christ</text>
+</svg>
