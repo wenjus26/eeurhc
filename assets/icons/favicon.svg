@@ -7,7 +7,7 @@
 
   <!-- Dark navy rounded badge background -->
   <rect width="64" height="64" rx="14" fill="#0D1525"/>
-  <rect x="2" y="2" width="60" height="60" rx="12" fill="#FFFFFF" stroke="#D7B875" stroke-width="1.5"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="#FFFFFF" stroke="#B10B0E" stroke-width="1.5"/>
 
   <!-- URHC Letters in official colors (U: Red, R: Navy, H: Red, C: Navy) -->
   <g font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="21" letter-spacing="-0.5">
@@ -33,5 +33,5 @@
   </g>
 
   <!-- Church initials line -->
-  <rect x="14" y="52" width="36" height="1.5" fill="#D7B875" rx="0.75"/>
+  <rect x="14" y="52" width="36" height="1.5" fill="#B10B0E" rx="0.75"/>
 </svg>
