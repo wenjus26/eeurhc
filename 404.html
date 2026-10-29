@@ -3,59 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page non trouvée — URHC Église Évangélique Union Renaissance d’Hommes en Christ</title>
-  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- SEO & Métadonnées -->
+  <title>404 — Page introuvable | URHC Église Évangélique</title>
+  <meta name="description" content="La page demandée est introuvable. Le site officiel de l’Église Évangélique Union Renaissance d’Hommes en Christ (URHC) est actuellement en conception.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Typographies Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Feuilles de styles -->
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    .error-hero {
+    .error-wrapper {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      position: relative;
+      background-color: var(--blue-night-deep);
+      overflow: hidden;
+    }
+
+    .error-main {
+      flex: 1;
+      display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 2rem;
-      background: radial-gradient(circle at center, #14223B 0%, #0A111F 100%);
+      padding: 7rem 1.5rem 4rem;
+      position: relative;
+      z-index: 1;
     }
-    .error-code {
+
+    .error-container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .error-number {
       font-family: var(--font-serif);
-      font-size: clamp(5rem, 12vw, 8rem);
+      font-size: clamp(5.5rem, 13vw, 8.5rem);
       font-weight: 700;
-      color: var(--gold-champagne);
-      line-height: 1;
-      margin-bottom: 1rem;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 4px 30px rgba(215, 184, 117, 0.2);
     }
-    .error-title {
+
+    .error-heading {
       font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-size: clamp(2rem, 3.8vw, 2.7rem);
+      font-weight: 600;
       color: var(--white);
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
-    .error-text {
-      color: var(--gray-soft);
-      max-width: 520px;
-      margin-bottom: 2rem;
+
+    .error-lead {
       font-size: 1.05rem;
+      color: var(--gray-soft);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    .error-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .error-verse {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(215, 184, 117, 0.18);
+      font-size: 0.92rem;
+      color: var(--gold-light);
+      font-style: italic;
     }
   </style>
 </head>
-<body>
-  <div class="error-hero">
-    <div class="brand-logo-badge" style="margin-bottom: 2rem;">
-      <img src="assets/images/logo-urhc.jpg" alt="Logo de l’Église URHC" class="brand-logo-img" width="56" height="51">
+<body class="error-wrapper">
+
+  <!-- =========================================================
+       EN-TÊTE SIMPLIFIÉ
+       ========================================================= -->
+  <header class="site-header scrolled" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="brand" aria-label="Accueil — URHC Église Évangélique">
+        <div class="brand-logo-badge">
+          <img src="assets/images/logo-urhc.jpg" alt="Logo de l’Église URHC" class="brand-logo-img" width="48" height="44">
+        </div>
+        <div class="brand-text">
+          <span class="brand-acronym">URHC</span>
+          <span class="brand-full-name">Église Évangélique Union Renaissance d’Hommes en Christ</span>
+        </div>
+      </a>
+
+      <div class="status-indicator" role="status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-label">Site officiel en conception</span>
+      </div>
     </div>
-    <div class="error-code">404</div>
-    <h1 class="error-title">Page introuvable</h1>
-    <p class="error-text">
-      La page que vous recherchez n'est pas disponible ou a été déplacée. Notre site officiel est actuellement en conception.
-    </p>
-    <a href="index.html" class="btn btn-primary">
-      <span>Retour à la page d'accueil</span>
-    </a>
-  </div>
+  </header>
+
+  <!-- =========================================================
+       SECTION CONTENU 404
+       ========================================================= -->
+  <main class="error-main" role="main">
+    
+    <!-- Arrière-plan cinématique -->
+    <div class="hero-backdrop" aria-hidden="true">
+      <img src="assets/images/hero-bg.jpg" alt="" class="hero-bg-img" style="filter: brightness(0.4) saturate(1.1);">
+      <div class="hero-overlay" style="background: rgba(10, 17, 31, 0.9);"></div>
+    </div>
+
+    <div class="error-container">
+      
+      <div class="hero-eyebrow" style="justify-content: center;">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">PAGE INTROUVABLE</span>
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <div class="error-number">404</div>
+
+      <h1 class="error-heading">Cette page n'existe pas ou n'est plus disponible.</h1>
+
+      <p class="error-lead">
+        L'adresse que vous avez saisie est introuvable. Notre nouvel espace numérique officiel est actuellement en préparation pour vous offrir prochainement une expérience enrichie.
+      </p>
+
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-primary">
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" style="transform: rotate(180deg);" aria-hidden="true">
+            <path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Retour à l'accueil</span>
+        </a>
+
+        <a href="index.html#contact" class="btn btn-secondary">
+          <span>Nous contacter</span>
+        </a>
+      </div>
+
+      <div class="error-verse">
+        « Ta parole est une lampe à mes pieds, et une lumière sur mon sentier. » — Psaume 119:105
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================
+       PIED DE PAGE
+       ========================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <p class="footer-copyright">
+        &copy; 2026 Église Évangélique Union Renaissance d’Hommes en Christ. Tous droits réservés.
+      </p>
+      <p class="footer-subtext">
+        Un nouvel espace numérique se prépare.
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
