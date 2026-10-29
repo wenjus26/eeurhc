@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr" dir="ltr" class="no-js">
 <head>
   <meta charset="UTF-8">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Préchargement de l'image Hero critique -->
+  <link rel="preload" as="image" href="assets/images/hero-bg.jpg" fetchpriority="high">
 
   <!-- =====================================================================
        SEO & MÉTADONNÉES INSTITUTIONNELLES
@@ -365,6 +369,23 @@
             </div>
           </div>
 
+          <!-- Notification directe de pré-lancement -->
+          <div class="stay-connected-card">
+            <div class="stay-connected-content">
+              <h3 class="stay-connected-title">Recevoir l'annonce d'ouverture</h3>
+              <p class="stay-connected-text">
+                Vous pouvez transmettre directement une demande par courriel pour être avisé dès la mise en ligne officielle de la plateforme.
+              </p>
+            </div>
+            <a href="mailto:contact@eeurhc.org?subject=Notification%20de%20lancement%20du%20site%20officiel%20URHC&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20%C3%AAtre%20inform%C3%A9(e)%20lors%20de%20l'ouverture%20du%20site%20officiel%20de%20l'%C3%89glise%20%C3%89vang%C3%A9lique%20URHC.%0A%0ACordialement." class="btn btn-primary btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span>Demander à être notifié</span>
+            </a>
+          </div>
+
         </div>
 
       </div>
@@ -403,6 +424,13 @@
 
     </div>
   </footer>
+
+  <!-- Bouton Remonter en haut de page -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Remonter en haut de page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <!-- Scripts Vanilla légers (Interactions & animations) -->
   <script src="script.js"></script>
