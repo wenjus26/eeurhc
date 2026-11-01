@@ -73,6 +73,8 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -89,7 +91,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  width: 100%;
   position: relative;
+}
+
+/* Prévention universelle du débordement textuel multi-écrans */
+h1, h2, h3, h4, h5, h6, p, blockquote, q {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+img, svg, picture {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Accessibilité Clavier */
@@ -321,6 +335,14 @@ body {
   color: var(--red-urhc);
   letter-spacing: 0.04em;
   white-space: nowrap;
+}
+
+.header-status-indicator .status-text-short {
+  display: none;
+}
+
+.header-status-indicator .status-text-full {
+  display: inline;
 }
 
 .header-status-indicator .status-dot {
@@ -1146,11 +1168,12 @@ body {
   border: none;
   background: transparent;
   font-family: var(--font-sans);
-  font-size: 0.92rem;
+  font-size: 1rem; /* 16px min : prévient le zoom automatique forcé sur iOS Safari */
   color: var(--text-body);
   flex: 1;
+  min-width: 0;
   outline: none;
-  padding: 0.6rem 0;
+  padding: 0.65rem 0.5rem;
 }
 
 .btn-notification {
@@ -1171,7 +1194,7 @@ body {
 .site-footer {
   background-color: var(--blue-urhc-dark);
   color: #94A3B8;
-  padding: 4.5rem 1.5rem 2.5rem;
+  padding: 4.5rem 1.5rem calc(2.5rem + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
 }
@@ -1262,8 +1285,8 @@ body {
    -------------------------------------------------------------------------- */
 .back-to-top {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: calc(25px + env(safe-area-inset-bottom, 0px));
+  right: calc(25px + env(safe-area-inset-right, 0px));
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1306,7 +1329,7 @@ body {
    -------------------------------------------------------------------------- */
 .toast-notification {
   position: fixed;
-  bottom: 25px;
+  bottom: calc(25px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%) translateY(100px);
   background: var(--blue-urhc);
@@ -1319,6 +1342,8 @@ body {
   z-index: 3000;
   opacity: 0;
   transition: all var(--transition-smooth);
+  max-width: 90vw;
+  text-align: center;
 }
 
 .toast-notification.show {
@@ -1347,8 +1372,11 @@ html.js .fade-in.visible {
 }
 
 /* --------------------------------------------------------------------------
-   16. RESPONSIVE DESIGN
+   16. RESPONSIVE DESIGN MULTI-PLATEFORMES
+   (Mobile 320px+, Smartphones, Phablettes, Tablettes, Desktop & 4K)
    -------------------------------------------------------------------------- */
+
+/* Tablettes & Petits Ordinateurs Portables (<= 1100px) */
 @media (max-width: 1100px) {
   .hero-layout-container {
     grid-template-columns: 1fr;
@@ -1358,6 +1386,7 @@ html.js .fade-in.visible {
 
   .hero-content {
     margin: 0 auto;
+    max-width: 780px;
   }
 
   .hero-actions {
@@ -1365,11 +1394,15 @@ html.js .fade-in.visible {
   }
 
   .hero-support-card {
-    margin: 0 auto;
+    margin: 3.2rem auto 0 auto;
+    max-width: 420px;
+    width: 100%;
   }
 
   .futur-features-grid {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+    margin: 0 auto;
   }
 
   .cultes-layout {
@@ -1390,17 +1423,35 @@ html.js .fade-in.visible {
   }
 
   .detail-item {
-    max-width: 440px;
+    max-width: 460px;
+    width: 100%;
+  }
+
+  .faith-card {
+    max-width: 520px;
+    margin: 0 auto;
     width: 100%;
   }
 
   .notification-content {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 3.2rem 2.2rem;
+  }
+
+  .notification-lead {
+    margin: 0 auto;
+    max-width: 540px;
+  }
+
+  .notification-form-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
+/* Tablettes Portrait (<= 900px) */
 @media (max-width: 900px) {
   .top-bar-center {
     display: none;
@@ -1408,18 +1459,50 @@ html.js .fade-in.visible {
 
   .vision-grid {
     grid-template-columns: 1fr;
-    max-width: 580px;
+    max-width: 540px;
     margin: 0 auto;
   }
 }
 
+/* Grands Téléphones & Tablettes Compactes (<= 768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4.5rem 1.25rem 5rem;
+    min-height: auto;
+  }
+
+  .section-vision,
+  .section-futur-site,
+  .section-cultes,
+  .section-notification {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .scripture-card {
+    padding: 2.6rem 1.4rem;
+  }
+
+  .notification-content {
+    padding: 2.6rem 1.5rem;
+  }
+
+  .notification-card {
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Téléphones Moyens & Paysage (<= 680px) */
 @media (max-width: 680px) {
   .brand-full-name {
     display: none;
   }
 
+  .header-container {
+    padding: 0.7rem 1rem;
+  }
+
   .header-status-indicator {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     padding: 0.35rem 0.75rem;
   }
 
@@ -1428,30 +1511,192 @@ html.js .fade-in.visible {
   }
 
   .top-bar-container {
-    justify-content: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding: 0.45rem 1rem;
+  }
+
+  .top-bar-right {
+    width: 100%;
+    text-align: center;
   }
 
   .futur-features-grid {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    max-width: 440px;
     margin: 0 auto;
-  }
-
-  .input-row {
-    flex-direction: column;
-    border-radius: var(--radius-sm);
-    padding: 0.8rem;
-    gap: 0.8rem;
-  }
-
-  .btn-notification {
-    width: 100%;
-    border-radius: var(--radius-sm);
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 0.8rem;
+  }
+}
+
+/* Téléphones Mobiles Standards (<= 580px) */
+@media (max-width: 580px) {
+  .section-vision,
+  .section-futur-site,
+  .section-cultes,
+  .section-notification {
+    padding: 3.5rem 1rem;
+  }
+
+  .hero-section {
+    padding: 3.5rem 1rem 4.5rem;
+  }
+
+  .hero-conception-badge {
+    padding: 0.4rem 0.85rem;
+    max-width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-conception-badge .badge-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  /* Pile verticale pleine largeur pour les actions Hero */
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    gap: 0.85rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px; /* Cible tactile WCAG recommandée */
+    padding: 0.95rem 1.25rem;
+  }
+
+  .hero-support-card {
+    padding: 2.5rem 1.2rem 1.8rem;
+    margin: 2.8rem auto 0 auto;
+    border-radius: var(--radius-md);
+  }
+
+  .scripture-card {
+    padding: 2rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .scripture-quote {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .quote-mark {
+    font-size: 2rem;
+  }
+
+  .input-row {
+    flex-direction: column;
+    border-radius: var(--radius-md);
+    padding: 0.65rem;
+    gap: 0.65rem;
+    background: #FFFFFF;
+  }
+
+  .notification-input {
+    text-align: center;
+    padding: 0.5rem 0.25rem;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .btn-notification {
+    width: 100%;
+    border-radius: var(--radius-full);
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  .faith-card {
+    padding: 2rem 1.2rem;
+    border-radius: var(--radius-md);
+  }
+
+  .faith-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .detail-item {
+    padding: 0.8rem 1rem;
+  }
+
+  .site-footer {
+    padding: 3.5rem 1rem calc(2rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Petits Téléphones Mobiles (<= 380px, ex. iPhone SE, 320px screens) */
+@media (max-width: 380px) {
+  .header-container {
+    padding: 0.55rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .brand {
+    gap: 0.55rem;
+  }
+
+  .brand-logo-badge {
+    padding: 2px 4px;
+  }
+
+  .brand-logo-img {
+    width: 34px;
+    max-height: 30px;
+  }
+
+  .brand-acronym {
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+  }
+
+  .header-status-indicator {
+    padding: 0.28rem 0.55rem;
+    font-size: 0.68rem;
+    gap: 0.4rem;
+  }
+
+  .header-status-indicator .status-text-full {
+    display: none;
+  }
+
+  .header-status-indicator .status-text-short {
+    display: inline;
+  }
+
+  .hero-conception-badge .badge-text {
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.4rem;
+    padding: 0.75rem 0.7rem;
+  }
+
+  .detail-icon {
+    margin: 0 auto;
+  }
+
+  .toast-notification {
+    font-size: 0.82rem;
+    padding: 0.75rem 1.2rem;
   }
 }
 
