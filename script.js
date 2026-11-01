@@ -1,6 +1,6 @@
 /**
  * Église Évangélique Union Renaissance d'Hommes en Christ (URHC)
- * Interactions, Modales, Recherche, Animations et Toast
+ * Interactions Single-Page : Navigation fluide, Notification & Animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Défilement fluide pour les liens internes
+  // 3. Défilement fluide pour tous les liens d'ancrage de la page
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        const headerOffset = 80;
+        const headerOffset = 75;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -58,50 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Modales interactives
-  const openModal = (modalId) => {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-  };
+  // 4. Scrollspy : Mettre en surbrillance le lien actif lors du défilement
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  const closeModal = (modal) => {
-    if (modal) {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  };
+  const updateActiveNav = () => {
+    const scrollY = window.pageYOffset;
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120;
+      const sectionId = current.getAttribute('id');
 
-  document.querySelectorAll('.trigger-modal').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const modalId = btn.getAttribute('data-modal');
-      const titleAttr = btn.getAttribute('data-title');
-      
-      if (modalId === 'modal-info' && titleAttr) {
-        const titleEl = document.getElementById('modal-info-title');
-        if (titleEl) titleEl.textContent = titleAttr;
-      }
-
-      if (modalId) openModal(modalId);
-    });
-  });
-
-  document.querySelectorAll('.modal-backdrop').forEach(modal => {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal || e.target.closest('.modal-close') || e.target.closest('.modal-close-btn')) {
-        closeModal(modal);
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
       }
     });
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.modal-backdrop.open').forEach(closeModal);
-    }
-  });
+  };
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
 
   // 5. Toast notification
   const showToast = (message) => {
@@ -111,38 +89,20 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.classList.add('show');
     setTimeout(() => {
       toast.classList.remove('show');
-    }, 4000);
+    }, 4500);
   };
 
-  window.handleModalVisiteSubmit = (form) => {
-    const nom = form.querySelector('#visite-nom')?.value || 'Cher ami';
-    document.querySelectorAll('.modal-backdrop.open').forEach(closeModal);
-    showToast(`Merci ${nom} ! Votre visite a bien été enregistrée. À très bientôt !`);
-    form.reset();
-  };
-
-  window.handleNewsletterSubmit = (form) => {
-    const email = form.querySelector('input[type="email"]')?.value;
-    showToast(`Merci ! Votre inscription avec ${email} a bien été enregistrée.`);
-    form.reset();
-  };
-
-  window.handleSearchSubmit = () => {
-    const type = document.getElementById('typeCulte')?.value;
-    const jour = document.getElementById('jourCulte')?.options[document.getElementById('jourCulte').selectedIndex]?.text;
-    showToast(`Recherche pour : ${jour}. Nous vous attendons avec joie !`);
-    
-    // Défilement doux vers la section Culte
-    const target = document.getElementById('rejoignez-nous');
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 80,
-        behavior: 'smooth'
-      });
+  // 6. Gestion du formulaire de notification de pré-lancement
+  window.handleNotificationSubmit = (form) => {
+    const emailInput = form.querySelector('#notif-email');
+    const email = emailInput?.value || '';
+    if (email) {
+      showToast(`Merci ! Votre adresse (${email}) a été enregistrée. Vous serez avisé dès le lancement officiel !`);
+      form.reset();
     }
   };
 
-  // 6. Intersection Observer pour les animations progressives
+  // 7. Animations progressives (IntersectionObserver)
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!prefersReducedMotion && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -161,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
   }
 
-  // 7. Bouton Remonter en haut de page
+  // 8. Bouton Remonter en haut de page
   const backToTopBtn = document.getElementById('backToTop');
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {

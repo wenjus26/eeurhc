@@ -1,11 +1,11 @@
 /* ==========================================================================
    ÉGLISE ÉVANGÉLIQUE UNION RENAISSANCE D'HOMMES EN CHRIST (URHC)
-   Feuille de styles officielle — Design Moderne Institutionnel
-   Palette Officielle : Bleu URHC (#0D2F5C), Rouge URHC (#B10B0E), Blanc Pur (#FFFFFF)
+   Landing Page Officielle — Site en Conception (Single-Page)
+   Palette Officielle : Bleu Roi URHC (#0D2F5C), Rouge URHC (#B10B0E), Blanc Pur (#FFFFFF)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. VARIABLES CSS (PALETTE OFFICIELLE & PARAMÈTRES)
+   1. VARIABLES CSS (PALETTE OFFICIELLE DU LOGO URHC)
    -------------------------------------------------------------------------- */
 :root {
   /* Couleurs échantillonnées directement sur le logo officiel URHC */
@@ -21,7 +21,7 @@
   --red-gradient: linear-gradient(135deg, #E53935 0%, #B10B0E 100%);
   --red-glow: rgba(177, 11, 14, 0.28);
 
-  /* Neutres & Surfaces */
+  /* Neutres & Surfaces Lumineuses */
   --white: #FFFFFF;
   --bg-main: #FFFFFF;
   --bg-surface: #F8FAFC;
@@ -51,7 +51,7 @@
   --shadow-sm: 0 2px 8px rgba(13, 47, 92, 0.05);
   --shadow-md: 0 8px 24px rgba(13, 47, 92, 0.08);
   --shadow-lg: 0 16px 40px rgba(13, 47, 92, 0.12);
-  --shadow-float: 0 20px 45px rgba(13, 47, 92, 0.14);
+  --shadow-float: 0 20px 45px rgba(0, 0, 0, 0.3);
   --shadow-red: 0 6px 20px rgba(177, 11, 14, 0.32);
 
   /* Transitions */
@@ -61,7 +61,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. RÉINITIALISATION & STYLES GLOBAUX
+   2. RÉINITIALISATION & STYLES DE BASE
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -78,6 +78,12 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: #FFFFFF;
+  /* Fond Blanc Carrelé — Subtile grille architecturale de 40px */
+  background-image: 
+    linear-gradient(to right, rgba(13, 47, 92, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 47, 92, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
   color: var(--text-body);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -86,7 +92,7 @@ body {
   position: relative;
 }
 
-/* Accessibilité (Skip Link) */
+/* Accessibilité Clavier */
 .skip-link {
   position: absolute;
   top: -70px;
@@ -173,6 +179,17 @@ body {
   animation: pulse-dot 2.5s infinite ease-in-out;
 }
 
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
 .top-bar-center {
   display: flex;
   align-items: center;
@@ -197,31 +214,19 @@ body {
   color: var(--red-urhc-bright);
 }
 
-.top-socials {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+.top-link-alert {
+  color: #FF8A8C;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
-.social-link {
-  color: #CBD5E1;
-  display: flex;
-  align-items: center;
-  transition: color var(--transition-fast), transform var(--transition-fast);
-}
-
-.social-link:hover {
+.top-link-alert:hover {
   color: var(--white);
-  transform: translateY(-1px);
-}
-
-.social-link svg {
-  width: 15px;
-  height: 15px;
 }
 
 /* --------------------------------------------------------------------------
-   4. EN-TÊTE PRINCIPAL (NAVBAR STICKY)
+   4. EN-TÊTE PRINCIPAL (STICKY NAVBAR)
    -------------------------------------------------------------------------- */
 .site-header {
   position: sticky;
@@ -302,25 +307,6 @@ body {
   line-height: 1.25;
 }
 
-.brand-status-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: var(--red-urhc);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 1px;
-}
-
-.tag-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: var(--red-urhc);
-}
-
 /* Navigation principale */
 .main-nav {
   display: flex;
@@ -345,10 +331,7 @@ body {
   transition: color var(--transition-fast);
 }
 
-.nav-link:hover {
-  color: var(--red-urhc);
-}
-
+.nav-link:hover,
 .nav-link.active {
   color: var(--red-urhc);
 }
@@ -364,20 +347,12 @@ body {
   border-radius: var(--radius-full);
 }
 
-/* CTA En-tête */
 .header-cta-group {
   display: flex;
   align-items: center;
   gap: 0.85rem;
 }
 
-.btn-don {
-  padding: 0.65rem 1.4rem;
-  font-size: 0.86rem;
-  font-weight: 700;
-}
-
-/* Menu Hamburger Mobile */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -397,7 +372,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   5. BOUTONS STYLISÉS (BOUTONS URHC)
+   5. BOUTONS STYLISÉS (URHC)
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
@@ -444,17 +419,6 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-.btn-navy {
-  background-color: var(--blue-urhc);
-  color: var(--white);
-}
-
-.btn-navy:hover {
-  background-color: var(--blue-urhc-light);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(13, 47, 92, 0.3);
-}
-
 .btn-sm {
   padding: 0.6rem 1.25rem;
   font-size: 0.85rem;
@@ -480,16 +444,16 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   6. SECTION HERO (SANCTUAIRE, CROIX & CARTE SOUTIEN)
+   6. SECTION HERO (LANDING PAGE : SITE EN CONCEPTION)
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  min-height: 88vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4.5rem 1.5rem 8.5rem;
-  overflow: visible;
+  padding: 5.5rem 1.5rem 6.5rem;
+  overflow: hidden;
   background-color: var(--blue-urhc-deep);
 }
 
@@ -513,9 +477,9 @@ body {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(7, 21, 42, 0.78) 0%,
-    rgba(10, 28, 54, 0.65) 50%,
-    rgba(7, 21, 42, 0.9) 100%
+    rgba(7, 21, 42, 0.82) 0%,
+    rgba(10, 28, 54, 0.7) 50%,
+    rgba(7, 21, 42, 0.94) 100%
   );
 }
 
@@ -601,12 +565,12 @@ body {
   flex-wrap: wrap;
 }
 
-/* Carte Flottante "Soutenez la mission" */
+/* Carte Flottante "Plateforme en Préparation" */
 .hero-support-card {
   background: #FFFFFF;
   border-radius: var(--radius-lg);
-  padding: 2.2rem 2rem;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  padding: 2.4rem 2rem 2.2rem;
+  box-shadow: var(--shadow-float);
   text-align: center;
   position: relative;
   max-width: 380px;
@@ -622,7 +586,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -48px auto 1.2rem;
+  margin: -50px auto 1.2rem;
   box-shadow: 0 6px 16px rgba(177, 11, 14, 0.35);
 }
 
@@ -643,114 +607,122 @@ body {
   font-size: 0.92rem;
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.4rem;
 }
 
-/* --------------------------------------------------------------------------
-   7. BARRE DE RECHERCHE FLOTTANTE ("Je veux...")
-   -------------------------------------------------------------------------- */
-.hero-search-wrapper {
-  position: relative;
-  z-index: 10;
-  max-width: 1140px;
-  margin: 3.5rem auto -4.5rem;
-  width: 100%;
-  padding: 0 1rem;
+.support-card-status {
+  margin-bottom: 1.5rem;
 }
 
-.hero-search-card {
-  background: #FFFFFF;
-  border-radius: var(--radius-full);
-  padding: 0.85rem 1.4rem;
-  box-shadow: var(--shadow-float);
-  border: 1px solid var(--border-medium);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.search-label-col {
-  padding-left: 0.5rem;
-  flex-shrink: 0;
-}
-
-.search-label-title {
-  font-family: var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 800;
+.status-pill {
+  display: inline-block;
+  background: rgba(13, 47, 92, 0.06);
+  border: 1px solid rgba(13, 47, 92, 0.18);
   color: var(--blue-urhc);
-  letter-spacing: -0.01em;
-}
-
-.search-field-col {
-  flex: 1;
-  min-width: 170px;
-}
-
-.select-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: #F8FAFC;
-  border: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
-  padding: 0.6rem 0.95rem;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
-}
-
-.select-wrapper:hover {
-  border-color: var(--border-strong);
-  background-color: #FFFFFF;
-}
-
-.select-icon {
-  width: 18px;
-  height: 18px;
-  color: var(--red-urhc);
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-.search-select {
-  border: none;
-  background: transparent;
-  font-family: var(--font-sans);
-  font-size: 0.86rem;
-  font-weight: 500;
-  color: var(--text-body);
-  width: 100%;
-  cursor: pointer;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.search-btn-col {
-  flex-shrink: 0;
 }
 
 /* --------------------------------------------------------------------------
-   8. SECTION "NOS MINISTÈRES" (5 CARTES)
+   7. SECTION CITATION BIBLIQUE (PAROLE DE FOI)
    -------------------------------------------------------------------------- */
-.section-ministeres {
-  padding: 8rem 1.5rem 5.5rem;
+.section-scripture {
+  padding: 4.5rem 1.5rem;
   background-color: #FFFFFF;
-  /* Fond Blanc Carrelé */
-  background-image: 
-    linear-gradient(to right, rgba(13, 47, 92, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(13, 47, 92, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .section-container {
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.scripture-card {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 3.2rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.scripture-cross-emblem {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 1.4rem;
+}
+
+.scripture-quote {
+  margin: 0 auto 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: var(--red-urhc);
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--blue-urhc);
+  line-height: 1.35;
+}
+
+.scripture-reference {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--blue-urhc);
+  text-transform: uppercase;
+}
+
+.ref-ornament {
+  color: var(--red-urhc);
+  font-size: 0.65rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. SECTION "NOTRE VISION & NOS FONDEMENTS" (3 PILIERS)
+   -------------------------------------------------------------------------- */
+.section-vision {
+  padding: 6.5rem 1.5rem;
+  background-color: #FFFFFF;
 }
 
 .section-header-center {
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 3.5rem;
+  margin: 0 auto 3.8rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--red-urhc);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 
 .section-title {
@@ -758,8 +730,16 @@ body {
   font-size: clamp(2.2rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--blue-urhc);
-  line-height: 1.2;
-  margin-bottom: 0.85rem;
+  line-height: 1.22;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 56px;
+  height: 3px;
+  background: var(--red-gradient);
+  margin: 0 auto 1.4rem;
+  border-radius: var(--radius-full);
 }
 
 .section-subtitle {
@@ -769,126 +749,148 @@ body {
   line-height: 1.7;
 }
 
-.ministeres-grid {
+.vision-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.4rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.ministere-card {
+.vision-card {
   background: #FFFFFF;
-  border-radius: var(--radius-md);
   border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 2.6rem 2rem;
   box-shadow: var(--shadow-sm);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
 }
 
-.ministere-card:hover {
-  transform: translateY(-6px);
+.vision-card:hover {
+  transform: translateY(-5px);
   border-color: var(--red-urhc-light);
-  box-shadow: 0 16px 32px rgba(13, 47, 92, 0.12);
+  box-shadow: 0 14px 34px rgba(13, 47, 92, 0.1);
 }
 
-.card-media {
-  position: relative;
-  height: 165px;
-  overflow: hidden;
-}
-
-.card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-
-.ministere-card:hover .card-img {
-  transform: scale(1.08);
-}
-
-.card-icon-badge {
-  position: absolute;
-  bottom: -18px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--blue-urhc);
-  color: var(--white);
-  border: 3px solid #FFFFFF;
+.vision-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(177, 11, 14, 0.08);
+  border: 1px solid rgba(177, 11, 14, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color var(--transition-fast);
-}
-
-.ministere-card:hover .card-icon-badge {
-  background: var(--red-urhc);
-}
-
-.card-icon-badge svg {
-  width: 18px;
-  height: 18px;
-}
-
-.card-body {
-  padding: 1.8rem 1.25rem 1.4rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card-title {
-  font-family: var(--font-serif);
-  font-size: 1.22rem;
-  font-weight: 700;
-  color: var(--blue-urhc);
-  margin-bottom: 0.65rem;
-  line-height: 1.3;
-}
-
-.card-description {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
-  flex: 1;
-}
-
-.card-link {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--blue-urhc);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  transition: color var(--transition-fast);
-}
-
-.card-link .link-arrow {
-  transition: transform var(--transition-fast);
-}
-
-.card-link:hover {
   color: var(--red-urhc);
+  margin-bottom: 1.5rem;
 }
 
-.card-link:hover .link-arrow {
-  transform: translateX(4px);
+.vision-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.vision-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--blue-urhc);
+  margin-bottom: 0.85rem;
+}
+
+.vision-card-text {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
 
 /* --------------------------------------------------------------------------
-   9. SECTION "REJOIGNEZ-NOUS CHAQUE DIMANCHE À 10h00"
+   9. SECTION "LE NOUVEAU SITE EN PRÉPARATION" (4 FONCTIONNALITÉS)
    -------------------------------------------------------------------------- */
-.section-dimanche {
+.section-futur-site {
+  padding: 6.5rem 1.5rem;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.futur-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+.feature-box {
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 2.2rem 1.8rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.feature-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(13, 47, 92, 0.09);
+}
+
+.feature-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--blue-urhc);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  transition: background-color var(--transition-fast);
+}
+
+.feature-box:hover .feature-icon-badge {
+  background: var(--red-urhc);
+}
+
+.feature-icon-badge svg {
+  width: 20px;
+  height: 20px;
+}
+
+.feature-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blue-urhc);
+  margin-bottom: 0.65rem;
+}
+
+.feature-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+  flex: 1;
+}
+
+.feature-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--red-urhc);
+  background: rgba(177, 11, 14, 0.08);
+  border: 1px solid rgba(177, 11, 14, 0.25);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+/* --------------------------------------------------------------------------
+   10. SECTION CULTES & COORDONNÉES OFFICIELLES
+   -------------------------------------------------------------------------- */
+.section-cultes {
   position: relative;
   background-color: var(--blue-urhc);
   padding: 6.5rem 1.5rem;
@@ -896,13 +898,13 @@ body {
   color: var(--white);
 }
 
-.dimanche-backdrop {
+.cultes-backdrop {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.dimanche-bg-img {
+.cultes-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -910,254 +912,193 @@ body {
   filter: saturate(1.2) brightness(0.9);
 }
 
-.dimanche-overlay {
+.cultes-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(13, 47, 92, 0.94) 0%,
+    rgba(13, 47, 92, 0.95) 0%,
     rgba(10, 28, 54, 0.96) 100%
   );
 }
 
-.dimanche-layout {
+.cultes-layout {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: 4rem;
+  gap: 3.5rem;
 }
 
-.dimanche-cta-col {
-  max-width: 520px;
+.cultes-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #FF8A8C;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 
-.dimanche-title {
+.cultes-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-.dimanche-time {
+.highlight-time {
   color: #FF6B6E;
   font-style: italic;
 }
 
-.dimanche-divider {
-  width: 60px;
+.cultes-divider {
+  width: 56px;
   height: 3px;
   background: var(--red-gradient);
   border-radius: var(--radius-full);
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.5rem;
 }
 
-.dimanche-lead {
-  font-size: 1.08rem;
+.cultes-lead {
+  font-size: 1.05rem;
   color: #E2E8F0;
   line-height: 1.7;
   font-weight: 300;
   margin-bottom: 2rem;
 }
 
-.dimanche-perks {
-  list-style: none;
-  margin-bottom: 2.5rem;
+.cultes-details-box {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 1.2rem;
 }
 
-.perk-item {
+.detail-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 0.98rem;
-  font-weight: 500;
-}
-
-.perk-check {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  color: #FF8A8C;
-  font-weight: 800;
-  font-size: 0.82rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Grille 2x2 des 4 Piliers Blancs */
-.dimanche-pillars-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.4rem;
-}
-
-.pillar-box {
-  background: #FFFFFF;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 0.9rem 1.2rem;
   border-radius: var(--radius-md);
-  padding: 2.2rem 1.8rem;
-  color: var(--text-body);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.detail-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.detail-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.pillar-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+.detail-label {
+  font-size: 0.76rem;
+  color: #CBD5E1;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
 }
 
-.pillar-emblem {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: rgba(177, 11, 14, 0.08);
-  color: var(--red-urhc);
+.detail-value {
+  font-size: 0.98rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.detail-link {
+  font-size: 0.98rem;
+  color: #FF8A8C;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.detail-link:hover {
+  color: var(--white);
+}
+
+/* Colonne Droite : Carte "Une Maison Pour Tous" */
+.faith-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 2.6rem 2.2rem;
+  color: var(--text-body);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.faith-card-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 1.1rem;
 }
 
-.pillar-emblem svg {
-  width: 24px;
-  height: 24px;
-}
-
-.pillar-name {
+.faith-card-title {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--blue-urhc);
-  margin-bottom: 0.5rem;
 }
 
-.pillar-txt {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* --------------------------------------------------------------------------
-   10. SECTION "ILS TÉMOIGNENT" (AVIS DE LA COMMUNAUTÉ)
-   -------------------------------------------------------------------------- */
-.section-temoignages {
-  padding: 6.5rem 1.5rem;
-  background-color: #FFFFFF;
-  /* Fond Blanc Carrelé */
-  background-image: 
-    linear-gradient(to right, rgba(13, 47, 92, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(13, 47, 92, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-.temoignages-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-}
-
-.temoignage-card {
-  background: #FFFFFF;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  padding: 2.4rem 2rem;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
-}
-
-.temoignage-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--red-urhc-light);
-  box-shadow: 0 14px 32px rgba(13, 47, 92, 0.08);
-}
-
-.stars-row {
+.faith-badge {
+  background: rgba(177, 11, 14, 0.1);
   color: var(--red-urhc);
-  font-size: 1.15rem;
-  letter-spacing: 0.15em;
-  margin-bottom: 1.2rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
 }
 
-.temoignage-text {
-  font-size: 0.96rem;
-  color: var(--text-body);
-  line-height: 1.7;
-  font-style: italic;
-  margin-bottom: 1.8rem;
-  flex: 1;
+.faith-card-text {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
 }
 
-.temoignage-author {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-}
-
-.author-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--border-medium);
-}
-
-.author-meta {
+.faith-points {
+  list-style: none;
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-body);
 }
 
-.author-name {
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--blue-urhc);
-}
-
-.author-info {
-  font-size: 0.78rem;
-  color: var(--text-light);
-}
-
-.temoignages-pagination {
-  display: flex;
+.check-icon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-}
-
-.temoignages-pagination .dot {
-  width: 10px;
-  height: 10px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--border-strong);
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
-}
-
-.temoignages-pagination .dot.active {
-  background: var(--red-urhc);
-  transform: scale(1.2);
+  background: rgba(177, 11, 14, 0.12);
+  color: var(--red-urhc);
+  font-weight: 800;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
 }
 
 /* --------------------------------------------------------------------------
-   11. BANNIÈRE "RESTEZ CONNECTÉ" (NEWSLETTER)
+   11. SECTION "ÊTRE NOTIFIÉ DU LANCEMENT" (NEWSLETTER)
    -------------------------------------------------------------------------- */
-.section-newsletter {
-  padding: 1rem 1.5rem 5.5rem;
+.section-notification {
+  padding: 5.5rem 1.5rem;
   background-color: #FFFFFF;
 }
 
-.newsletter-card {
+.notification-card {
   position: relative;
   background-color: var(--blue-urhc-dark);
   border-radius: var(--radius-lg);
@@ -1165,13 +1106,13 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-.newsletter-bg {
+.notification-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.newsletter-bg-img {
+.notification-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1179,7 +1120,7 @@ body {
   opacity: 0.22;
 }
 
-.newsletter-overlay {
+.notification-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -1190,40 +1131,57 @@ body {
   );
 }
 
-.newsletter-content {
+.notification-content {
   position: relative;
   z-index: 1;
-  padding: 3.5rem 3rem;
+  padding: 4rem 3.5rem;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1.15fr 1fr;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
-.newsletter-title {
+.notification-tag {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #FF8A8C;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.notification-title {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 3.5vw, 2.7rem);
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 0.6rem;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
 }
 
-.newsletter-lead {
+.notification-lead {
   font-size: 1.02rem;
   color: #CBD5E1;
   line-height: 1.6;
 }
 
-.newsletter-form .input-group {
+.notification-form-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row {
   display: flex;
   align-items: center;
   background: #FFFFFF;
   border-radius: var(--radius-full);
   padding: 4px 5px 4px 1.4rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.8rem;
 }
 
-.newsletter-input {
+.notification-input {
   border: none;
   background: transparent;
   font-family: var(--font-sans);
@@ -1234,166 +1192,115 @@ body {
   padding: 0.6rem 0;
 }
 
-.btn-newsletter {
-  padding: 0.75rem 1.6rem;
+.btn-notification {
+  padding: 0.8rem 1.6rem;
   font-size: 0.92rem;
   white-space: nowrap;
 }
 
-/* --------------------------------------------------------------------------
-   12. PIED DE PAGE INSTITUTIONNEL (4 COLONNES)
-   -------------------------------------------------------------------------- */
-.site-footer {
-  background-color: var(--blue-urhc-dark);
-  color: #94A3B8;
-  padding: 5rem 1.5rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.footer-container {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1.1fr 1.3fr;
-  gap: 3.5rem;
-  margin-bottom: 3.5rem;
-}
-
-.footer-logo-row {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 1.2rem;
-}
-
-.footer-logo-badge {
-  background: #FFFFFF;
-  padding: 3px 6px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-brand-names {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-acronym {
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.12em;
-  color: var(--white);
-}
-
-.footer-full-name {
-  font-size: 0.74rem;
-  color: #CBD5E1;
-  max-width: 280px;
-  line-height: 1.25;
-}
-
-.footer-mission-text {
-  font-size: 0.88rem;
-  color: #94A3B8;
-  line-height: 1.7;
-  margin-bottom: 1.6rem;
-}
-
-.footer-social-icons {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.footer-social-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #E2E8F0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition-fast);
-}
-
-.footer-social-btn svg {
-  width: 16px;
-  height: 16px;
-}
-
-.footer-social-btn:hover {
-  background: var(--red-urhc);
-  border-color: var(--red-urhc);
-  color: var(--white);
-  transform: translateY(-2px);
-}
-
-.footer-col-title {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: 0.03em;
-  margin-bottom: 1.3rem;
-}
-
-.footer-links, .footer-contact-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.footer-links a {
-  color: #94A3B8;
-  font-size: 0.88rem;
-  text-decoration: none;
-  transition: color var(--transition-fast), transform var(--transition-fast);
-  display: inline-block;
-}
-
-.footer-links a:hover {
-  color: var(--white);
-  transform: translateX(3px);
-}
-
-.contact-entry {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  font-size: 0.88rem;
+.form-disclaimer {
+  font-size: 0.76rem;
   color: #94A3B8;
   line-height: 1.5;
 }
 
-.contact-icon {
-  width: 18px;
-  height: 18px;
-  color: var(--red-urhc-bright);
-  flex-shrink: 0;
-  margin-top: 2px;
+/* --------------------------------------------------------------------------
+   12. PIED DE PAGE INSTITUTIONNEL
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--blue-urhc-dark);
+  color: #94A3B8;
+  padding: 4.5rem 1.5rem 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
 }
 
-.footer-link-direct {
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-identity-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.footer-logo-badge {
+  background: #FFFFFF;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+  width: 46px;
+  height: auto;
+  max-height: 42px;
+  display: block;
+}
+
+.footer-brand-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.footer-acronym {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.14em;
+  color: var(--white);
+}
+
+.footer-full-name {
+  font-size: 0.88rem;
+  color: #E2E8F0;
+  max-width: 440px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  color: #94A3B8;
+  font-style: italic;
+  margin-bottom: 1.8rem;
+}
+
+.footer-page-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.footer-page-links a {
   color: #CBD5E1;
+  font-size: 0.88rem;
+  font-weight: 500;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-.footer-link-direct:hover {
+.footer-page-links a:hover {
   color: var(--white);
+}
+
+.footer-page-links .sep {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 2rem;
+  padding-top: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1403,30 +1310,14 @@ body {
   flex-wrap: wrap;
 }
 
-.footer-conception-note {
-  color: #FF8A8C;
-  font-weight: 600;
-  margin-left: 0.35rem;
-}
-
-.footer-legal-links {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.footer-legal-links a {
-  color: #64748B;
+.domain-link {
+  color: #94A3B8;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-.footer-legal-links a:hover {
-  color: #CBD5E1;
-}
-
-.footer-legal-links .sep {
-  color: rgba(255, 255, 255, 0.15);
+.domain-link:hover {
+  color: var(--white);
 }
 
 /* --------------------------------------------------------------------------
@@ -1474,162 +1365,8 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   14. MODALES INTERACTIVES & TOAST
+   14. TOAST NOTIFICATION
    -------------------------------------------------------------------------- */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(7, 21, 42, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: all var(--transition-smooth);
-}
-
-.modal-backdrop.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal-box {
-  background: #FFFFFF;
-  border-radius: var(--radius-md);
-  max-width: 500px;
-  width: 100%;
-  padding: 2.2rem;
-  position: relative;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-  transform: translateY(20px) scale(0.96);
-  transition: all var(--transition-smooth);
-}
-
-.modal-backdrop.open .modal-box {
-  transform: translateY(0) scale(1);
-}
-
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  line-height: 1;
-  color: var(--text-light);
-  cursor: pointer;
-  transition: color var(--transition-fast);
-}
-
-.modal-close:hover {
-  color: var(--red-urhc);
-}
-
-.modal-title {
-  font-family: var(--font-serif);
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--blue-urhc);
-  margin-bottom: 0.4rem;
-}
-
-.modal-subtitle {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  margin-bottom: 1.6rem;
-  line-height: 1.5;
-}
-
-.form-group {
-  margin-bottom: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  text-align: left;
-}
-
-.form-group label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--blue-urhc);
-}
-
-.form-group input, .form-group select {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-sm);
-  outline: none;
-  transition: border-color var(--transition-fast);
-}
-
-.form-group input:focus, .form-group select:focus {
-  border-color: var(--blue-urhc);
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-/* Modal Don */
-.don-text {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.4rem;
-}
-
-.don-channels {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  margin-bottom: 1.6rem;
-}
-
-.channel-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.channel-title {
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--blue-urhc);
-}
-
-.channel-detail {
-  font-size: 0.82rem;
-  color: var(--text-body);
-}
-
-.channel-status {
-  font-size: 0.76rem;
-  color: var(--red-urhc);
-  font-style: italic;
-}
-
-/* Modal Info */
-.modal-note {
-  font-size: 0.84rem;
-  color: var(--text-light);
-  line-height: 1.5;
-  margin: 1rem 0 1.5rem;
-}
-
-/* Toast */
 .toast-notification {
   position: fixed;
   bottom: 25px;
@@ -1653,7 +1390,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   15. ANIMATIONS & MICRO-INTERACTIONS
+   15. ANIMATIONS D'APPARITION PROGRESSIVE
    -------------------------------------------------------------------------- */
 .fade-in {
   opacity: 1;
@@ -1662,7 +1399,7 @@ body {
 
 html.js .fade-in {
   opacity: 0;
-  transform: translateY(22px);
+  transform: translateY(20px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
   will-change: opacity, transform;
 }
@@ -1694,31 +1431,36 @@ html.js .fade-in.visible {
     margin: 0 auto;
   }
 
-  .ministeres-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .futur-features-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .dimanche-layout {
+  .cultes-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
-  .dimanche-cta-col {
-    max-width: 100%;
+  .cultes-text-col {
     text-align: center;
   }
 
-  .dimanche-divider {
-    margin: 0 auto 1.6rem;
+  .cultes-divider {
+    margin: 0 auto 1.5rem;
   }
 
-  .dimanche-perks {
+  .cultes-details-box {
     align-items: center;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+  .detail-item {
+    max-width: 440px;
+    width: 100%;
+  }
+
+  .notification-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 3rem 2rem;
   }
 }
 
@@ -1727,26 +1469,15 @@ html.js .fade-in.visible {
     display: none;
   }
 
-  .hero-search-card {
-    border-radius: var(--radius-md);
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1.4rem;
-  }
-
-  .newsletter-content {
+  .vision-grid {
     grid-template-columns: 1fr;
-    text-align: center;
-    padding: 2.5rem 1.8rem;
-  }
-
-  .temoignages-grid {
-    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto;
   }
 
   .main-nav {
     position: fixed;
-    top: 70px;
+    top: 68px;
     left: 0;
     width: 100%;
     background: #FFFFFF;
@@ -1771,42 +1502,35 @@ html.js .fade-in.visible {
 }
 
 @media (max-width: 680px) {
-  .ministeres-grid {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-
-  .dimanche-pillars-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .newsletter-form .input-group {
-    flex-direction: column;
-    border-radius: var(--radius-sm);
-    padding: 0.8rem;
-    gap: 0.8rem;
-  }
-
-  .btn-newsletter {
-    width: 100%;
-    border-radius: var(--radius-sm);
-  }
-
   .top-bar-left {
     display: none;
   }
 
   .top-bar-container {
     justify-content: flex-end;
+  }
+
+  .futur-features-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .input-row {
+    flex-direction: column;
+    border-radius: var(--radius-sm);
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .btn-notification {
+    width: 100%;
+    border-radius: var(--radius-sm);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
