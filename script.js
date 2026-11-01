@@ -1,6 +1,6 @@
 /**
  * Église Évangélique Union Renaissance d'Hommes en Christ (URHC)
- * Interactions Single-Page : Navigation fluide, Notification & Animations
+ * Interactions Landing Page (Sans Barre de Navigation) : Défilement, Notification & Animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,25 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // 2. Menu mobile toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const mainNav = document.getElementById('mainNav');
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
-    // Fermer le menu lors du clic sur un lien
-    mainNav.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  // 3. Défilement fluide pour tous les liens d'ancrage de la page
+  // 2. Défilement fluide pour tous les liens d'ancrage de la page
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -43,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        const headerOffset = 75;
+        const headerOffset = 80;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -58,30 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Scrollspy : Mettre en surbrillance le lien actif lors du défilement
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  const updateActiveNav = () => {
-    const scrollY = window.pageYOffset;
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  };
-  window.addEventListener('scroll', updateActiveNav, { passive: true });
-
-  // 5. Toast notification
+  // 3. Toast notification
   const showToast = (message) => {
     const toast = document.getElementById('toastNotification');
     if (!toast) return;
@@ -92,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4500);
   };
 
-  // 6. Gestion du formulaire de notification de pré-lancement
+  // 4. Gestion du formulaire de notification de pré-lancement
   window.handleNotificationSubmit = (form) => {
     const emailInput = form.querySelector('#notif-email');
     const email = emailInput?.value || '';
@@ -102,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // 7. Animations progressives (IntersectionObserver)
+  // 5. Animations progressives (IntersectionObserver)
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!prefersReducedMotion && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -121,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
   }
 
-  // 8. Bouton Remonter en haut de page
+  // 6. Bouton Remonter en haut de page
   const backToTopBtn = document.getElementById('backToTop');
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
