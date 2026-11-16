@@ -6,27 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Préchargement de l'image Hero critique -->
+  <!-- Préchargement de l'image héroïque cinématique -->
   <link rel="preload" as="image" href="assets/images/hero-bg.jpg" fetchpriority="high">
 
-  <!-- =====================================================================
-       SEO & MÉTADONNÉES INSTITUTIONNELLES
-       ===================================================================== -->
-  <title>URHC — Église Évangélique Union Renaissance d’Hommes en Christ | Site Officiel en Conception</title>
-  <meta name="description" content="Landing page officielle de l'Église Évangélique Union Renaissance d’Hommes en Christ (URHC). Site officiel en conception. Une Église vivante, une foi authentique, une espérance vivante en Jésus-Christ.">
-  <meta name="keywords" content="URHC, Église Évangélique, Union Renaissance d'Hommes en Christ, foi chrétienne, Jésus-Christ, culte, louange, salut, Bénin, site officiel">
+  <!-- Métadonnées Institutionnelles & SEO -->
+  <title>URHC — Église Évangélique Union Renaissance d’Hommes en Christ | Site Officiel</title>
+  <meta name="description" content="Site officiel de l'Église Évangélique Union Renaissance d’Hommes en Christ (URHC). Fondée en 1973 au Bénin. Une Église vivante, une foi authentique et une espérance renouvelée en Jésus-Christ.">
+  <meta name="keywords" content="URHC, Église Évangélique, Union Renaissance d'Hommes en Christ, culte, louange, foi chrétienne, prédications, Bénin, église protestante">
   <meta name="author" content="Église Évangélique Union Renaissance d’Hommes en Christ">
   <meta name="robots" content="index, follow">
-  <!-- Open Graph -->
+
+  <!-- Open Graph / Réseaux Sociaux -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="URHC — Église Évangélique Union Renaissance d’Hommes en Christ">
-  <meta property="og:description" content="Site officiel en conception. Une Église vivante, une foi authentique, une espérance vivante.">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="URHC — Église Évangélique Union Renaissance d’Hommes en Christ">
-  <meta name="twitter:description" content="Site officiel en conception. Une Église vivante, une foi authentique, une espérance vivante.">
+  <meta property="og:description" content="Une communauté unie par la foi vivante en Jésus-Christ, attachée à l'autorité des Écritures et au service de son prochain.">
+  <meta property="og:image" content="assets/images/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
@@ -34,394 +29,375 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
 
-  <!-- Typographies Google Fonts -->
+  <!-- Typographies Google Fonts : Playfair Display & Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
-  <!-- Feuille de styles principale -->
+  <!-- Feuille de Styles Principale -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Données structurées Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Church",
-    "name": "Église Évangélique Union Renaissance d’Hommes en Christ",
-    "alternateName": "URHC",
-    "description": "Communauté chrétienne évangélique fondée au Bénin en 1973. Plateforme officielle en conception.",
-    "foundingDate": "1973",
-    "logo": "assets/images/logo-urhc.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "BJ"
-    }
-  }
-  </script>
 </head>
 <body>
 
-  <!-- Lien d'évitement clavier -->
+  <!-- Lien d'évitement d'accessibilité -->
   <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
 
   <!-- =========================================================
-       1. BARRE D'INFORMATIONS SUPÉRIEURE (TOP BAR)
+       1. BARRE SUPÉRIEURE D'INFORMATION (TOP BAR)
        ========================================================= -->
-  <div class="top-bar">
+  <aside class="top-bar" aria-label="Informations générales de l'Église">
     <div class="top-bar-container">
       <div class="top-bar-left">
-        <span class="motto">✦ Dieu • Famille • Communauté</span>
-        <span class="top-status-badge">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span>Site officiel en conception</span>
+        <span class="top-motto">
+          <span class="top-motto-dot">✦</span> Dieu • Famille • Communauté
         </span>
       </div>
       <div class="top-bar-center">
-        <span class="cult-time">
+        <span class="top-info-item">
           <svg class="top-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
           </svg>
-          Cultes : Dimanche à 10h00
+          Culte dominical : Dimanche à 10h00
         </span>
-        <span class="separator">|</span>
-        <span class="address">
+        <span class="top-divider">|</span>
+        <span class="top-info-item">
           <svg class="top-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
           </svg>
-          Fondée en 1973 — Bénin
+          Fondée en 1973 — République du Bénin
         </span>
       </div>
       <div class="top-bar-right">
-        <a href="#notification" class="top-link-alert">
-          Être informé du lancement →
+        <a href="donner.html" class="top-link-solennel">
+          <span>Soutenir l'œuvre</span>
+          <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>
-  </div>
+  </aside>
 
   <!-- =========================================================
-       2. EN-TÊTE PRINCIPAL INSTITUTIONNEL (SANS NAVIGATION)
+       2. EN-TÊTE PRINCIPAL & NAVIGATION ÉDITORIALE
        ========================================================= -->
   <header class="site-header" id="header" role="banner">
-    <div class="header-container">
+    <div class="header-inner">
       
-      <!-- Logo Officiel URHC -->
-      <a href="#hero" class="brand" aria-label="Accueil - URHC Église Évangélique">
-        <div class="brand-logo-badge">
-          <img src="assets/images/logo-urhc.jpg" alt="Logo officiel de l’Église URHC" class="brand-logo-img" width="48" height="44">
+      <!-- Logo et Identité Officielle -->
+      <a href="index.html" class="brand-link" aria-label="Accueil - URHC Église Évangélique">
+        <div class="brand-badge">
+          <img src="assets/images/logo-urhc.jpg" alt="Emblème officiel de l'Église URHC" class="brand-logo" width="44" height="42">
         </div>
-        <div class="brand-text">
+        <div class="brand-titles">
           <span class="brand-acronym">URHC</span>
-          <span class="brand-full-name">Église Évangélique Union Renaissance d’Hommes en Christ</span>
+          <span class="brand-name">Église Évangélique Union Renaissance d’Hommes en Christ</span>
         </div>
       </a>
 
-      <!-- Statut Officiel en Conception (Sans Barre de Navigation) -->
-      <div class="header-status-indicator" role="status">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span class="status-text">
-          <span class="status-text-full">Site officiel en conception</span>
-          <span class="status-text-short">En conception</span>
-        </span>
+      <!-- Menu Principal pour Ordinateur -->
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link active" aria-current="page">Accueil</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="a-propos.html" class="nav-link">
+            <span>L'Église</span>
+            <svg class="nav-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="a-propos.html" class="dropdown-link">À propos d'URHC</a>
+            <a href="vision-mission.html" class="dropdown-link">Vision &amp; Mission</a>
+            <a href="direction.html" class="dropdown-link">Direction Pastorale</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="ministeres.html" class="nav-link">Ministères</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="activites.html" class="nav-link">
+            <span>Vie d'Église</span>
+            <svg class="nav-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="activites.html" class="dropdown-link">Activités Hebdomadaires</a>
+            <a href="evenements.html" class="dropdown-link">Calendrier des Événements</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="predications-medias.html" class="nav-link">Prédications</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="temoignages.html" class="nav-link">Témoignages</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <!-- Actions Rapides -->
+      <div class="header-actions">
+        <a href="donner.html" class="btn-don-header">
+          <span>Faire un don</span>
+        </a>
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
 
     </div>
   </header>
 
+  <!-- Tiroir Mobile Accessible -->
+  <div class="mobile-drawer-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu principal">
+    <div class="mobile-drawer-header">
+      <div class="brand-titles">
+        <span class="brand-acronym">URHC</span>
+        <span class="brand-name">Église Évangélique</span>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileClose" aria-label="Fermer le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-drawer-nav">
+      <a href="index.html" class="mobile-nav-link active">Accueil</a>
+      <a href="a-propos.html" class="mobile-nav-link">À propos de l'Église</a>
+      <div class="mobile-submenu-group">
+        <a href="vision-mission.html" class="mobile-sub-link">Vision &amp; Mission</a>
+        <a href="direction.html" class="mobile-sub-link">Direction Pastorale</a>
+      </div>
+      <a href="ministeres.html" class="mobile-nav-link">Nos Ministères</a>
+      <a href="activites.html" class="mobile-nav-link">Activités &amp; Rencontres</a>
+      <div class="mobile-submenu-group">
+        <a href="evenements.html" class="mobile-sub-link">Calendrier des Événements</a>
+      </div>
+      <a href="predications-medias.html" class="mobile-nav-link">Prédications &amp; Médias</a>
+      <a href="temoignages.html" class="mobile-nav-link">Témoignages de Foi</a>
+      <a href="contact.html" class="mobile-nav-link">Contact &amp; Accès</a>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <a href="donner.html" class="btn btn-sacred btn-block">
+        <span>Faire un don à l'Église</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================
+       3. CONTENU PRINCIPAL
+       ========================================================= -->
   <main id="contenu-principal">
 
-    <!-- =======================================================
-         3. SECTION HERO (LANDING PAGE : SITE EN CONCEPTION)
-         ======================================================= -->
-    <section class="hero-section" id="hero" aria-labelledby="hero-title">
-      
-      <!-- Image d'arrière-plan avec superposition cinématique -->
-      <div class="hero-backdrop" aria-hidden="true">
-        <img src="assets/images/hero-bg.jpg" alt="" class="hero-bg-img" loading="eager" fetchpriority="high">
-        <div class="hero-overlay"></div>
+    <!-- HERO SECTION PRINCIPALE -->
+    <section class="hero-home" aria-labelledby="hero-title">
+      <div class="hero-home-bg" aria-hidden="true">
+        <img src="assets/images/hero-bg.jpg" alt="" class="hero-home-img" fetchpriority="high">
+        <div class="hero-home-overlay"></div>
       </div>
 
-      <div class="hero-layout-container">
-        
-        <!-- Colonne Gauche : Titre noble & Mission -->
-        <div class="hero-content fade-in">
-          <div class="hero-conception-badge">
-            <span class="badge-dot" aria-hidden="true"></span>
-            <span class="badge-text">SITE OFFICIEL EN CONCEPTION • OUVERTURE PROCHAINE</span>
-          </div>
-
-          <h1 class="hero-title" id="hero-title">
-            Une Église Vivante,<br>
-            Une Foi Authentique,<br>
-            Une <span class="highlight-urhc">Espérance Vivante.</span>
-          </h1>
-
-          <p class="hero-description">
-            L’Église Évangélique Union Renaissance d’Hommes en Christ prépare son nouvel espace numérique officiel. Un lieu de rassemblement, d’édification dans la Parole de Dieu et de rayonnement de l’Évangile.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#notification" class="btn btn-primary">
-              <span>Être notifié à l'ouverture</span>
-              <svg class="btn-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true">
-                <path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-
-            <a href="#vision" class="btn btn-outline-light">
-              <span>Découvrir notre vision</span>
-            </a>
-          </div>
+      <div class="hero-home-content fade-in">
+        <div class="hero-tag-badge">
+          <span class="hero-tag-dot" aria-hidden="true"></span>
+          <span class="hero-tag-text">Communauté Évangélique Fondée en 1973</span>
         </div>
 
-        <!-- Colonne Droite : Carte Flottante "Site en Préparation" -->
-        <div class="hero-support-card fade-in">
-          <div class="support-card-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+        <h1 class="hero-home-title" id="hero-title">
+          Une Foi Vivante. Une Espérance Solide. Une <span class="highlight-red">Identité Renouvelée</span> en Jésus-Christ.
+        </h1>
+
+        <p class="hero-home-lead">
+          Bienvenue à l'Église Évangélique Union Renaissance d’Hommes en Christ. Nous sommes une communauté unie par l'amour de Dieu, consacrée à l'enseignement des Écritures, à la sanctification et au rayonnement de l'Évangile.
+        </p>
+
+        <div class="hero-actions">
+          <a href="a-propos.html" class="btn btn-sacred">
+            <span>Découvrir notre Église</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </div>
-          <h2 class="support-card-title">Plateforme en Préparation</h2>
-          <p class="support-card-text">
-            Notre nouvelle présence en ligne se construit avec soin pour vous offrir enseignements bibliques, cultes et vie communautaire.
-          </p>
-          <div class="support-card-status">
-            <span class="status-pill">Lancement officiel très bientôt</span>
-          </div>
-          <a href="#notification" class="btn btn-primary btn-block">
-            <span>Être tenu informé</span>
+          </a>
+          <a href="predications-medias.html" class="btn btn-outline-white">
+            <span>Écouter les Prédications</span>
           </a>
         </div>
-
       </div>
-
     </section>
 
-    <!-- =======================================================
-         4. SECTION CITATION BIBLIQUE (PAROLE DE FOI)
-         ======================================================= -->
-    <section class="section-scripture" aria-label="Parole de foi et verset biblique">
-      <div class="section-container">
-        
-        <div class="scripture-card fade-in">
-          <div class="scripture-cross-emblem" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 4V36M11 14H29" stroke="var(--red-urhc)" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
+    <!-- SECTION CITATION BIBLIQUE PRINCIPALE -->
+    <section class="site-container" style="padding-top: 3.5rem;" aria-label="Verset fondateur">
+      <div class="scripture-box fade-in">
+        <blockquote class="scripture-quote">
+          « Si quelqu'un est en Christ, il est une nouvelle créature. Les choses anciennes sont passées ; voici, toutes choses sont devenues nouvelles. »
+        </blockquote>
+        <cite class="scripture-ref">2 Corinthiens 5:17 — Parole Éternelle</cite>
+      </div>
+    </section>
+
+    <!-- SECTION BIENVENUE & VOCATION -->
+    <section class="site-container" style="padding: 4.5rem 1.5rem;" aria-labelledby="welcome-title">
+      <div class="grid-2" style="align-items: center;">
+        <div class="fade-in">
+          <span class="section-tag">Bienvenue à l'URHC</span>
+          <h2 class="section-title" id="welcome-title">Un lieu de sanctification, de prière et de transformation de vie.</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle" style="margin-bottom: 1.5rem;">
+            Depuis plus de cinq décennies, l'Église Évangélique Union Renaissance d’Hommes en Christ proclame la bonne nouvelle du salut en Jésus-Christ avec fidélité, simplicité et ferveur.
+          </p>
+          <p class="section-subtitle" style="margin-bottom: 2rem;">
+            Notre vocation est de rassembler hommes, femmes, jeunes et enfants dans une communion fraternelle authentique, enracinée dans la sainte doctrine et activement engagée au service du bien commun.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="vision-mission.html" class="btn btn-primary">
+              <span>Notre Vision &amp; Mission</span>
+            </a>
+            <a href="contact.html" class="btn btn-secondary">
+              <span>Planifier une visite</span>
+            </a>
           </div>
-
-          <blockquote class="scripture-quote">
-            <span class="quote-mark" aria-hidden="true">«</span>
-            <p class="quote-text">Avec Dieu, nous ferons des exploits.</p>
-            <span class="quote-mark" aria-hidden="true">»</span>
-          </blockquote>
-
-          <cite class="scripture-reference">
-            <span class="ref-ornament" aria-hidden="true">✦</span>
-            <span>Psaume 60:14</span>
-            <span class="ref-ornament" aria-hidden="true">✦</span>
-          </cite>
         </div>
 
+        <div class="fade-in">
+          <div style="border: 1px solid var(--border-subtle); padding: 8px; background: #FFFFFF;">
+            <img src="assets/images/church-interior.jpg" alt="Sanctuaire d'adoration de l'Église URHC" style="width: 100%; height: 380px; object-fit: cover;">
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- =======================================================
-         5. SECTION "NOTRE VISION & NOS FONDEMENTS" (3 PILIERS)
-         ======================================================= -->
-    <section class="section-vision" id="vision" aria-labelledby="vision-title">
-      <div class="section-container">
-        
+    <!-- SECTION NOS 3 PILIERS FONDAMENTAUX -->
+    <section style="background-color: var(--bg-surface); padding: 6rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);" aria-labelledby="pillars-title">
+      <div class="site-container">
         <div class="section-header-center fade-in">
-          <span class="section-tag">FONDEMENTS SPIRITUELS</span>
-          <h2 class="section-title" id="vision-title">Bâtir sur le Roc, Servir avec Amour</h2>
-          <div class="section-divider" aria-hidden="true"></div>
+          <span class="section-tag">Nos Fondements Doctrinaux</span>
+          <h2 class="section-title" id="pillars-title">Trois Piliers pour Bâtir une Vie selon Dieu</h2>
+          <div class="section-divider"></div>
           <p class="section-subtitle">
-            Fondée en 1973 au Bénin, l'Église Évangélique URHC s'attache fidèlement à l'Évangile de Jésus-Christ pour fortifier les croyants et édifier la société.
+            L'URHC s'appuie sur la vérité inaltérable de la Parole de Dieu pour équiper les croyants face aux défis de leur génération.
           </p>
         </div>
 
-        <div class="vision-grid">
-          
-          <!-- Pilier 1 : La Foi & la Parole -->
-          <article class="vision-card fade-in">
-            <div class="vision-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                <line x1="12" y1="6" x2="16" y2="6"/>
-                <line x1="12" y1="10" x2="16" y2="10"/>
-              </svg>
-            </div>
-            <h3 class="vision-card-title">La Foi &amp; la Parole</h3>
-            <p class="vision-card-text">
-              Un ancrage inébranlable dans les Saintes Écritures et la prière vivante pour conduire chaque âme dans la maturité spirituelle et la fidélité au Christ.
-            </p>
-          </article>
-
-          <!-- Pilier 2 : La Communion Fraternelle -->
-          <article class="vision-card fade-in">
-            <div class="vision-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
-            <h3 class="vision-card-title">La Communion Fraternelle</h3>
-            <p class="vision-card-text">
-              Une communauté chaleureuse, unie dans l'amour du Seigneur, le partage mutuel, la louange fervente et le soutien bienveillant aux familles.
-            </p>
-          </article>
-
-          <!-- Pilier 3 : L'Espérance & le Rayonnement -->
-          <article class="vision-card fade-in">
-            <div class="vision-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
-            </div>
-            <h3 class="vision-card-title">L'Espérance &amp; le Rayonnement</h3>
-            <p class="vision-card-text">
-              Témoigner de la grâce salvatrice de Dieu, accompagner la jeunesse et participer activement au relèvement moral et spirituel de notre nation.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =======================================================
-         6. SECTION "CE QUE VOUS RETROUVEREZ BIENTÔT" (FUTUR SITE)
-         ======================================================= -->
-    <section class="section-futur-site" id="futur-site" aria-labelledby="futur-title">
-      <div class="section-container">
-        
-        <div class="section-header-center fade-in">
-          <span class="section-tag">LE NOUVEAU SITE EN PRÉPARATION</span>
-          <h2 class="section-title" id="futur-title">Ce que vous découvrirez bientôt</h2>
-          <div class="section-divider" aria-hidden="true"></div>
-          <p class="section-subtitle">
-            Un espace digital moderne, accessible à tous, conçu pour enrichir votre quotidien spirituel et faciliter vos liens avec l'Église.
-          </p>
-        </div>
-
-        <div class="futur-features-grid">
-          
-          <div class="feature-box fade-in">
-            <div class="feature-icon-badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Cultes &amp; Prédications</h3>
-            <p class="feature-text">Accédez aux retransmissions, aux enseignements du dimanche et aux messages inspirés de la Parole de Dieu.</p>
-            <span class="feature-pill">En développement</span>
-          </div>
-
-          <div class="feature-box fade-in">
-            <div class="feature-icon-badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Méditations &amp; Études</h3>
-            <p class="feature-text">Des ressources bibliques, réflexions quotidiennes et parcours d'affermissement pour nourrir votre foi.</p>
-            <span class="feature-pill">En développement</span>
-          </div>
-
-          <div class="feature-box fade-in">
-            <div class="feature-icon-badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Vie des Ministères</h3>
-            <p class="feature-text">Suivez les activités des départements : Enfants, Jeunesse, Hommes, Femmes et Groupes de maison.</p>
-            <span class="feature-pill">En développement</span>
-          </div>
-
-          <div class="feature-box fade-in">
-            <div class="feature-icon-badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Assemblées &amp; Contact</h3>
-            <p class="feature-text">Trouvez l'assemblée URHC la plus proche de chez vous et contactez directement les pasteurs et responsables.</p>
-            <span class="feature-pill">En développement</span>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =======================================================
-         7. SECTION CULTES & COORDONNÉES OFFICIELLES
-         ======================================================= -->
-    <section class="section-cultes" id="cultes" aria-labelledby="cultes-title">
-      <div class="cultes-backdrop" aria-hidden="true">
-        <img src="assets/images/church-building.jpg" alt="" class="cultes-bg-img" loading="lazy">
-        <div class="cultes-overlay"></div>
-      </div>
-
-      <div class="section-container">
-        <div class="cultes-layout">
-          
-          <div class="cultes-text-col fade-in">
-            <span class="cultes-tag">RENCONTRES HEBDOMADAIRES</span>
-            <h2 class="cultes-title" id="cultes-title">Rejoignez-nous chaque dimanche à <span class="highlight-time">10h00</span></h2>
-            <div class="cultes-divider" aria-hidden="true"></div>
-            <p class="cultes-lead">
-              En attendant la mise en ligne complète du site, nos portes sont grandes ouvertes pour vous accueillir lors de nos cultes de louange et d'édification.
-            </p>
-
-            <div class="cultes-details-box">
-              <div class="detail-item">
-                <div class="detail-icon" aria-hidden="true">🕒</div>
-                <div class="detail-content">
-                  <span class="detail-label">Culte Dominical</span>
-                  <span class="detail-value">Chaque Dimanche à 10h00</span>
-                </div>
-              </div>
-              <div class="detail-item">
-                <div class="detail-icon" aria-hidden="true">📍</div>
-                <div class="detail-content">
-                  <span class="detail-label">Origine &amp; Implantation</span>
-                  <span class="detail-value">République du Bénin — Fondée en 1973</span>
-                </div>
-              </div>
-              <div class="detail-item">
-                <div class="detail-icon" aria-hidden="true">🏛️</div>
-                <div class="detail-content">
-                  <span class="detail-label">Cadre Spirituel</span>
-                  <span class="detail-value">Communauté chrétienne évangélique</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="cultes-card-col fade-in">
-            <div class="faith-card">
-              <div class="faith-card-header">
-                <h3 class="faith-card-title">Une Maison Pour Tous</h3>
-                <span class="faith-badge">Bienvenue</span>
-              </div>
-              <p class="faith-card-text">
-                Que vous soyez en quête spirituelle, de passage ou à la recherche d'une assemblée pour grandir dans la foi, vous êtes les bienvenus au sein de la famille URHC.
+        <div class="grid-3">
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <span class="section-tag" style="margin-bottom: 0.5rem;">Pilier 01</span>
+              <h3 class="card-title">Une Église Vivante</h3>
+              <p class="card-text">
+                Une communauté vibrante d'amour fraternel et de louange sincère, habitée par le Saint-Esprit et engagée dans l'intercession continue pour les familles et la nation.
               </p>
-              <ul class="faith-points">
-                <li><span class="check-icon">✓</span> Enseignement christocentrique et biblique</li>
-                <li><span class="check-icon">✓</span> Temps de prière et d'intercession fraternelle</li>
-                <li><span class="check-icon">✓</span> Accueil bienveillant et fraternel</li>
+              <a href="a-propos.html" class="card-link">
+                <span>En savoir plus</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <span class="section-tag" style="margin-bottom: 0.5rem;">Pilier 02</span>
+              <h3 class="card-title">Une Foi Authentique</h3>
+              <p class="card-text">
+                Un attachement sans compromis à l'autorité souveraine de la Bible, à la saine doctrine du salut par grâce et à la sanctification quotidienne de chaque croyant.
+              </p>
+              <a href="vision-mission.html" class="card-link">
+                <span>Nos affirmations</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <span class="section-tag" style="margin-bottom: 0.5rem;">Pilier 03</span>
+              <h3 class="card-title">Une Espérance Vivante</h3>
+              <p class="card-text">
+                La joyeuse assurance de la résurrection en Christ et de son glorieux retour, moteur inébranlable de notre compassion envers les personnes éprouvées.
+              </p>
+              <a href="ministeres.html" class="card-link">
+                <span>Nos engagements</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CULTES & RENCONTRES (COMMUNAUTÉ) -->
+    <section class="section-worship" aria-labelledby="worship-title">
+      <div class="worship-bg" aria-hidden="true">
+        <img src="assets/images/church-building.jpg" alt="" class="worship-bg-img">
+      </div>
+
+      <div class="site-container">
+        <div class="worship-layout">
+          
+          <div class="fade-in">
+            <span class="section-tag" style="color: #FF8A8C;">Vie Liturgique &amp; Fraternelle</span>
+            <h2 class="section-title section-title-white" id="worship-title">Rejoignez-nous lors de nos cultes et rassemblements</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle section-subtitle-white" style="margin-bottom: 2.2rem;">
+              Chaque rassemblement est une opportunité bénie d'adorer le Dieu vivant, d'être instruit par sa sainte Parole et de partager une réelle communion fraternelle.
+            </p>
+
+            <div class="worship-box">
+              <span class="worship-box-icon" aria-hidden="true">🕒</span>
+              <div>
+                <p class="worship-box-title">Culte Dominical d'Adoration</p>
+                <p class="worship-box-desc">Chaque Dimanche à 10h00</p>
+              </div>
+            </div>
+
+            <div class="worship-box">
+              <span class="worship-box-icon" aria-hidden="true">📖</span>
+              <div>
+                <p class="worship-box-title">Étude Biblique &amp; Doctrine</p>
+                <p class="worship-box-desc">Chaque Mercredi à 18h30</p>
+              </div>
+            </div>
+
+            <div class="worship-box">
+              <span class="worship-box-icon" aria-hidden="true">🙏</span>
+              <div>
+                <p class="worship-box-title">Veillée de Prière &amp; Intercession</p>
+                <p class="worship-box-desc">Chaque Vendredi à 19h00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-in">
+            <div class="faith-statement-card">
+              <div class="faith-statement-header">
+                <h3 class="faith-statement-title">Une Maison Pour Tous</h3>
+                <span class="faith-statement-badge">Portes Ouvertes</span>
+              </div>
+              <p style="font-size: 0.94rem; color: var(--text-muted); line-height: 1.68;">
+                Que vous veniez pour la toute première fois ou que vous cherchiez un foyer spirituel durable, vous serez reçu avec bienveillance et respect fraternel.
+              </p>
+              <ul class="check-list">
+                <li class="check-item"><span class="check-bullet">✓</span> Prédication centrée sur Christ et la Bible</li>
+                <li class="check-item"><span class="check-bullet">✓</span> Accueil et encadrement spirituel pour enfants</li>
+                <li class="check-item"><span class="check-bullet">✓</span> Temps de prière fraternelle et d'écoute pastorale</li>
+                <li class="check-item"><span class="check-bullet">✓</span> Cadre d'adoration chaleureux et respectueux</li>
               </ul>
-              <a href="#notification" class="btn btn-primary btn-block">
-                <span>Être notifié du lancement</span>
+              <a href="contact.html" class="btn btn-primary btn-block">
+                <span>Informations pratiques pour votre visite</span>
               </a>
             </div>
           </div>
@@ -430,71 +406,405 @@
       </div>
     </section>
 
-    <!-- =======================================================
-         8. SECTION "ÊTRE NOTIFIÉ DU LANCEMENT" (NEWSLETTER)
-         ======================================================= -->
-    <section class="section-notification" id="notification" aria-labelledby="notification-title">
-      <div class="section-container">
+    <!-- SECTION MINISTÈRES EN ACTION -->
+    <section class="site-container" style="padding: 6.5rem 1.5rem;" aria-labelledby="ministries-home-title">
+      <div class="section-header-center fade-in">
+        <span class="section-tag">Service &amp; Vocation</span>
+        <h2 class="section-title" id="ministries-home-title">Des Ministères Actifs au Service du Corps du Christ</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">
+          Chaque croyant a reçu des dons de la part de Dieu pour l'édification de tous. Découvrez les différents départements où vous pouvez grandir et servir.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="editorial-card fade-in">
+          <div class="card-img-wrap">
+            <img src="assets/images/ministry-worship.jpg" alt="Chœur et adoration à l'église" class="card-img" loading="lazy">
+            <span class="card-badge">Liturgie</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Louange &amp; Adoration</h3>
+            <p class="card-text">
+              Conduire l'assemblée des fidèles dans une célébration digne, fervente et sanctifiée devant le Seigneur par les psaumes et les cantiques spirituels.
+            </p>
+            <a href="ministeres.html#louange" class="card-link">
+              <span>Découvrir ce ministère</span>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="editorial-card fade-in">
+          <div class="card-img-wrap">
+            <img src="assets/images/ministry-bible.jpg" alt="Bible ouverte pour étude approfondie" class="card-img" loading="lazy">
+            <span class="card-badge">Édification</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Enseignement Biblique</h3>
+            <p class="card-text">
+              Approfondir la compréhension de la doctrine apostolique, former les disciples de Jésus-Christ et affermir les fondements de la foi chrétienne.
+            </p>
+            <a href="ministeres.html#enseignement" class="card-link">
+              <span>Découvrir ce ministère</span>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="editorial-card fade-in">
+          <div class="card-img-wrap">
+            <img src="assets/images/ministry-social.jpg" alt="Entraide communautaire et partage" class="card-img" loading="lazy">
+            <span class="card-badge">Compassion</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Action Sociale &amp; Entraide</h3>
+            <p class="card-text">
+              Témoigner de l'amour du Christ par des actes concrets de solidarité envers les veuves, les orphelins, les malades et les personnes vulnérables.
+            </p>
+            <a href="ministeres.html#social" class="card-link">
+              <span>Découvrir ce ministère</span>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;" class="fade-in">
+        <a href="ministeres.html" class="btn btn-secondary">
+          <span>Consulter l'ensemble de nos ministères</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION DERNIÈRES PRÉDICATIONS & LECTEUR AUDIO -->
+    <section style="background-color: var(--bg-surface); padding: 6.5rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);" aria-labelledby="sermons-home-title">
+      <div class="site-container">
         
-        <div class="notification-card fade-in">
-          <div class="notification-bg" aria-hidden="true">
-            <img src="assets/images/newsletter-bg.jpg" alt="" class="notification-bg-img" loading="lazy">
-            <div class="notification-overlay"></div>
+        <div class="section-header fade-in">
+          <span class="section-tag">Nourriture Spirituelle</span>
+          <h2 class="section-title" id="sermons-home-title">Prédications &amp; Paroles d'Édification</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Écoutez les messages récents dispensés dans notre assemblée pour affermir votre marche quotidienne avec le Seigneur.
+          </p>
+        </div>
+
+        <!-- Lecteur Interactif d'Écoute -->
+        <div class="sermon-player-box fade-in" role="region" aria-label="Lecteur audio de prédication">
+          <div class="sermon-player-header">
+            <div class="sermon-now-playing">
+              <span class="now-playing-label">Message en cours d'écoute</span>
+              <h3 class="now-playing-title" id="currentSermonTitle">L'Offrande Vivante et le Renouvellement de l'Intelligence</h3>
+              <p class="now-playing-preacher" id="currentSermonPreacher">Série : Marcher dans la Grâce • Référence : Romains 12:1-2</p>
+            </div>
+            <a href="predications-medias.html" class="btn btn-secondary">
+              <span>Toutes les archives</span>
+            </a>
           </div>
 
-          <div class="notification-content">
-            <div class="notification-text">
-              <span class="notification-tag">RESTEZ CONNECTÉ</span>
-              <h2 class="notification-title" id="notification-title">Recevoir l'annonce d'ouverture</h2>
-              <p class="notification-lead">
-                Inscrivez-vous pour être prévenu par e-mail dès la mise en ligne officielle de la nouvelle plateforme numérique de l'URHC.
-              </p>
-            </div>
+          <div class="audio-controls">
+            <button type="button" class="btn-play-pause" id="btnPlayPause" aria-label="Écouter la prédication">
+              <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <svg id="pauseIcon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" style="display:none;" aria-hidden="true">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
 
-            <div class="notification-form-wrap">
-              <form class="notification-form" id="notificationForm" onsubmit="event.preventDefault(); window.handleNotificationSubmit(this);">
-                <div class="input-row">
-                  <input type="email" id="notif-email" placeholder="Votre adresse e-mail" required class="notification-input" aria-label="Votre adresse e-mail">
-                  <button type="submit" class="btn btn-primary btn-notification">
-                    <span>M'avertir du lancement</span>
-                  </button>
-                </div>
-                <p class="form-disclaimer">
-                  🔒 Vos données restent strictement confidentielles et ne seront utilisées que pour cette annonce officielle.
-                </p>
-              </form>
+            <div class="audio-progress-bar-wrap">
+              <div class="audio-progress-bar" id="audioProgressBar" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100">
+                <div class="audio-progress-fill" id="audioProgressFill"></div>
+              </div>
+              <div class="audio-timestamps">
+                <span id="audioCurrentTime">14:14</span>
+                <span id="audioTotalTime">45:32</span>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- Grille des Prédications Récents -->
+        <div class="grid-3">
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <div class="card-meta">
+                <span>Culte Dominical</span>
+                <span>•</span>
+                <span>Durée : 42 min</span>
+              </div>
+              <h3 class="card-title">La Puissance de l'Intercession en Assemblée</h3>
+              <p class="card-text">
+                Comment la prière collective fervente et continue renverse les obstacles spirituels et fait descendre la paix divine dans les foyers.
+              </p>
+              <button type="button" class="btn btn-primary btn-block" onclick="selectSermon('La Puissance de l\'Intercession en Assemblée', 'Série : Prier sans cesse • Actes 12:5', '42 min')">
+                <span>Écouter ce message</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <div class="card-meta">
+                <span>Étude Biblique</span>
+                <span>•</span>
+                <span>Durée : 38 min</span>
+              </div>
+              <h3 class="card-title">L'Alliance Scellée et la Fidélité de Dieu</h3>
+              <p class="card-text">
+                Comprendre la certitude des promesses éternelles accordées par le sang de l'alliance nouvelle et vivre dans la plénitude du salut.
+              </p>
+              <button type="button" class="btn btn-primary btn-block" onclick="selectSermon('L\'Alliance Scellée et la Fidélité de Dieu', 'Série : Les Fondements Éternels • Hébreux 9:15', '38 min')">
+                <span>Écouter ce message</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <div class="card-meta">
+                <span>Enseignement</span>
+                <span>•</span>
+                <span>Durée : 46 min</span>
+              </div>
+              <h3 class="card-title">Garder son Cœur Plus que Toute Autre Chose</h3>
+              <p class="card-text">
+                La discipline spirituelle des pensées et la veille intérieure face aux séductions contemporaines pour plaire au Seigneur.
+              </p>
+              <button type="button" class="btn btn-primary btn-block" onclick="selectSermon('Garder son Cœur Plus que Toute Autre Chose', 'Série : Sagesse selon Dieu • Proverbes 4:23', '46 min')">
+                <span>Écouter ce message</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION ÉVÉNEMENTS À VENIR -->
+    <section class="site-container" style="padding: 6.5rem 1.5rem;" aria-labelledby="events-home-title">
+      <div class="section-header-center fade-in">
+        <span class="section-tag">Agenda &amp; Célébrations</span>
+        <h2 class="section-title" id="events-home-title">Prochains Rendez-vous Communautaires</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">
+          Découvrez les conventions spirituelles, séminaires de formation et rassemblements solennels programmés au sein de notre communauté.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <article class="editorial-card fade-in">
+          <div class="card-body" style="border-left: 4px solid var(--red-urhc);">
+            <div class="card-meta">
+              <span style="color: var(--red-urhc); font-weight: 800;">Convention Annuelle</span>
+              <span>•</span>
+              <span>Du Vendredi au Dimanche</span>
+            </div>
+            <h3 class="card-title">Grande Convention Spirituelle de la Renaissance</h3>
+            <p class="card-text">
+              Trois jours solennels de louange, d'écoute de la Parole de Dieu et de prières pour le réveil spirituel, la restauration des familles et la bénédiction de la cité.
+            </p>
+            <div style="display: flex; gap: 0.85rem; align-items: center; margin-top: auto;">
+              <a href="evenements.html" class="btn btn-primary">
+                <span>Détails &amp; Programme</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="editorial-card fade-in">
+          <div class="card-body" style="border-left: 4px solid var(--blue-urhc);">
+            <div class="card-meta">
+              <span style="color: var(--blue-urhc); font-weight: 800;">Séminaire de Formation</span>
+              <span>•</span>
+              <span>Samedi de 9h00 à 16h00</span>
+            </div>
+            <h3 class="card-title">Séminaire des Hommes et Femmes d'Impact</h3>
+            <p class="card-text">
+              Journée de réflexion et d'équipement pratique : concilier engagement chrétien, responsabilités professionnelles et témoignage éthique au quotidien.
+            </p>
+            <div style="display: flex; gap: 0.85rem; align-items: center; margin-top: auto;">
+              <a href="evenements.html" class="btn btn-secondary">
+                <span>Consulter l'agenda</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION TÉMOIGNAGES ÉDIFIANTS -->
+    <section style="background-color: var(--bg-surface); padding: 6.5rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);" aria-labelledby="testimonies-home-title">
+      <div class="site-container">
+        
+        <div class="section-header-center fade-in">
+          <span class="section-tag">La Grâce à l'Œuvre</span>
+          <h2 class="section-title" id="testimonies-home-title">Témoignages de Foi et de Transformation</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            « Ils l'ont vaincu à cause du sang de l'Agneau et à cause de la parole de leur témoignage. » — Apocalypse 12:11
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <p style="font-style: italic; font-size: 0.96rem; color: var(--text-body); line-height: 1.7; margin-bottom: 1.5rem;">
+                « Lorsque j'ai franchi les portes de l'URHC, j'étais brisé par les épreuves. Les enseignements bibliques et la prière persévérante des frères ont restauré mon foyer et ranimé mon espérance. »
+              </p>
+              <div style="display: flex; align-items: center; gap: 0.85rem; margin-top: auto; border-top: 1px solid #F1F4F9; padding-top: 1rem;">
+                <img src="assets/images/testimonial-1.jpg" alt="" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                <div>
+                  <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--blue-primary); margin-bottom: 2px;">Témoignage de Restauration</h4>
+                  <span style="font-size: 0.76rem; color: var(--text-light);">Membre de l'assemblée locale</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <p style="font-style: italic; font-size: 0.96rem; color: var(--text-body); line-height: 1.7; margin-bottom: 1.5rem;">
+                « À travers le département des jeunes, j'ai découvert une véritable famille spirituelle et une formation rigoureuse dans les Écritures. Cela m'a appris à vivre ma foi chrétienne sans honte. »
+              </p>
+              <div style="display: flex; align-items: center; gap: 0.85rem; margin-top: auto; border-top: 1px solid #F1F4F9; padding-top: 1rem;">
+                <img src="assets/images/testimonial-2.jpg" alt="" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                <div>
+                  <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--blue-primary); margin-bottom: 2px;">Témoignage de la Jeunesse</h4>
+                  <span style="font-size: 0.76rem; color: var(--text-light);">Engagement au sein du chœur</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="editorial-card fade-in">
+            <div class="card-body">
+              <p style="font-style: italic; font-size: 0.96rem; color: var(--text-body); line-height: 1.7; margin-bottom: 1.5rem;">
+                « La fidélité doctrinale de l'Église et la profondeur des études bibliques hebdomadaires m'ont permis de sortir de la confusion pour m'ancrer fermement dans la grâce souveraine du salut. »
+              </p>
+              <div style="display: flex; align-items: center; gap: 0.85rem; margin-top: auto; border-top: 1px solid #F1F4F9; padding-top: 1rem;">
+                <img src="assets/images/testimonial-3.jpg" alt="" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                <div>
+                  <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--blue-primary); margin-bottom: 2px;">Témoignage de Délivrance</h4>
+                  <span style="font-size: 0.76rem; color: var(--text-light);">Responsable de cellule de prière</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;" class="fade-in">
+          <a href="temoignages.html" class="btn btn-secondary">
+            <span>Lire d'autres témoignages de fidèles</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION APPEL FINAL & ENGAGEMENT (SOUTENIR L'ŒUVRE) -->
+    <section style="background-color: var(--blue-primary); color: #FFFFFF; padding: 6.5rem 1.5rem; text-align: center;" aria-labelledby="cta-home-title">
+      <div class="site-container-narrow fade-in">
+        <span class="section-tag" style="color: #FF8A8C;">Participer à l'Avancement du Royaume</span>
+        <h2 class="section-title section-title-white" id="cta-home-title">Bâtir Ensemble pour les Générations Présentes et Futures</h2>
+        <div class="section-divider" style="margin: 0 auto 1.8rem;"></div>
+        <p class="section-subtitle section-subtitle-white" style="margin-bottom: 2.8rem;">
+          Votre soutien par vos prières, votre présence fraternelle et vos dîmes et offrandes permet de maintenir les cultes, de porter secours aux démunis et d'annoncer l'Évangile avec zèle.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+          <a href="donner.html" class="btn btn-sacred">
+            <span>Faire une offrande pour la mission</span>
+          </a>
+          <a href="contact.html" class="btn btn-outline-white">
+            <span>Écrire à la direction pastorale</span>
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <!-- =========================================================
-       9. PIED DE PAGE INSTITUTIONNEL
+       4. PIED DE PAGE INSTITUTIONNEL MAJEUR (4 COLONNES)
        ========================================================= -->
   <footer class="site-footer" role="contentinfo">
-    <div class="footer-container">
+    <div class="site-container">
       
-      <div class="footer-identity-center">
-        <!-- Logo officiel -->
-        <div class="footer-logo-badge" title="Logo officiel de l’Église URHC">
-          <img src="assets/images/logo-urhc.jpg" alt="Logo officiel de l’Église URHC" class="footer-logo-img" width="46" height="42">
+      <div class="footer-top-grid">
+        
+        <!-- Colonne 1 : Marque & Mission -->
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="assets/images/logo-urhc.jpg" alt="Logo URHC" class="footer-logo-img" width="42" height="40">
+            <span class="footer-brand-title">URHC</span>
+          </div>
+          <p class="footer-desc">
+            Église Évangélique Union Renaissance d’Hommes en Christ. Fondée en 1973 au Bénin, consacrée à l'édification des disciples, à la prédication de l'Évangile et à la gloire du Seigneur Jésus-Christ.
+          </p>
+          <p style="font-size: 0.8rem; color: #CBD5E1; font-style: italic;">
+            « Une foi vivante, une espérance inébranlable, un amour sincère. »
+          </p>
         </div>
-        <div class="footer-brand-title">
-          <span class="footer-acronym">URHC</span>
-          <span class="footer-full-name">Église Évangélique Union Renaissance d’Hommes en Christ</span>
+
+        <!-- Colonne 2 : L'Église -->
+        <div>
+          <h3 class="footer-col-title">L'Église</h3>
+          <ul class="footer-links">
+            <li><a href="a-propos.html" class="footer-link">À propos d'URHC</a></li>
+            <li><a href="vision-mission.html" class="footer-link">Vision &amp; Mission 2030</a></li>
+            <li><a href="direction.html" class="footer-link">Direction Pastorale</a></li>
+            <li><a href="ministeres.html" class="footer-link">Ministères &amp; Départements</a></li>
+            <li><a href="temoignages.html" class="footer-link">Témoignages de foi</a></li>
+          </ul>
         </div>
-        <p class="footer-tagline">
-          Plateforme officielle en cours de conception • Bientôt disponible pour la gloire de Dieu.
-        </p>
+
+        <!-- Colonne 3 : Ressources & Vie d'Église -->
+        <div>
+          <h3 class="footer-col-title">Ressources</h3>
+          <ul class="footer-links">
+            <li><a href="predications-medias.html" class="footer-link">Prédications &amp; Médias</a></li>
+            <li><a href="activites.html" class="footer-link">Activités Hebdomadaires</a></li>
+            <li><a href="evenements.html" class="footer-link">Calendrier des Événements</a></li>
+            <li><a href="contact.html" class="footer-link">Contact &amp; Secrétariat</a></li>
+            <li><a href="donner.html" class="footer-link">Soutenir l'Église (Dîmes &amp; Dons)</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Cultes & Rencontres -->
+        <div>
+          <h3 class="footer-col-title">Rencontres Hebdomadaires</h3>
+          <div class="footer-hours-box">
+            <div class="footer-hours-item">
+              <span style="font-weight: 700; color: #FFFFFF;">Dimanche</span>
+              <span>10h00 • Culte Dominical</span>
+            </div>
+            <div class="footer-hours-item">
+              <span style="font-weight: 700; color: #FFFFFF;">Mercredi</span>
+              <span>18h30 • Étude Biblique</span>
+            </div>
+            <div class="footer-hours-item">
+              <span style="font-weight: 700; color: #FFFFFF;">Vendredi</span>
+              <span>19h00 • Prière &amp; Intercession</span>
+            </div>
+            <div class="footer-hours-item">
+              <span style="font-weight: 700; color: #FFFFFF;">Samedi</span>
+              <span>16h00 • Chorale &amp; Répétitions</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-copyright">
+        <div>
           &copy; 2026 Église Évangélique Union Renaissance d’Hommes en Christ. Tous droits réservés.
+        </div>
+        <div>
+          République du Bénin • Foi • Vérité • Sanctification
         </div>
       </div>
 
@@ -502,14 +812,11 @@
   </footer>
 
   <!-- Bouton Remonter en haut de page -->
-  <button type="button" class="back-to-top" id="backToTop" aria-label="Remonter en haut de page">
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Remonter en haut de la page">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
-
-  <!-- Notification Toast -->
-  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite"></div>
 
   <!-- Script des interactions légères -->
   <script src="script.js"></script>

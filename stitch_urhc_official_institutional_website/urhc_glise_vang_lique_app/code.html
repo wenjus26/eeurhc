@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}*{-webkit-border-radius:0px!important;border-radius:0px!important;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#93000f", "on-error-container": "#93000a", "primary-container": "#12345a", "on-tertiary-fixed": "#101c2a", "error-container": "#ffdad6", "on-tertiary-container": "#909cae", "on-primary-container": "#809dc9", "on-secondary-container": "#fffbff", "surface-container-high": "#dde9fd", "secondary-container": "#db3231", "on-secondary": "#ffffff", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "inverse-on-surface": "#eaf1ff", "on-error": "#ffffff", "inverse-primary": "#aac8f6", "surface-container-lowest": "#ffffff", "surface-dim": "#cfdbef", "secondary-fixed-dim": "#ffb3ac", "secondary-fixed": "#ffdad6", "outline-variant": "#c3c6cf", "tertiary": "#131f2d", "background": "#f8f9ff", "tertiary-container": "#283443", "on-surface": "#111c2b", "surface-container-low": "#eff4ff", "surface-container-highest": "#d8e3f7", "on-primary-fixed": "#001c39", "primary-fixed": "#d4e3ff", "surface-tint": "#426088", "on-primary-fixed-variant": "#29486f", "outline": "#73777f", "surface": "#f8f9ff", "on-tertiary": "#ffffff", "surface-variant": "#d8e3f7", "surface-container": "#e6eeff", "primary-fixed-dim": "#aac8f6", "on-tertiary-fixed-variant": "#3c4857", "on-secondary-fixed": "#410003", "primary": "#001f3e", "secondary": "#b7141c", "tertiary-fixed-dim": "#bbc7da", "on-surface-variant": "#43474e", "tertiary-fixed": "#d7e3f7", "inverse-surface": "#263140", "error": "#ba1a1a", "on-background": "#111c2b" }, borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px" }, spacing: { "space-sm": "0.5rem", "margin-desktop": "4rem", "margin": "1.25rem", "space-lg": "1.5rem", "gutter-desktop": "2.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.5rem" }, fontFamily: { "headline-lg-mobile": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "display-hero": ["Playfair Display"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "label-meta": ["Manrope"], "headline-sm": ["Playfair Display"], "body-sm": ["Manrope"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "label-nav": ["Manrope"] }, fontSize: { "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "600" }], "display-hero-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-nav": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Menu Principal" class="w-11 h-11 flex items-center justify-center text-primary bg-transparent hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="URHC Logo Officiel" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VcYJLWcOvqgKbswax2a10z6Ru9UATUNsSbAVhskWoekmFIzTi7LW2YvTiW6uUvZTHnCs2LNVmivLMJOI74wK6gR-Pde6xYS6k7vKtlxs1UWnI-hIxPLxpIqh7JAX37DCQ63SASIup5xGFSmQe_JsmTW1gzNMBKEkUDeTYDje5dkKnm51paqfURCdyrlZKNAcpkDD2RcD8zUdkCh7aRXeZiINeJruE-SjO-n48TIOrTzg"/><div class="flex flex-col ml-space-xs"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary leading-none">URHC</span><span class="font-label-meta text-label-meta tracking-wider text-on-surface-variant uppercase leading-none mt-0.5">Église Évangélique</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xs:block text-right mr-1"><span class="block font-headline-sm text-headline-sm text-primary leading-none">Accueil</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfT1BYZvwUssBV5akrMTWptppS3lTOHQIHQFqzPzPCG-jdqtWWsORVGLE_uUliMVGfN0nAddtA3HsotY-A6dsv7dH8RbhG2vum_sol7BqMn73zdFBkSJcMMsp5TxydGgI28f4d2-qgwMhWbzwMBK82UALq2VjMaTcGtXRdOAHu8BJUzGyf1B8IMkpMBabmOMIRcvJGMJP7mlWxY0K7c5pLEQvmRAQPZt4K5hRlMikp"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full bg-primary flex flex-col justify-end overflow-hidden">
+<div class="relative w-full h-[520px]">
+<img alt="Célébration et adoration solennelle au sanctuaire URHC" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmvV3jQ2duuxAxazOJtH8GbimQj51oTYadF6QxEKue8X9LPeZb-rYpYhTa7FOjUeFLRHAO_uELkXSmbGiblK8zms70XzYzNyT1jbiqccMlHJv4qKvZ_wHoaEMam-80nkXmUO_J6RD2tgOYuk7eGj3d_icbAKCIqD1lHTmXKwvgjg_-eyI954xCMcLxgH5LEGry2hlcLX112oqcMAeBg0W50PYrTO7NIDeyFIwwjosb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+<div class="absolute inset-x-0 bottom-0 px-margin pb-space-lg flex flex-col gap-space-md text-on-primary">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2.5 h-2.5 bg-secondary"></span>
+<span class="font-label-meta text-label-meta tracking-widest uppercase text-secondary-fixed">Union Renaissance d'Hommes en Christ</span>
+</div>
+<h1 class="font-display-hero-mobile text-display-hero-mobile font-semibold leading-tight text-on-primary">
+          UNE FOI VIVANTE.<br/>
+<span class="italic font-normal text-primary-fixed">UNE IDENTITÉ</span> RENOUVELÉE.
+        </h1>
+<p class="font-body-md text-body-md text-surface-container-high leading-relaxed max-w-xl">
+          Bienvenue à l'Église Évangélique Union Renaissance d'Hommes en Christ. Découvrez une communauté unie par la foi en Jésus-Christ et engagée dans une vie de transformation.
+        </p>
+<div class="flex flex-col sm:flex-row gap-space-sm pt-space-xs">
+<a class="inline-flex items-center justify-center px-6 py-3.5 bg-secondary text-on-secondary font-label-nav text-label-nav uppercase tracking-widest transition-colors hover:bg-secondary-container" href="#visite">
+<span>Découvrir notre Église</span>
+<span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-6 py-3.5 bg-surface-container-lowest text-primary font-label-nav text-label-nav uppercase tracking-widest transition-colors hover:bg-surface-container-high" href="#rejoindre">
+<span>Nous rejoindre</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Ruban Culte Hebdomadaire -->
+<div class="w-full bg-primary-container text-on-primary px-margin py-3.5 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">calendar_clock</span>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-on-primary-container">Rassemblement Dominical</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-primary">Dimanche 09h00 &amp; 11h30 · Culte de Célébration</span>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-secondary text-on-secondary font-label-meta text-[10px] uppercase font-bold tracking-widest">En Présentiel</span>
+</div>
+</section>
+<!-- 2. IDENTITÉ INSTITUTIONNELLE (Architecture & Fondations) -->
+<section class="w-full bg-surface-container-low px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Fondements Doctrinaux</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-primary">NOTRE VOCATION</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Une communauté ancrée dans la Parole immuable de Dieu, dédiée au rayonnement de la grâce et à l'édification de chaque croyant.
+      </p>
+</div>
+<!-- Image Cadre Documentaire -->
+<div class="w-full bg-surface-container-lowest overflow-hidden">
+<img alt="Architecture du sanctuaire intérieur et croix solennelle en bois" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArwJsXFfwsfLCZQu6pq2Tpz4vAXBVqmVHt19LXRPAHY_Kh9lzxMwWos3PTdEJH9a2OIc9xs6aopH8K04YUy_f65ssb7gfX2Sn8wqmMHPbWRVlfKvBoH5FzVlQhHjXQRVkdA5G8COmdFfubxf51IDi8oM4AbMMNCAyIb6gHF0EXrOWhZxKbThXNZOMIgmy_KlrfJOeAjvJO9agZJZaVxMoYYZtsYs_ghoCMIGD5jYhi"/>
+<div class="p-space-md bg-surface-container-lowest">
+<span class="font-label-meta text-label-meta text-outline uppercase tracking-wider block">Sanctuaire Principal · Espace de Recueillement</span>
+<p class="font-headline-sm text-headline-sm italic text-primary mt-1">« Là où deux ou trois sont assemblés en mon nom, je suis au milieu d'eux. »</p>
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-semibold mt-1 block">Matthieu 18:20</span>
+</div>
+</div>
+<!-- Grille des 4 Piliers Suisse -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-lg flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">01.</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Notre Histoire</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Enracinée dans l'Évangile et la grâce salvatrice, l'URHC chemine depuis des décennies avec fidélité, transmettant l'héritage d'une foi vivante et inébranlable.
+        </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">02.</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Notre Vision</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Bâtir des hommes et des femmes transformés par l'Esprit Saint, capables d'impacter leur foyer, leur milieu professionnel et la société tout entière.
+        </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">03.</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Notre Mission</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Proclamer fidèlement la Parole, servir notre prochain avec un haut niveau d'excellence et équiper chaque génération par l'enseignement doctrinal rigoureux.
+        </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">04.</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Nos Valeurs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Attachement sans compromis à la vérité biblique, amour fraternel agissant, intégrité morale, sobriété et engagement civique et spirituel permanent.
+        </p>
+</div>
+</div>
+</section>
+<!-- 3. VIE SPIRITUELLE & ENSEIGNEMENTS -->
+<section class="w-full bg-surface px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Nourriture Spirituelle</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-primary">PAROLE &amp; FORMATION</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Des prédications expositives et des parcours d'études bibliques pour affermir votre marche quotidienne.
+      </p>
+</div>
+<!-- Lecteur Message Récent Solennel -->
+<div class="bg-primary text-on-primary p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 bg-secondary text-on-secondary font-label-meta text-[10px] uppercase font-bold tracking-widest">Dernier Sermon</span>
+<span class="font-label-meta text-label-meta text-primary-fixed uppercase tracking-wider">Culte du 12 Avril 2026</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-primary">
+          La Marche dans la Liberté de l'Esprit
+        </h3>
+<p class="font-body-sm text-body-sm text-surface-container-high italic">
+          « Or, le Seigneur c'est l'Esprit ; et là où est l'Esprit du Seigneur, là est la liberté. » — 2 Corinthiens 3:17
+        </p>
+<span class="font-label-meta text-label-meta text-secondary-fixed uppercase tracking-wider font-semibold">Par le Pasteur Principal</span>
+</div>
+<!-- Lecteur Audio Contrôles Minimaux -->
+<div class="bg-tertiary-container p-space-md flex flex-col gap-space-sm text-on-surface">
+<div class="flex items-center justify-between text-on-primary-container text-body-sm">
+<span id="current-time">14:32</span>
+<span class="font-label-meta text-label-meta text-surface-dim uppercase tracking-wider">Durée totale 48:10</span>
+<span>48:10</span>
+</div>
+<!-- Curseur Audio Interactif -->
+<div class="w-full bg-primary h-2 relative cursor-pointer" id="audio-scrubber">
+<div class="bg-secondary h-2 w-[30%]" id="audio-progress"></div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<button aria-label="Reculer 15 secondes" class="text-on-primary hover:text-secondary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">replay_10</span>
+</button>
+<button aria-label="Lire ou mettre en pause" class="w-12 h-12 bg-secondary text-on-secondary flex items-center justify-center transition-colors hover:bg-secondary-container" id="play-btn" type="button">
+<span class="material-symbols-outlined text-[28px]" id="play-icon">play_arrow</span>
+</button>
+<button aria-label="Avancer 15 secondes" class="text-on-primary hover:text-secondary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">forward_10</span>
+</button>
+<a class="flex items-center text-primary-fixed hover:text-on-primary text-body-sm font-semibold" href="#" title="Télécharger le fichier audio MP3">
+<span class="material-symbols-outlined text-[20px] mr-1">download</span>
+<span class="hidden sm:inline font-label-meta text-label-meta uppercase">Audio MP3</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Liste Hiérarchisée des Formations Spirituelles -->
+<div class="flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest p-space-md flex items-start justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-high text-primary font-label-meta text-[10px] uppercase font-bold tracking-wider">Chaque Dimanche</span>
+<span class="font-label-meta text-label-meta text-outline">09h00 &amp; 11h30</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-primary">Prédications Dominicales</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Explication systématique verset par verset pour affermir votre théologie pratique.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px] self-center">arrow_forward</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md flex items-start justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-high text-primary font-label-meta text-[10px] uppercase font-bold tracking-wider">Mercredi Soir</span>
+<span class="font-label-meta text-label-meta text-outline">18h30 - 20h00</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-primary">Études Bibliques Fondamentales</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Approfondissement des doctrines évangéliques, étude de textes et questions-réponses interactives.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px] self-center">arrow_forward</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md flex items-start justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-high text-primary font-label-meta text-[10px] uppercase font-bold tracking-wider">Cycles Trimestriels</span>
+<span class="font-label-meta text-label-meta text-outline">Sur Inscription</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-primary">Séminaires Doctrinaux &amp; Discipulat</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Formation théologique structurée pour responsables, nouveaux convertis et conducteurs de cellule.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px] self-center">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- 4. COMMUNAUTÉ & MINISTÈRES -->
+<section class="w-full bg-surface-container-low px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">La Vie Fraternelle</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-primary">UNE COMMUNAUTÉ EN MARCHE</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Chaque tranche d'âge et chaque vocation trouve son lieu d'épanouissement au sein des départements ministériels de l'église.
+      </p>
+</div>
+<!-- Grille des Ministères -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Ministère Hommes -->
+<div class="bg-surface-container-lowest flex flex-col">
+<div class="p-space-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Département Central</span>
+<span class="material-symbols-outlined text-primary text-[24px]">diversity_3</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Hommes d'Impact</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Encourager la sanctification, l'assomption du leadership familial exemplaire, le mentorat fraternel et l'intégrité civique et spirituelle.
+          </p>
+<div class="mt-space-sm pt-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase tracking-wider block">Rencontre : Chaque 2e samedi du mois</span>
+</div>
+</div>
+</div>
+<!-- Ministère Femmes -->
+<div class="bg-surface-container-lowest flex flex-col">
+<div class="p-space-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Département Féminin</span>
+<span class="material-symbols-outlined text-primary text-[24px]">spa</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Femmes de Foi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Prière persévérante, soutien bienveillant entre sœurs, affermissement biblique et service actif auprès des plus vulnérables.
+          </p>
+<div class="mt-space-sm pt-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase tracking-wider block">Rencontre : Chaque 3e samedi du mois</span>
+</div>
+</div>
+</div>
+<!-- Ministère Jeunesse -->
+<div class="bg-surface-container-lowest flex flex-col">
+<div class="p-space-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Nouvelle Génération</span>
+<span class="material-symbols-outlined text-primary text-[24px]">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Jeunesse Impact (15-30 ans)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Une génération sanctifiée, audacieuse et solide dans la vérité, équipée pour relever les défis académiques et moraux de notre époque.
+          </p>
+<div class="mt-space-sm pt-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase tracking-wider block">Rencontre : Samedi après-midi · 16h30</span>
+</div>
+</div>
+</div>
+<!-- Action Sociale -->
+<div class="bg-surface-container-lowest flex flex-col">
+<div class="p-space-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Compassion Pratique</span>
+<span class="material-symbols-outlined text-primary text-[24px]">volunteer_activism</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Action Sociale &amp; Entraide</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Assistance alimentaire, visites hospitalières, accompagnement pastoral aux personnes isolées et solidarité fraternelle active.
+          </p>
+<div class="mt-space-sm pt-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase tracking-wider block">Permanence : Mardi &amp; Jeudi matin</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECTION ÉVÉNEMENTS & RENCONTRES -->
+<section class="w-full bg-surface px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex items-end justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Agenda Liturgique</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-primary">ÉVÉNEMENTS &amp; CULTES</h2>
+</div>
+<a class="hidden sm:inline-flex items-center text-primary font-label-nav text-label-nav uppercase tracking-wider hover:text-secondary" href="#">
+<span>Calendrier Annuel</span>
+<span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+</a>
+</div>
+<!-- Événements Liste Suisse avec Cartes Structurées -->
+<div class="flex flex-col gap-space-sm">
+<!-- Événement 1 -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 bg-primary text-on-primary flex flex-col items-center justify-center shrink-0">
+<span class="font-label-meta text-label-meta uppercase font-bold text-secondary-fixed">DIM</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">19</span>
+<span class="font-label-meta text-[9px] uppercase tracking-wider text-surface-container-high">AVRIL</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-secondary font-semibold">Culte Spécial de Sainte-Cène</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Communion &amp; Sanctification Fraternelle</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 09h30 — 12h00 · Sanctuaire Principal
+            </p>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between shrink-0">
+<span class="px-2.5 py-1 bg-surface-container-high text-primary font-label-meta text-[10px] uppercase font-bold tracking-wider">Tous publics</span>
+<a class="font-label-nav text-label-nav text-secondary uppercase tracking-wider font-bold hover:underline flex items-center mt-2" href="#">
+<span>Détails</span>
+<span class="material-symbols-outlined text-[16px] ml-0.5">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Événement 2 -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 bg-primary-container text-on-primary flex flex-col items-center justify-center shrink-0">
+<span class="font-label-meta text-label-meta uppercase font-bold text-secondary-fixed">SAM</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">25</span>
+<span class="font-label-meta text-[9px] uppercase tracking-wider text-surface-container-high">AVRIL</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-secondary font-semibold">Conférence Thématique</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Séminaire National des Hommes d'Impact</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 08h30 — 16h00 · Salle Polyvalente URHC
+            </p>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between shrink-0">
+<span class="px-2.5 py-1 bg-surface-container-high text-primary font-label-meta text-[10px] uppercase font-bold tracking-wider">Inscription Requise</span>
+<a class="font-label-nav text-label-nav text-secondary uppercase tracking-wider font-bold hover:underline flex items-center mt-2" href="#">
+<span>Détails</span>
+<span class="material-symbols-outlined text-[16px] ml-0.5">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Événement 3 -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 bg-surface-container-highest text-primary flex flex-col items-center justify-center shrink-0">
+<span class="font-label-meta text-label-meta uppercase font-bold text-secondary">VEN</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">01</span>
+<span class="font-label-meta text-[9px] uppercase tracking-wider text-on-surface-variant">MAI</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-secondary font-semibold">Veillée d'Intercession</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Nuit de Prière &amp; d'Alignement Spirituel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 21h00 — 05h00 · Sanctuaire &amp; En Ligne
+            </p>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between shrink-0">
+<span class="px-2.5 py-1 bg-secondary text-on-secondary font-label-meta text-[10px] uppercase font-bold tracking-wider">Diffusé En Direct</span>
+<a class="font-label-nav text-label-nav text-secondary uppercase tracking-wider font-bold hover:underline flex items-center mt-2" href="#">
+<span>Détails</span>
+<span class="material-symbols-outlined text-[16px] ml-0.5">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. NOUS REJOINDRE (Invitation Chaleureuse) -->
+<section class="w-full bg-primary text-on-primary px-margin py-space-xl flex flex-col gap-space-lg" id="rejoindre">
+<div class="flex flex-col gap-space-xs text-center items-center">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary-fixed font-bold">Première Visite</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-on-primary">VOUS ÊTES LES BIENVENUS</h2>
+<p class="font-body-md text-body-md text-surface-container-high max-w-xl">
+        Que vous cherchiez un foyer spirituel, une réponse à vos interrogations ou simplement un temps de recueillement, notre équipe d'accueil vous réserve une écoute fraternelle.
+      </p>
+</div>
+<!-- 3 Étapes pour les Nouveaux Venants -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm text-left">
+<div class="bg-primary-container p-space-md flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">A.</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-primary">Accueil Personnalisé</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+          Dès votre arrivée sur le parvis, des frères et sœurs dévoués sont présents pour vous guider vers le sanctuaire et répondre à vos questions pratiques.
+        </p>
+</div>
+<div class="bg-primary-container p-space-md flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">B.</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-primary">Accueil des Enfants</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+          Une équipe pédagogique chrétienne qualifiée prend en charge vos enfants dans des salles sécurisées avec un enseignement adapté à leur âge.
+        </p>
+</div>
+<div class="bg-primary-container p-space-md flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">C.</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-primary">Moment Fraternel</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+          À l'issue du culte, partagez un café ou une boisson chaude dans notre espace d'échange avec le collège pastoral.
+        </p>
+</div>
+</div>
+<!-- Formulaire d'Annonce de Visite -->
+<div class="bg-surface-container-lowest text-on-surface p-space-lg flex flex-col gap-space-md" id="visite">
+<div class="flex flex-col gap-1">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Préparer votre venue</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Planifier une Visite</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Laissez-nous vos coordonnées afin que notre équipe vous accueille dès votre arrivée.</p>
+</div>
+<form class="flex flex-col gap-space-sm" id="visit-form" onsubmit="event.preventDefault(); document.getElementById('visit-success').classList.remove('hidden'); this.reset();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Nom &amp; Prénom</label>
+<input class="w-full bg-surface-container-low px-4 py-3 text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="Ex. Jean-Marc Dupont" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Adresse E-mail</label>
+<input class="w-full bg-surface-container-low px-4 py-3 text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="jean.marc@exemple.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Téléphone / WhatsApp</label>
+<input class="w-full bg-surface-container-low px-4 py-3 text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="+33 6 00 00 00 00" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Date souhaitée</label>
+<input class="w-full bg-surface-container-low px-4 py-3 text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" required="" type="date"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Avez-vous des questions particulières ?</label>
+<textarea class="w-full bg-surface-container-low px-4 py-3 text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest resize-none" placeholder="Précisez si vous venez avec des enfants ou si vous avez besoin d'une assistance particulière..." rows="2"></textarea>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<button class="w-full sm:w-auto px-8 py-3.5 bg-secondary text-on-secondary font-label-nav text-label-nav uppercase tracking-widest transition-colors hover:bg-secondary-container" type="submit">
+            Confirmer ma visite
+          </button>
+</div>
+</form>
+<div class="hidden bg-surface-container-high p-space-md text-primary font-body-sm flex items-center gap-space-sm" id="visit-success">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<span>Merci pour votre démarche ! Notre équipe pastorale et d'accueil vous contactera très rapidement. Soyez béni(e) !</span>
+</div>
+</div>
+</section>
+<!-- 7. FOOTER INSTITUTIONNEL -->
+<footer class="w-full bg-tertiary text-on-tertiary px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg">
+<!-- Colonne Marque URHC -->
+<div class="flex flex-col gap-space-sm md:col-span-1">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-3 h-3 bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-tertiary leading-none">URHC</span>
+</div>
+<span class="font-label-meta text-label-meta text-secondary-fixed uppercase tracking-widest font-semibold">Église Évangélique</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-container leading-relaxed">
+          Union Renaissance d'Hommes en Christ. Sanctification, foi agissante, amour fraternel et proclamation de la vérité scripturaire.
+        </p>
+</div>
+<!-- Colonne Cultes & Horaires -->
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Rassemblements</h4>
+<div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-tertiary-container">
+<span class="text-on-tertiary font-semibold">Dimanche 09h00 :</span>
+<span>1er Culte de Louange &amp; Enseignement</span>
+<span class="text-on-tertiary font-semibold mt-1">Dimanche 11h30 :</span>
+<span>2e Culte de Célébration Solennelle</span>
+<span class="text-on-tertiary font-semibold mt-1">Mercredi 18h30 :</span>
+<span>Étude Biblique &amp; Prière</span>
+</div>
+</div>
+<!-- Colonne Coordonnées & Lieu -->
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Siège &amp; Sanctuaire</h4>
+<div class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-tertiary-container">
+<span class="text-on-tertiary font-semibold">Sanctuaire Central URHC</span>
+<span>12, Avenue de la Renaissance Chrétienne</span>
+<span>Tél : +33 (0)1 42 00 00 00</span>
+<span>WhatsApp : +33 (0)6 12 34 56 78</span>
+<span>Courriel : contact@urhc-eglise.org</span>
+</div>
+</div>
+<!-- Colonne Navigation Rapide -->
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-label-meta text-label-meta uppercase tracking-widest text-secondary font-bold">Accès Rapide</h4>
+<ul class="flex flex-col gap-1 font-body-sm text-body-sm text-on-tertiary-container">
+<li><a class="hover:text-on-tertiary transition-colors" href="#">Déclaration de Foi</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#">Collège Pastoral &amp; Diacres</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#">Dîmes &amp; Offrandes en Ligne</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#">Demande de Prière Pastorale</a></li>
+<li><a class="hover:text-on-tertiary transition-colors" href="#">Contact du Secrétariat</a></li>
+</ul>
+</div>
+</div>
+<!-- Barre Inférieure Mentions & Droits -->
+<div class="pt-space-md flex flex-col sm:flex-row items-center justify-between text-on-tertiary-container font-label-meta text-[11px] gap-space-xs">
+<span>© 2026 Église Évangélique URHC — Tous droits réservés.</span>
+<div class="flex items-center gap-space-md">
+<a class="hover:text-on-tertiary transition-colors" href="#">Mentions Légales</a>
+<span>·</span>
+<a class="hover:text-on-tertiary transition-colors" href="#">Protection des Données</a>
+<span>·</span>
+<a class="hover:text-on-tertiary transition-colors" href="#">Statuts Canoniques</a>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  (function() {
+    const playBtn = document.getElementById('play-btn');
+    const playIcon = document.getElementById('play-icon');
+    const scrubber = document.getElementById('audio-scrubber');
+    const progress = document.getElementById('audio-progress');
+    const currentTimeEl = document.getElementById('current-time');
+    
+    let isPlaying = false;
+    let currentSeconds = 14 * 60 + 32;
+    const totalSeconds = 48 * 60 + 10;
+    let timer = null;
+
+    if (playBtn && playIcon) {
+      playBtn.addEventListener('click', function() {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          playIcon.textContent = 'pause';
+          timer = setInterval(function() {
+            if (currentSeconds < totalSeconds) {
+              currentSeconds++;
+              updateProgress();
+            } else {
+              clearInterval(timer);
+              isPlaying = false;
+              playIcon.textContent = 'play_arrow';
+            }
+          }, 1000);
+        } else {
+          playIcon.textContent = 'play_arrow';
+          if (timer) clearInterval(timer);
+        }
+      });
+    }
+
+    if (scrubber) {
+      scrubber.addEventListener('click', function(e) {
+        const rect = scrubber.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
+        const percentage = Math.max(0, Math.min(1, clickX / width));
+        currentSeconds = Math.floor(percentage * totalSeconds);
+        updateProgress();
+      });
+    }
+
+    function updateProgress() {
+      const percentage = (currentSeconds / totalSeconds) * 100;
+      if (progress) progress.style.width = percentage + '%';
+      if (currentTimeEl) {
+        const mins = Math.floor(currentSeconds / 60);
+        const secs = currentSeconds % 60;
+        currentTimeEl.textContent = mins + ':' + (secs < 10 ? '0' : '') + secs;
+      }
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary border-t-2 border-secondary bg-surface-container-low"><div class="grid grid-cols-5 items-stretch h-16 w-full"><a aria-current="page" class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] transition-colors text-secondary border-t-2 border-secondary bg-surface-container-low" data-path="accueil" href="#"><span class="material-symbols-outlined text-[20px]">church</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Accueil</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="notre-eglise" href="#"><span class="material-symbols-outlined text-[20px]">info</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Église</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="enseignements" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Sermons</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="activites" href="#"><span class="material-symbols-outlined text-[20px]">event</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Activités</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="nous-rejoindre" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Rejoindre</span></a></div></nav></body></html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}*{-webkit-border-radius:0px!important;border-radius:0px!important;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#93000f", "on-error-container": "#93000a", "primary-container": "#12345a", "on-tertiary-fixed": "#101c2a", "error-container": "#ffdad6", "on-tertiary-container": "#909cae", "on-primary-container": "#809dc9", "on-secondary-container": "#fffbff", "surface-container-high": "#dde9fd", "secondary-container": "#db3231", "on-secondary": "#ffffff", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "inverse-on-surface": "#eaf1ff", "on-error": "#ffffff", "inverse-primary": "#aac8f6", "surface-container-lowest": "#ffffff", "surface-dim": "#cfdbef", "secondary-fixed-dim": "#ffb3ac", "secondary-fixed": "#ffdad6", "outline-variant": "#c3c6cf", "tertiary": "#131f2d", "background": "#f8f9ff", "tertiary-container": "#283443", "on-surface": "#111c2b", "surface-container-low": "#eff4ff", "surface-container-highest": "#d8e3f7", "on-primary-fixed": "#001c39", "primary-fixed": "#d4e3ff", "surface-tint": "#426088", "on-primary-fixed-variant": "#29486f", "outline": "#73777f", "surface": "#f8f9ff", "on-tertiary": "#ffffff", "surface-variant": "#d8e3f7", "surface-container": "#e6eeff", "primary-fixed-dim": "#aac8f6", "on-tertiary-fixed-variant": "#3c4857", "on-secondary-fixed": "#410003", "primary": "#001f3e", "secondary": "#b7141c", "tertiary-fixed-dim": "#bbc7da", "on-surface-variant": "#43474e", "tertiary-fixed": "#d7e3f7", "inverse-surface": "#263140", "error": "#ba1a1a", "on-background": "#111c2b" }, borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px" }, spacing: { "space-sm": "0.5rem", "margin-desktop": "4rem", "margin": "1.25rem", "space-lg": "1.5rem", "gutter-desktop": "2.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.5rem" }, fontFamily: { "headline-lg-mobile": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "display-hero": ["Playfair Display"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "label-meta": ["Manrope"], "headline-sm": ["Playfair Display"], "body-sm": ["Manrope"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "label-nav": ["Manrope"] }, fontSize: { "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "600" }], "display-hero-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-nav": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Menu Principal" class="w-11 h-11 flex items-center justify-center text-primary bg-transparent hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="URHC Logo Officiel" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VcYJLWcOvqgKbswax2a10z6Ru9UATUNsSbAVhskWoekmFIzTi7LW2YvTiW6uUvZTHnCs2LNVmivLMJOI74wK6gR-Pde6xYS6k7vKtlxs1UWnI-hIxPLxpIqh7JAX37DCQ63SASIup5xGFSmQe_JsmTW1gzNMBKEkUDeTYDje5dkKnm51paqfURCdyrlZKNAcpkDD2RcD8zUdkCh7aRXeZiINeJruE-SjO-n48TIOrTzg"/><div class="flex flex-col ml-space-xs"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary leading-none">URHC</span><span class="font-label-meta text-label-meta tracking-wider text-on-surface-variant uppercase leading-none mt-0.5">Église Évangélique</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xs:block text-right mr-1"><span class="block font-headline-sm text-headline-sm text-primary leading-none">Enseignements</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfT1BYZvwUssBV5akrMTWptppS3lTOHQIHQFqzPzPCG-jdqtWWsORVGLE_uUliMVGfN0nAddtA3HsotY-A6dsv7dH8RbhG2vum_sol7BqMn73zdFBkSJcMMsp5TxydGgI28f4d2-qgwMhWbzwMBK82UALq2VjMaTcGtXRdOAHu8BJUzGyf1B8IMkpMBabmOMIRcvJGMJP7mlWxY0K7c5pLEQvmRAQPZt4K5hRlMikp"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<section class="bg-primary text-on-primary px-margin py-space-xl">
+<div class="flex items-center gap-2 mb-3">
+<span class="inline-block w-2.5 h-2.5 bg-secondary"></span>
+<span class="font-label-meta text-label-meta tracking-[0.2em] uppercase text-surface-variant">Bibliothèque Liturgique</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold tracking-tight text-on-primary">
+      Enseignements &amp; Ressources Spirituelles
+    </h1>
+<p class="font-body-md text-body-md text-surface-variant/90 mt-space-sm max-w-xl">
+      Nourriture doctrinale, prédications dominicales et méditations bibliques de l'Église Évangélique URHC pour l'édification du corps de Christ.
+    </p>
+<div class="mt-space-lg flex items-center justify-between bg-primary-container px-space-md py-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">podcasts</span>
+<span class="font-label-nav text-label-nav uppercase tracking-wider text-on-primary">Flux Hebdomadaire Actif</span>
+</div>
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-surface-dim">Série : Romains 12</span>
+</div>
+</section>
+<nav aria-label="Filtres thématiques" class="bg-surface-container-low px-margin py-3 overflow-x-auto scrollbar-none">
+<div class="flex items-center gap-2 min-w-max" id="tagFilterBar">
+<button class="filter-tab px-4 py-2 bg-primary text-on-primary font-label-nav text-label-nav uppercase tracking-wider transition-colors" onclick="setFilter(this, 'all')">
+        Tout
+      </button>
+<button class="filter-tab px-4 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-nav text-label-nav uppercase tracking-wider transition-colors" onclick="setFilter(this, 'sermons')">
+        Sermons du Dimanche
+      </button>
+<button class="filter-tab px-4 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-nav text-label-nav uppercase tracking-wider transition-colors" onclick="setFilter(this, 'etudes')">
+        Études Bibliques
+      </button>
+<button class="filter-tab px-4 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-nav text-label-nav uppercase tracking-wider transition-colors" onclick="setFilter(this, 'serie')">
+        Série Actuelle
+      </button>
+<button class="filter-tab px-4 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-nav text-label-nav uppercase tracking-wider transition-colors" onclick="setFilter(this, 'doctrine')">
+        Doctrine
+      </button>
+</div>
+</nav>
+<section class="px-margin py-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-secondary text-on-secondary font-label-meta text-label-meta uppercase tracking-widest font-bold">À la Une</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider">Dernier Culte Solennel</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Dimanche 18 Mai 2025</span>
+</div>
+<article class="bg-surface-container-lowest shadow-md flex flex-col">
+<div class="relative w-full h-56 bg-cover bg-center overflow-hidden" data-alt="A vibrant evangelical church auditorium during Sunday worship, warm golden sunlight streaming through cathedral-high floor-to-ceiling windows, worshippers raising their hands in authentic adoration with radiant expressions, pastor standing at an austere wooden lectern, choir in the background, sharp photographic realism, deep navy tones and rich oak woodwork." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVeIJ2DTv22BBd_Ylbu6M8Jb6MgOvLhX9MNiNg5CI9oGYlxbG527XcIwxmQGxMJ4RXfsKaNrVDOQzxiOXPJl9Qjrx1zAc1bUPxu20MybBUy_nwul6jYSRsFvLIcv0B2tXFhgNPxdUXJPQkm_JrtKasoNd9bhgKrtpJWYmYNOqXPZc_ofL_VooNEZIGFfL6A3MmYedL2qErcSh8AVbbKUl6ZfTRwByscxjNsDBJz_dz')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+<div class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 font-label-meta text-label-meta uppercase tracking-wider">
+          Romains 12:1-2
+        </div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta tracking-wider uppercase">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>54 min</span>
+</div>
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-surface-dim">Pasteur Samuel Mbeki</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col">
+<h2 class="font-headline-md text-headline-md font-semibold text-primary leading-tight">
+          La Marche par la Foi et le Renouvellement de l'Intelligence
+        </h2>
+<div class="my-space-md bg-surface-container-low p-space-md">
+<p class="font-headline-sm text-[17px] leading-snug italic text-primary">
+            « Ne vous conformez pas au siècle présent, mais soyez transformés par le renouvellement de l'intelligence, afin que vous discerniez quelle est la volonté de Dieu... »
+          </p>
+<span class="block mt-2 font-label-meta text-label-meta font-bold uppercase tracking-wider text-secondary">
+            Romains 12:2 (Version NEG79)
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+          Dans une société saturée d'opinions éphémères, comment sanctifier sa pensée selon le modèle biblique ? Cet enseignement dissèque l'exhortation paulinienne et propose quatre disciplines spirituelles concrètes pour demeurer inébranlable dans la vérité scripturaire.
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3.5 px-4 font-label-nav text-label-nav uppercase tracking-wider hover:bg-secondary transition-colors" id="audioPlayBtn" onclick="toggleAudio()">
+<span class="material-symbols-outlined text-[20px]" id="audioIcon">play_arrow</span>
+<span id="audioText">Écouter l'Audio</span>
+</button>
+<a class="w-full flex items-center justify-center gap-2 bg-surface-container-high text-primary py-3.5 px-4 font-label-nav text-label-nav uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors text-center" href="#telechargement">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Notes du Culte (PDF)</span>
+</a>
+</div>
+<div class="hidden mt-space-md p-space-sm bg-primary-container text-on-primary transition-all" id="miniPlayer">
+<div class="flex items-center justify-between text-xs mb-1 font-label-meta">
+<span class="uppercase tracking-wider text-on-primary-container">Lecture en cours : Prédication</span>
+<span class="text-surface-variant font-mono">14:28 / 54:12</span>
+</div>
+<div class="w-full bg-primary h-1.5 relative cursor-pointer" onclick="advanceProgress(event)">
+<div class="bg-secondary h-full w-[26%]" id="progressBar"></div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<section class="bg-surface-container-low px-margin py-space-xl">
+<div class="flex flex-col mb-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-meta text-label-meta tracking-widest uppercase text-secondary font-bold">Archives Doctrinales</span>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary mt-1">Prédications Récentes</h2>
+</div>
+<div class="hidden sm:flex gap-1">
+<span class="material-symbols-outlined text-primary text-[22px]">auto_stories</span>
+</div>
+</div>
+<div class="w-12 h-0.5 bg-primary mt-2"></div>
+</div>
+<div class="flex flex-col gap-space-md" id="sermonsList">
+<article class="bg-surface-container-lowest shadow-sm p-space-md hover:bg-surface-container-lowest transition-colors flex flex-col sm:flex-row gap-space-md">
+<div class="relative w-full sm:w-44 h-36 flex-shrink-0 bg-cover bg-center" data-alt="Close up photograph of an open leather-bound study Bible on a dark wooden communion table, morning sanctuary lighting illuminating French scripture pages, quiet reverent mood, high contrast and sharp editorial composition with no rounded corners." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHol8fb-rL3aJSmvPlhjw7f1MifMDqnWNOPcvdXwH21Bp9hqPsoZpwhJyKTsDTkOwyjMJ03NAgVrScvKdSFO5n5EI6c2lmJou8gpN9-rGCcVC1burrfWJu0oJ1Jfdxfgx29yvnomg5jhqE996tXNXeec7iEID6XEkuv5hC8wxTd0vu2PsGLIS2jvwRoTbBcx6e5eqdBoOiShtmQPTaXXlXt8018SfvsRnaNJUCEEIP')">
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-meta text-[10px] px-2 py-0.5 uppercase tracking-wider">Série Romains</span>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 text-on-surface-variant mb-1.5">
+<span class="font-label-meta text-label-meta tracking-wider uppercase text-secondary font-bold">Dimanche 11 Mai 2025</span>
+<span class="font-label-meta text-label-meta uppercase tracking-wider">48 min</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary leading-snug">
+              L'Offrande Vivante : Signification du Sacrificium
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Étude approfondie de Romains 12:1. Que signifie consacrer ses membres à la justice de Dieu dans l'exercice quotidien de sa profession ?
+            </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-3 bg-surface-container-low px-3 py-2">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-on-surface">Orateur : Pasteur S. Mbeki</span>
+<div class="flex items-center gap-3">
+<button class="text-primary hover:text-secondary flex items-center" title="Écouter">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</button>
+<button class="text-primary hover:text-secondary flex items-center" title="Télécharger les notes">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<article class="bg-surface-container-lowest shadow-sm p-space-md hover:bg-surface-container-lowest transition-colors flex flex-col sm:flex-row gap-space-md">
+<div class="relative w-full sm:w-44 h-36 flex-shrink-0 bg-cover bg-center" data-alt="Evangelical church baptismal pool and communion table set with golden chalices and unleavened bread, peaceful interior church sanctuary, solemn light filtering through tall stained glass with clean lines, dignified architectural interior of Protestant chapel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnCD6JC1eGaHXjaUZPUdnrGBuDzoiwE9zqkqBu6RDRgadstXU_S8yPfSsOAZMKGYBbTiInWt4lJQ905fcQu34Yf0-zq_Kjb6TRAuX5YDmodhiARcRBMkgfhS5y4EOTDSjiXmrmq7PspeYDPU2ub_FaMd9JncQjGsqBs6EDj4-vM-wQySOeZgFPdIUzQyy0NPhOGwi0fCFLB6ITCzXpAk0q7V-ID4pANHXQgxdNOztZ')">
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-meta text-[10px] px-2 py-0.5 uppercase tracking-wider">Étude Biblique</span>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 text-on-surface-variant mb-1.5">
+<span class="font-label-meta text-label-meta tracking-wider uppercase text-secondary font-bold">Jeudi 08 Mai 2025</span>
+<span class="font-label-meta text-label-meta uppercase tracking-wider">1h 12 min</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary leading-snug">
+              L'Alliance Scellée : Fondements de la Cène
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Retour doctrinal sur 1 Corinthiens 11:23-29. Exégèse du mémorial eucharistique et examen de conscience selon la tradition réformée confessante.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-3 bg-surface-container-low px-3 py-2">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-on-surface">Orateur : Ancien Daniel K.</span>
+<div class="flex items-center gap-3">
+<button class="text-primary hover:text-secondary flex items-center" title="Écouter">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</button>
+<button class="text-primary hover:text-secondary flex items-center" title="Télécharger les notes">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<article class="bg-surface-container-lowest shadow-sm p-space-md hover:bg-surface-container-lowest transition-colors flex flex-col sm:flex-row gap-space-md">
+<div class="relative w-full sm:w-44 h-36 flex-shrink-0 bg-cover bg-center" data-alt="Church choir and vocalists singing with sheet music in church robes, warm ambient lighting, peaceful facial expressions, wooden music stands, solemn Protestant sanctuary background, photojournalistic style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRNItbHBBwFsEj_U-flS82Lcgl4FZpoWAcjiFWxoXHsw125F9hLoSCwwHRmWOnXiJcOBblXqgXQbfcDFkpYtw4mElBcqxRFDC4tga8-ZkAStLQnDUhFdO5g9VzU0VqkZgHxDu-orX3QaUyC5EH1Fz7KcYeKM0Lv1Q9BVFrz7zPHDIsIbjud0XkhQfRZK_X10nW7ihU-lWzsi_oJuIJ5wi_7YVMqLVUlbaBy8NdV5F6')">
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-meta text-[10px] px-2 py-0.5 uppercase tracking-wider">Série Foi &amp; Vie</span>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 text-on-surface-variant mb-1.5">
+<span class="font-label-meta text-label-meta tracking-wider uppercase text-secondary font-bold">Dimanche 04 Mai 2025</span>
+<span class="font-label-meta text-label-meta uppercase tracking-wider">50 min</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary leading-snug">
+              La Puissance de l'Intercession en Assemblée
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Méditation sur Actes 12:5. Quand l'Église s'unit d'un même cœur dans l'épreuve : autorité de la prière corporative et libération des captifs.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-3 bg-surface-container-low px-3 py-2">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-on-surface">Oratrice : Diaconesse Rachel B.</span>
+<div class="flex items-center gap-3">
+<button class="text-primary hover:text-secondary flex items-center" title="Écouter">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</button>
+<button class="text-primary hover:text-secondary flex items-center" title="Télécharger les notes">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="px-margin py-space-xl bg-surface">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-meta text-label-meta tracking-widest uppercase text-secondary font-bold">Discipline Quotidienne</span>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary mt-1">Plan de Lecture Biblique</h2>
+</div>
+<div class="bg-primary text-on-primary px-3 py-1 font-label-meta text-label-meta uppercase tracking-wider">
+        Semaine 21
+      </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+      Suivez la communion fraternelle dans la lecture continue de la Parole de Dieu. Cochez vos lectures quotidiennes pour maintenir votre progression spirituelle.
+    </p>
+<div class="overflow-x-auto shadow-sm">
+<table class="w-full text-left bg-surface-container-lowest">
+<thead class="bg-primary text-on-primary">
+<tr>
+<th class="p-3.5 font-label-nav text-label-nav uppercase tracking-wider">Jour</th>
+<th class="p-3.5 font-label-nav text-label-nav uppercase tracking-wider">Ancien Testament</th>
+<th class="p-3.5 font-label-nav text-label-nav uppercase tracking-wider">Nouveau Testament</th>
+<th class="p-3.5 font-label-nav text-label-nav uppercase tracking-wider text-center">État</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="p-3.5 font-bold font-label-meta text-label-meta uppercase text-primary">Lundi</td>
+<td class="p-3.5">Ésaïe 53-54</td>
+<td class="p-3.5 font-medium">Marc 9:1-29</td>
+<td class="p-3.5 text-center">
+<button class="w-6 h-6 bg-secondary text-on-secondary inline-flex items-center justify-center font-bold" onclick="toggleRowCheck(this)">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-3.5 font-bold font-label-meta text-label-meta uppercase text-primary">Mardi</td>
+<td class="p-3.5">Ésaïe 55-57</td>
+<td class="p-3.5 font-medium">Marc 9:30-50</td>
+<td class="p-3.5 text-center">
+<button class="w-6 h-6 bg-secondary text-on-secondary inline-flex items-center justify-center font-bold" onclick="toggleRowCheck(this)">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="p-3.5 font-bold font-label-meta text-label-meta uppercase text-primary">Mercredi</td>
+<td class="p-3.5">Ésaïe 58-60</td>
+<td class="p-3.5 font-medium">Marc 10:1-31</td>
+<td class="p-3.5 text-center">
+<button class="w-6 h-6 bg-surface-container-high text-on-surface inline-flex items-center justify-center" onclick="toggleRowCheck(this)">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-3.5 font-bold font-label-meta text-label-meta uppercase text-primary">Jeudi</td>
+<td class="p-3.5">Ésaïe 61-63</td>
+<td class="p-3.5 font-medium">Marc 10:32-52</td>
+<td class="p-3.5 text-center">
+<button class="w-6 h-6 bg-surface-container-high text-on-surface inline-flex items-center justify-center" onclick="toggleRowCheck(this)">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="p-3.5 font-bold font-label-meta text-label-meta uppercase text-primary">Vendredi</td>
+<td class="p-3.5">Ésaïe 64-66</td>
+<td class="p-3.5 font-medium">Marc 11:1-19</td>
+<td class="p-3.5 text-center">
+<button class="w-6 h-6 bg-surface-container-high text-on-surface inline-flex items-center justify-center" onclick="toggleRowCheck(this)">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-3.5 font-bold font-label-meta text-label-meta uppercase text-primary">Samedi</td>
+<td class="p-3.5">Psaume 119:1-88</td>
+<td class="p-3.5 font-medium">Marc 11:20-33</td>
+<td class="p-3.5 text-center">
+<button class="w-6 h-6 bg-surface-container-high text-on-surface inline-flex items-center justify-center" onclick="toggleRowCheck(this)">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-space-md p-space-md bg-primary-container text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">bookmark</span>
+<div>
+<span class="block font-label-nav text-label-nav uppercase tracking-wider text-surface-variant">Progression Hebdomadaire</span>
+<span class="font-headline-sm text-headline-sm font-semibold">2 chapitres sur 6 complétés</span>
+</div>
+</div>
+<span class="font-label-meta text-label-meta uppercase tracking-widest bg-primary px-3 py-1.5 text-on-primary">33%</span>
+</div>
+</section>
+<section class="bg-primary text-on-primary px-margin py-space-xl">
+<div class="max-w-xl mx-auto flex flex-col">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 bg-secondary"></span>
+<span class="font-label-meta text-label-meta tracking-widest uppercase text-surface-variant">Fidélité &amp; Communion</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-on-primary leading-tight">
+        Abonnement au Podcast Pastoral &amp; Épître Hebdomadaire
+      </h2>
+<p class="font-body-md text-body-md text-surface-variant/90 mt-space-sm mb-space-lg">
+        Recevez chaque lundi matin le sermon audio complet, le résumé exégétique de l'équipe pastorale, et le guide de prière intercessionnel directement dans votre boîte courriel.
+      </p>
+<form class="flex flex-col gap-space-sm" id="newsletterForm" onsubmit="handleSubscribe(event)">
+<div class="flex flex-col">
+<label class="font-label-meta text-label-meta uppercase tracking-widest text-surface-dim mb-1" for="subscriberName">
+            Nom et Prénom
+          </label>
+<input class="bg-surface-container-lowest text-on-surface px-4 py-3 font-body-md text-body-md focus:bg-surface-container-lowest focus:text-on-surface outline-none transition-colors" id="subscriberName" placeholder="Ex. Jean-Marc Kaboré" required="" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-meta text-label-meta uppercase tracking-widest text-surface-dim mb-1" for="subscriberEmail">
+            Adresse Électronique
+          </label>
+<input class="bg-surface-container-lowest text-on-surface px-4 py-3 font-body-md text-body-md focus:bg-surface-container-lowest focus:text-on-surface outline-none transition-colors" id="subscriberEmail" placeholder="pasteur.etudes@domaine.org" required="" type="email"/>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-surface-dim mb-2">Format préféré</span>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-3 bg-primary-container text-on-primary cursor-pointer hover:bg-secondary transition-colors">
+<input checked="" class="accent-secondary" name="formatPref" type="radio" value="podcast"/>
+<span class="font-label-nav text-label-nav uppercase tracking-wider text-xs">Flux Audio &amp; Podcast</span>
+</label>
+<label class="flex items-center gap-2 p-3 bg-primary-container text-on-primary cursor-pointer hover:bg-secondary transition-colors">
+<input class="accent-secondary" name="formatPref" type="radio" value="lettre"/>
+<span class="font-label-nav text-label-nav uppercase tracking-wider text-xs">Notes &amp; Lettre Écrite</span>
+</label>
+</div>
+</div>
+<button class="mt-space-md w-full py-4 bg-secondary text-on-secondary font-label-nav text-label-nav uppercase tracking-widest font-bold hover:bg-primary-container transition-colors flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+<span>Souscrire à la Diffusion Spirituelle</span>
+</button>
+<p class="hidden mt-3 p-3 bg-surface-container-lowest text-primary font-body-sm text-body-sm text-center font-semibold" id="subscriptionFeedback">
+          Votre inscription a été enregistrée. Que la paix du Seigneur vous accompagne.
+        </p>
+</form>
+</div>
+</section>
+<footer class="bg-surface-container-lowest px-margin py-space-lg text-center">
+<div class="flex justify-center items-center gap-2 mb-2">
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary">URHC</span>
+<span class="text-secondary font-bold">•</span>
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-on-surface-variant">Archivage Scripturaire</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mx-auto">
+      « Toute Écriture est inspirée de Dieu, et utile pour enseigner, pour convaincre, pour corriger, pour instruire dans la justice. »
+    </p>
+<span class="block mt-2 font-label-meta text-label-meta text-secondary font-bold uppercase tracking-wider">
+      2 Timothée 3:16
+    </span>
+</footer>
+</div>
+<script>
+  let isPlaying = false;
+
+  function toggleAudio() {
+    isPlaying = !isPlaying;
+    const player = document.getElementById('miniPlayer');
+    const icon = document.getElementById('audioIcon');
+    const text = document.getElementById('audioText');
+
+    if (isPlaying) {
+      player.classList.remove('hidden');
+      icon.textContent = 'pause';
+      text.textContent = 'Mettre en Pause';
+    } else {
+      icon.textContent = 'play_arrow';
+      text.textContent = 'Écouter l\'Audio';
+    }
+  }
+
+  function advanceProgress(e) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const pct = Math.max(5, Math.min(100, (clickX / rect.width) * 100));
+    document.getElementById('progressBar').style.width = pct + '%';
+  }
+
+  function setFilter(btn, category) {
+    const tabs = document.querySelectorAll('.filter-tab');
+    tabs.forEach(t => {
+      t.className = 'filter-tab px-4 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-nav text-label-nav uppercase tracking-wider transition-colors';
+    });
+    btn.className = 'filter-tab px-4 py-2 bg-primary text-on-primary font-label-nav text-label-nav uppercase tracking-wider transition-colors';
+  }
+
+  function toggleRowCheck(btn) {
+    const isChecked = btn.classList.contains('bg-secondary');
+    if (isChecked) {
+      btn.className = 'w-6 h-6 bg-surface-container-high text-on-surface inline-flex items-center justify-center';
+    } else {
+      btn.className = 'w-6 h-6 bg-secondary text-on-secondary inline-flex items-center justify-center font-bold';
+    }
+  }
+
+  function handleSubscribe(e) {
+    e.preventDefault();
+    const feedback = document.getElementById('subscriptionFeedback');
+    feedback.classList.remove('hidden');
+    document.getElementById('subscriberName').value = '';
+    document.getElementById('subscriberEmail').value = '';
+    setTimeout(() => {
+      feedback.classList.add('hidden');
+    }, 6000);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary border-t-2 border-secondary bg-surface-container-low"><div class="grid grid-cols-5 items-stretch h-16 w-full"><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="accueil" href="#"><span class="material-symbols-outlined text-[20px]">church</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Accueil</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="notre-eglise" href="#"><span class="material-symbols-outlined text-[20px]">info</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Église</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] transition-colors text-secondary border-t-2 border-secondary bg-surface-container-low" data-path="enseignements" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Sermons</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="activites" href="#"><span class="material-symbols-outlined text-[20px]">event</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Activités</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="nous-rejoindre" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Rejoindre</span></a></div></nav></body></html>

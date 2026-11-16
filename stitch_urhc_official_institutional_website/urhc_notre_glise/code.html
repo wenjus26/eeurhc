@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}*{-webkit-border-radius:0px!important;border-radius:0px!important;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#93000f", "on-error-container": "#93000a", "primary-container": "#12345a", "on-tertiary-fixed": "#101c2a", "error-container": "#ffdad6", "on-tertiary-container": "#909cae", "on-primary-container": "#809dc9", "on-secondary-container": "#fffbff", "surface-container-high": "#dde9fd", "secondary-container": "#db3231", "on-secondary": "#ffffff", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "inverse-on-surface": "#eaf1ff", "on-error": "#ffffff", "inverse-primary": "#aac8f6", "surface-container-lowest": "#ffffff", "surface-dim": "#cfdbef", "secondary-fixed-dim": "#ffb3ac", "secondary-fixed": "#ffdad6", "outline-variant": "#c3c6cf", "tertiary": "#131f2d", "background": "#f8f9ff", "tertiary-container": "#283443", "on-surface": "#111c2b", "surface-container-low": "#eff4ff", "surface-container-highest": "#d8e3f7", "on-primary-fixed": "#001c39", "primary-fixed": "#d4e3ff", "surface-tint": "#426088", "on-primary-fixed-variant": "#29486f", "outline": "#73777f", "surface": "#f8f9ff", "on-tertiary": "#ffffff", "surface-variant": "#d8e3f7", "surface-container": "#e6eeff", "primary-fixed-dim": "#aac8f6", "on-tertiary-fixed-variant": "#3c4857", "on-secondary-fixed": "#410003", "primary": "#001f3e", "secondary": "#b7141c", "tertiary-fixed-dim": "#bbc7da", "on-surface-variant": "#43474e", "tertiary-fixed": "#d7e3f7", "inverse-surface": "#263140", "error": "#ba1a1a", "on-background": "#111c2b" }, borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px" }, spacing: { "space-sm": "0.5rem", "margin-desktop": "4rem", "margin": "1.25rem", "space-lg": "1.5rem", "gutter-desktop": "2.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.5rem" }, fontFamily: { "headline-lg-mobile": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "display-hero": ["Playfair Display"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "label-meta": ["Manrope"], "headline-sm": ["Playfair Display"], "body-sm": ["Manrope"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "label-nav": ["Manrope"] }, fontSize: { "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "600" }], "display-hero-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-nav": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Menu Principal" class="w-11 h-11 flex items-center justify-center text-primary bg-transparent hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="URHC Logo Officiel" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VcYJLWcOvqgKbswax2a10z6Ru9UATUNsSbAVhskWoekmFIzTi7LW2YvTiW6uUvZTHnCs2LNVmivLMJOI74wK6gR-Pde6xYS6k7vKtlxs1UWnI-hIxPLxpIqh7JAX37DCQ63SASIup5xGFSmQe_JsmTW1gzNMBKEkUDeTYDje5dkKnm51paqfURCdyrlZKNAcpkDD2RcD8zUdkCh7aRXeZiINeJruE-SjO-n48TIOrTzg"/><div class="flex flex-col ml-space-xs"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary leading-none">URHC</span><span class="font-label-meta text-label-meta tracking-wider text-on-surface-variant uppercase leading-none mt-0.5">Église Évangélique</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xs:block text-right mr-1"><span class="block font-headline-sm text-headline-sm text-primary leading-none">Notre Église</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfT1BYZvwUssBV5akrMTWptppS3lTOHQIHQFqzPzPCG-jdqtWWsORVGLE_uUliMVGfN0nAddtA3HsotY-A6dsv7dH8RbhG2vum_sol7BqMn73zdFBkSJcMMsp5TxydGgI28f4d2-qgwMhWbzwMBK82UALq2VjMaTcGtXRdOAHu8BJUzGyf1B8IMkpMBabmOMIRcvJGMJP7mlWxY0K7c5pLEQvmRAQPZt4K5hRlMikp"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- EN-TÊTE ÉDITORIAL & DÉCLARATION SOLENNELLE -->
+<section class="w-full bg-surface-container-lowest px-margin pt-space-lg pb-space-xl">
+<div class="w-full max-w-2xl mx-auto flex flex-col items-start">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[14px]">church</span>
+<span class="font-label-meta text-label-meta uppercase tracking-widest">URHC • FONDATION 1988</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-semibold mt-4 mb-3 tracking-tight">
+        Histoire, Vision &amp; Ministère Pastoral
+      </h1>
+<div class="w-16 h-[2px] bg-primary mb-5"></div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        L’Union Renaissance d’Hommes en Christ est une communauté confessante, ordonnée autour de l’autorité souveraine des Saintes Écritures, du discipulat rigoureux et du témoignage de la grâce sanctifiante au cœur de la cité.
+      </p>
+</div>
+</section>
+<!-- BANNIÈRE VISUELLE ARCHITECTURALE (INSPIRÉE DU SANCTUAIRE ÉPURÉ) -->
+<section class="w-full bg-surface">
+<div class="w-full max-w-3xl mx-auto">
+<div class="relative w-full aspect-[16/10] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Interior of a modern solemn Protestant sanctuary inspired by minimalist architecture, featuring fair oak wooden pews aligned neatly, raw exposed concrete wall with a tall wooden cross bathed in soft diagonal morning sunlight streaming from high timber framed windows, reverent silence, photorealistic natural lighting in deep navy and warm wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-8lJUp1WYbDE9yaPtSiokAM-SxauyNnI5qQfSFgXithVBIV7rF4Yis9Q6fDyqPwCRcIqTZjQ3_EBV0joLrpET0wPwq6g8GLnJwzh2e18hx1svDDr_Dcq37el5wZsbB8GjCM3c30pUqpMEJIeilOTl0OsjHa54GNO-QGOzFi92EDz8i4jVKUFAJIWlnnnt7ATFCmP93QQsJ93XqqDbil3l0ub7xTFnCmJN2nE-7NkG"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 text-on-primary p-3 px-margin flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim">location_on</span>
+<span class="font-label-meta text-label-meta uppercase tracking-wider">Sanctuaire Central • Culte d'Adoration</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Genèse 28:17</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CITATION D'OUVERTURE THÉOLOGIQUE -->
+<section class="w-full bg-surface-container-low px-margin py-space-xl">
+<div class="w-full max-w-2xl mx-auto flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-[32px] mb-3">menu_book</span>
+<div class="w-12 h-[1px] bg-primary mb-4"></div>
+<blockquote class="font-headline-sm text-headline-sm text-primary italic font-medium leading-snug">
+        « Car nous sommes son ouvrage, ayant été créés en Jésus-Christ pour de bonnes œuvres, que Dieu a préparées d'avance, afin que nous les pratiquions. »
+      </blockquote>
+<div class="w-12 h-[1px] bg-primary mt-4 mb-3"></div>
+<cite class="font-label-nav text-label-nav uppercase tracking-widest text-on-surface-variant not-italic">
+        Éphésiens 2:10 — Confession d’Anvers
+      </cite>
+</div>
+</section>
+<!-- GENÈSE & RACINES HISTORIQUES -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-xl">
+<div class="w-full max-w-2xl mx-auto flex flex-col">
+<div class="flex items-baseline justify-between mb-4">
+<span class="font-label-meta text-label-meta uppercase text-secondary font-bold tracking-widest">Chronologie &amp; Genèse</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">I. L'Origine</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold tracking-tight mb-4">
+        L’Union Renaissance dans la cité
+      </h2>
+<p class="font-body-md text-body-md text-on-surface mb-4 leading-relaxed">
+        Née en 1988 à l'initiative d'un groupe d'enseignants, d'ingénieurs et de laïcs engagés dans la prière commune, l'URHC s'est constituée pour proclamer un réveil spirituel concret : restaurer la stature de l’homme racheté, réconcilié avec son Créateur et pleinement responsable devant sa famille et la société.
+      </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+        Loin des modes fluctuantes, notre communauté a maintenu une ligne rigoureuse d'exposition biblique verset par verset, formant des générations de disciples zélés pour le bien commun et la transmission saine de la doctrine évangélique.
+      </p>
+<!-- PANNEAU DES 3 PILIERS HISTORIQUES -->
+<div class="grid grid-cols-1 gap-px bg-outline-variant/30 mt-2">
+<div class="bg-surface-container-low p-4 flex flex-col">
+<span class="font-label-meta text-label-meta text-secondary font-bold uppercase tracking-wider mb-1">1988 — L’Appel Inaugural</span>
+<span class="font-body-sm text-body-sm text-on-surface">Fondation du premier cercle de prière et d’étude des Réformateurs par le Pasteur fondateur Daniel K.</span>
+</div>
+<div class="bg-surface-container-low p-4 flex flex-col">
+<span class="font-label-meta text-label-meta text-secondary font-bold uppercase tracking-wider mb-1">2004 — Implantation &amp; Sanctuaire</span>
+<span class="font-body-sm text-body-sm text-on-surface">Érection du grand temple d’assemblée solennelle, conçu comme un écrin sobre dédié à la prédication et au chant choral liturgique.</span>
+</div>
+<div class="bg-surface-container-low p-4 flex flex-col">
+<span class="font-label-meta text-label-meta text-secondary font-bold uppercase tracking-wider mb-1">Aujourd’hui — Rayonnement &amp; Diaconat</span>
+<span class="font-body-sm text-body-sm text-on-surface">Plus de 14 cellules de maison rayonnant sur l’agglomération, un diaconat d’entraide alimentaire et une académie théologique laïque.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CONFESSION DE FOI : 5 ARTICLES EN GRILLE SUISSE -->
+<section class="w-full bg-surface-container px-margin py-space-xl">
+<div class="w-full max-w-2xl mx-auto flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-meta text-label-meta uppercase text-secondary font-bold tracking-widest">Doctrines Fondatrices</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">II. Confession de Foi</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold tracking-tight mb-2">
+        Nos Cinq Affirmations Théologiques
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+        Adhérente aux principes inaltérables du Sola Scriptura, Sola Gratia, Sola Fide, Solus Christus et Soli Deo Gloria.
+      </p>
+<div class="flex flex-col gap-3">
+<!-- Article 1 -->
+<div class="bg-surface-container-lowest p-5 flex flex-col">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-label-meta text-label-meta text-secondary font-bold tracking-widest uppercase">Article 01</span>
+<span class="font-label-meta text-label-meta text-outline tracking-wider uppercase">Sola Scriptura</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mb-1">
+            L'Autorité Divine de l'Écriture
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Nous confessons la pleine inspiration verbale des 66 livres bibliques, infaillibles dans leur teneur originelle et constituant la seule norme suprême de notre foi et de notre vie quotidienne.
+          </p>
+</div>
+<!-- Article 2 -->
+<div class="bg-surface-container-lowest p-5 flex flex-col">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-label-meta text-label-meta text-secondary font-bold tracking-widest uppercase">Article 02</span>
+<span class="font-label-meta text-label-meta text-outline tracking-wider uppercase">Trinitas</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mb-1">
+            Le Dieu Trinitaire et Souverain
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Un seul Dieu éternel, infini et immuable, subsistant en trois personnes coéternelles et consubstantielles : le Père tout-puissant, le Fils rédempteur incarné, et le Saint-Esprit sanctificateur.
+          </p>
+</div>
+<!-- Article 3 -->
+<div class="bg-surface-container-lowest p-5 flex flex-col">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-label-meta text-label-meta text-secondary font-bold tracking-widest uppercase">Article 03</span>
+<span class="font-label-meta text-label-meta text-outline tracking-wider uppercase">Solus Christus</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mb-1">
+            La Rédemption Substitutionnelle
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            La réconciliation de l'homme déchu avec Dieu s'accomplit exclusivement par le sacrifice propitiatoire de Jésus-Christ à la croix, sa résurrection corporelle et son intercession perpétuelle.
+          </p>
+</div>
+<!-- Article 4 -->
+<div class="bg-surface-container-lowest p-5 flex flex-col">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-label-meta text-label-meta text-secondary font-bold tracking-widest uppercase">Article 04</span>
+<span class="font-label-meta text-label-meta text-outline tracking-wider uppercase">Regeneratio</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mb-1">
+            La Nouvelle Naissance &amp; Sainteté
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            L'œuvre régénératrice de l'Esprit Saint qui produit la repentance sincère, la sanctification active de la conduite, et l'amour sacrificiel mutuel au sein de l'assemblée des saints.
+          </p>
+</div>
+<!-- Article 5 -->
+<div class="bg-surface-container-lowest p-5 flex flex-col">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-label-meta text-label-meta text-secondary font-bold tracking-widest uppercase">Article 05</span>
+<span class="font-label-meta text-label-meta text-outline tracking-wider uppercase">Ecclesia &amp; Parousia</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mb-1">
+            L'Église Locale &amp; l'Attente de l'Avènement
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            L'édification du corps de Christ par les ordonnances du Baptême par immersion et de la Sainte Cène, dans la vigilance constante du retour glorieux et visible de Notre Seigneur.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- COLLÈGE PASTORAL & GOUVERNANCE -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-xl">
+<div class="w-full max-w-2xl mx-auto flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-meta text-label-meta uppercase text-secondary font-bold tracking-widest">Direction Spirituelle</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">III. Le Ministère</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold tracking-tight mb-2">
+        Le Collège Pastoral &amp; Les Anciens
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+        Une gouvernance presbytérienne collégiale fidèle au modèle apostolique de 1 Timothée 3.
+      </p>
+<!-- CARTE PASTEUR PRINCIPAL -->
+<div class="bg-surface-container-low mb-4">
+<div class="w-full aspect-[16/9] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Dignified mature African pastor in formal navy suit holding a hardbound leather Bible, standing solemnly in front of a warm oak pulpit in an architectural chapel with natural daylighting, serene and pastoral expression, cinematic documentary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-B-hDY40BPwj9gCz8KXQPdCbgvzii0OY5yoiOzZKkEBeS1RKlEufqBttkSBTtn_3wqbXLrDfCpN5l6aTLArI3SXbAFHKRhNbLy1dgsCuz5XvRON8ZtT4yCSxGPMoV3t1Clb5zzAxDbnyyfhqrZQ3bVGN65VimsMFeV0YLo5DRGap2i6sriPmucGA0hXVntnIFHDQxaOKTLxtQ6pFpYDvkb-Nu2vBFoSGNyVrfGN7-"/>
+</div>
+<div class="p-5 flex flex-col">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-meta text-label-meta text-secondary font-bold uppercase tracking-wider">Pasteur Principal</span>
+<span class="font-label-meta text-label-meta text-outline tracking-wider uppercase">32 ans de ministère</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mb-2">
+            Pasteur Emmanuel K. M’Vemba
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+            Diplômé de la Faculté Libre de Théologie Évangélique, veille à la prédication dominicale, au soin doctrinal des familles et à la formation continue des cadres de l'Église.
+          </p>
+<div class="flex items-center gap-2 pt-3 bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+<span class="font-body-sm text-[12px] text-on-surface font-semibold tracking-wide">pastorat@urhc-eglise.org</span>
+</div>
+</div>
+</div>
+<!-- DEUX ANCIENS EN CARTES COMPACTES -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="bg-surface-container-low p-4 flex flex-col">
+<div class="w-full aspect-[4/3] bg-surface-container mb-3">
+<img class="w-full h-full object-cover" data-alt="Portait of a serene middle-aged church elder in clean white formal shirt and dark navy waistcoat, looking thoughtfully near a library of theological books, soft architectural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDwVnCiLtrl99cRhdhJgyVpPfUgiDm1euusxiI2ILJ5zsNYavtjqZmsbkCtkMya0cMycoLjUfcWB36ntGzvqkasNI10s8RlasgzwhVEH0C5CWDl47mWcg9xDnjhtdi8QLajMAKRwki50xDOpyTwTS9H4MrW3YYQtCnQTzMQQXb_Zhap2nGhSUNDpecdQEHsqk9Bkgwp_b7z2VZpdfJ9nzGzrFJ6QNOPktTnjrRWyG_"/>
+</div>
+<span class="font-label-meta text-label-meta text-secondary font-bold uppercase tracking-wider mb-1">Ancien Dirigeant</span>
+<h4 class="font-headline-sm text-[18px] text-primary font-semibold mb-1">Ancien Jean-Claude Mbida</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+            Responsable du conseil des anciens et de la discipline fraternelle.
+          </p>
+</div>
+<div class="bg-surface-container-low p-4 flex flex-col">
+<div class="w-full aspect-[4/3] bg-surface-container mb-3">
+<img class="w-full h-full object-cover" data-alt="Portait of a committed Christian pastoral counselor woman and deaconess in elegant conservative dark dress standing in a chapel room with natural wood paneling, peaceful dignified demeanor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsgrA_nu9UN9BnfIOvvmclePdeamoLVomXiQVh1PujLn5uYbsnC566Gmx2GaZh_I_adth2wHsCEnSIm1y42RCQLEP2co7Ou6bHh1DsysEgAtAOb1yC0G9-pk9x6Sw9yOgE3zDvHjhsxp2deaKxikhT5AmxV0anuN-R4DkEUwDwSu7kpLeT2WSmojhDLLrR3lXBscV0VjAk-EKpx2W5_Mnt2gD4MonWJMBBnE9QSzxa"/>
+</div>
+<span class="font-label-meta text-label-meta text-secondary font-bold uppercase tracking-wider mb-1">Diaconat Général</span>
+<h4 class="font-headline-sm text-[18px] text-primary font-semibold mb-1">Diaconesse Sarah N. Touzé</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+            Coordination de l'action caritative, secours aux veuves et bienfaisance.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ORGANISATION DES MINISTÈRES -->
+<section class="w-full bg-surface-container px-margin py-space-xl">
+<div class="w-full max-w-2xl mx-auto flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-meta text-label-meta uppercase text-secondary font-bold tracking-widest">Corps &amp; Vocations</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">IV. Les Ministères</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold tracking-tight mb-2">
+        L’Action Structurée de l'URHC
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+        Chaque fidèle est invité à exercer le sacerdoce universel par un service dévoué au sein d'un département établi.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Ministère 1 -->
+<div class="bg-surface-container-lowest p-4 flex flex-col">
+<div class="w-9 h-9 bg-primary text-on-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+</div>
+<h3 class="font-headline-sm text-[17px] text-primary font-semibold mb-1">Diaconat &amp; Entraide</h3>
+<p class="font-body-sm text-[13px] text-on-surface-variant mb-3 leading-relaxed">
+            Distribution de vivres, visites hospitalières, secours d'urgence aux familles éprouvées de la congrégation.
+          </p>
+<span class="font-label-meta text-[10px] text-secondary font-bold uppercase tracking-wider mt-auto">48 bénévoles actifs</span>
+</div>
+<!-- Ministère 2 -->
+<div class="bg-surface-container-lowest p-4 flex flex-col">
+<div class="w-9 h-9 bg-primary text-on-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<h3 class="font-headline-sm text-[17px] text-primary font-semibold mb-1">Éducation Chrétienne</h3>
+<p class="font-body-sm text-[13px] text-on-surface-variant mb-3 leading-relaxed">
+            École du dimanche pour l’enfance, catéchèse des adolescents et académie biblique d'affermissement doctrinal.
+          </p>
+<span class="font-label-meta text-[10px] text-secondary font-bold uppercase tracking-wider mt-auto">3 cycles d'études</span>
+</div>
+<!-- Ministère 3 -->
+<div class="bg-surface-container-lowest p-4 flex flex-col">
+<div class="w-9 h-9 bg-primary text-on-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[20px]">queue_music</span>
+</div>
+<h3 class="font-headline-sm text-[17px] text-primary font-semibold mb-1">Louange &amp; Liturgie</h3>
+<p class="font-body-sm text-[13px] text-on-surface-variant mb-3 leading-relaxed">
+            Chorale polyphonique classique et conducteurs de culte orientés vers la révérence, l'hymnologie et l'adoration biblique.
+          </p>
+<span class="font-label-meta text-[10px] text-secondary font-bold uppercase tracking-wider mt-auto">Chœur liturgique</span>
+</div>
+<!-- Ministère 4 -->
+<div class="bg-surface-container-lowest p-4 flex flex-col">
+<div class="w-9 h-9 bg-primary text-on-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<h3 class="font-headline-sm text-[17px] text-primary font-semibold mb-1">Fraternité &amp; Hommes en Christ</h3>
+<p class="font-body-sm text-[13px] text-on-surface-variant mb-3 leading-relaxed">
+            Cercles d'encouragement mutuel pour les époux et pères, déjeuners de travail et veillées de repentance fraternelle.
+          </p>
+<span class="font-label-meta text-[10px] text-secondary font-bold uppercase tracking-wider mt-auto">Rencontre bi-mensuelle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TÉMOIGNAGES DE FOI ÉDITORIAUX -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-xl">
+<div class="w-full max-w-2xl mx-auto flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-meta text-label-meta uppercase text-secondary font-bold tracking-widest">La Grâce en Action</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">V. Témoignages</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold tracking-tight mb-4">
+        Vies Transformées par l'Évangile
+      </h2>
+<div class="flex flex-col gap-4">
+<!-- Témoignage 1 -->
+<div class="bg-surface-container-low p-5 flex flex-col">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">format_quote</span>
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Restauration Familiale</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-3">
+            « Arrivé brisé par les conflits d’ego et l’épuisement professionnel, j'ai trouvé à l'URHC une clarté théologique sans concession et des frères qui ont jeûné pour ma maison. Ma foi n’est plus un sentiment diffus, mais une ancre solide. »
+          </p>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-primary">Marc-Antoine D.</span>
+<span class="font-label-meta text-label-meta text-outline">Membre depuis 2016</span>
+</div>
+</div>
+<!-- Témoignage 2 -->
+<div class="bg-surface-container-low p-5 flex flex-col">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">format_quote</span>
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Affermissement &amp; Vocation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-3">
+            « L’Académie biblique m’a enseigné la profondeur des textes sacrés et m'a délivrée des illusions superficielles. Servir dans l'école du dimanche auprès des plus jeunes est désormais ma plus haute joie hebdomadaire. »
+          </p>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-primary">Esther Bakary</span>
+<span class="font-label-meta text-label-meta text-outline">Monitrice jeunesse</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CITATION ARCHITECTURALE D'APPEL -->
+<section class="w-full bg-primary text-on-primary px-margin py-space-xl">
+<div class="w-full max-w-2xl mx-auto flex flex-col items-start">
+<span class="font-label-meta text-label-meta uppercase tracking-widest text-secondary-fixed mb-2">Notre Sanctuaire vous accueille</span>
+<h2 class="font-headline-md text-headline-md font-semibold text-on-primary mb-4 leading-tight">
+        « Une maison de prière pour toutes les nations, fondée sur la pierre angulaire. »
+      </h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-6 leading-relaxed">
+        Que vous cherchiez la paix avec Dieu, une communion fraternelle authentique ou un lieu d’exposition fidèle de la Parole, les portes de l'Union Renaissance d'Hommes en Christ vous sont largement ouvertes.
+      </p>
+<div class="grid grid-cols-2 gap-3 w-full mb-6">
+<div class="bg-primary-container p-3 flex flex-col">
+<span class="font-label-meta text-[10px] uppercase text-primary-fixed-dim">Culte Principal</span>
+<span class="font-headline-sm text-[16px] text-on-primary font-semibold mt-1">Dimanche • 09h30</span>
+</div>
+<div class="bg-primary-container p-3 flex flex-col">
+<span class="font-label-meta text-[10px] uppercase text-primary-fixed-dim">Étude &amp; Prière</span>
+<span class="font-headline-sm text-[16px] text-on-primary font-semibold mt-1">Mercredi • 19h00</span>
+</div>
+</div>
+<!-- CTA RECTANGULAIRE NET -->
+<a class="w-full py-4 px-6 bg-secondary text-on-secondary font-label-nav text-label-nav uppercase tracking-widest font-bold text-center hover:bg-on-secondary-fixed transition-colors block" href="#">
+        Rejoindre une cellule de maison
+      </a>
+<p class="font-label-meta text-[10px] uppercase tracking-wider text-primary-fixed-dim mt-3 w-full text-center">
+        Groupes de quartier répartis sur l’ensemble de la métropole
+      </p>
+</div>
+</section>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary border-t-2 border-secondary bg-surface-container-low"><div class="grid grid-cols-5 items-stretch h-16 w-full"><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="accueil" href="#"><span class="material-symbols-outlined text-[20px]">church</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Accueil</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="notre-eglise" href="#"><span class="material-symbols-outlined text-[20px]">info</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Église</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="enseignements" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Sermons</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="activites" href="#"><span class="material-symbols-outlined text-[20px]">event</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Activités</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="nous-rejoindre" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Rejoindre</span></a></div></nav></body></html>

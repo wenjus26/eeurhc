@@ -1,72 +1,84 @@
 /* ==========================================================================
    ÉGLISE ÉVANGÉLIQUE UNION RENAISSANCE D'HOMMES EN CHRIST (URHC)
-   Landing Page Officielle — Site en Conception (Single-Page)
-   Palette Officielle : Bleu Roi URHC (#0D2F5C), Rouge URHC (#B10B0E), Blanc Pur (#FFFFFF)
+   Système de Design Officiel : Éditorial Sacré & Rigueur Institutionnelle
+   Palette Officielle : Bleu Roi URHC (#001F3E / #12345A), Rouge Sacré (#B10B0E / #B5121B), Blanc Pur (#FFFFFF)
+   Typographie : Playfair Display (Monuments & Écritures) & Manrope (Clarté Institutionnelle)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. VARIABLES CSS (PALETTE OFFICIELLE DU LOGO URHC)
+   1. VARIABLES CSS (TOKENS DU SYSTÈME DE DESIGN OFFICIEL)
    -------------------------------------------------------------------------- */
 :root {
-  /* Couleurs échantillonnées directement sur le logo officiel URHC */
-  --blue-urhc: #0D2F5C;
-  --blue-urhc-dark: #07152A;
-  --blue-urhc-deep: #0A1C36;
-  --blue-urhc-light: #154382;
-  --blue-urhc-accent: #1D5BB0;
-  
-  --red-urhc: #B10B0E;
-  --red-urhc-light: #D32F2F;
-  --red-urhc-bright: #E53935;
-  --red-gradient: linear-gradient(135deg, #E53935 0%, #B10B0E 100%);
-  --red-glow: rgba(177, 11, 14, 0.28);
+  /* Couleurs Primaires Institutionnelles */
+  --blue-primary: #001F3E;       /* Bleu Nuit Sacré - Profondeur et Autorité */
+  --blue-urhc: #12345A;          /* Bleu Roi Institutionnel - Teinte Majeure URHC */
+  --blue-dark: #07152A;          /* Arrière-plans nocturnes et pieds de page */
+  --blue-light: #1D5BB0;         /* Accents et surbrillance */
+  --blue-soft: #E6EEFF;          /* Fond doux bleuté pour conteneurs */
+  --blue-surface: #F0F4FC;       /* Surface claire institutionnelle */
 
-  /* Neutres & Surfaces Lumineuses */
+  /* Couleurs Secondaires Sacrées */
+  --red-urhc: #B10B0E;           /* Rouge Sacré URHC - Ferveur et Don */
+  --red-accent: #B5121B;         /* Rouge Éditorial vif */
+  --red-light: #E53935;          /* Direct, alertes et indicateurs */
+  --red-soft: rgba(177, 11, 14, 0.08); /* Fonds d'étiquettes et badges */
+  --red-border: rgba(177, 11, 14, 0.25);
+
+  /* Neutres, Vélin & Surfaces */
   --white: #FFFFFF;
-  --bg-main: #FFFFFF;
-  --bg-surface: #F8FAFC;
+  --bg-page: #FFFFFF;
+  --bg-surface: #F8F9FF;        /* Fond écru très doux type papier vélin */
+  --bg-container: #F1F4F9;      /* Conteneurs secondaires */
   --bg-card: #FFFFFF;
-  --border-subtle: rgba(13, 47, 92, 0.08);
-  --border-medium: rgba(13, 47, 92, 0.14);
-  --border-strong: rgba(13, 47, 92, 0.24);
+  
+  /* Lignes de Fuite & Filets Hairline (1px) */
+  --border-hairline: 1px solid #E2E8F0;
+  --border-subtle: #E2E8F0;
+  --border-blue: 1px solid #12345A;
+  --border-strong: #CBD5E1;
+  --border-dark: rgba(255, 255, 255, 0.12);
 
   /* Typographies */
-  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Couleurs de Texte */
-  --text-title: #0D2F5C;
-  --text-body: #1E293B;
-  --text-muted: #475569;
-  --text-light: #64748B;
+  /* Typométrie & Hiérarchie */
+  --text-title: #001F3E;
+  --text-body: #202B3A;
+  --text-muted: #5A6A80;
+  --text-light: #7E8C9F;
+  --text-white: #FFFFFF;
 
-  /* Rayons & Élévations */
-  --radius-xs: 4px;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-full: 9999px;
+  /* Structure Géométrique & Règle des Bordures (Orthogonalité Pure) */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-full: 9999px; /* Réservé aux pastilles de direct */
 
-  /* Ombres */
-  --shadow-sm: 0 2px 8px rgba(13, 47, 92, 0.05);
-  --shadow-md: 0 8px 24px rgba(13, 47, 92, 0.08);
-  --shadow-lg: 0 16px 40px rgba(13, 47, 92, 0.12);
-  --shadow-float: 0 20px 45px rgba(0, 0, 0, 0.3);
-  --shadow-red: 0 6px 20px rgba(177, 11, 14, 0.32);
+  /* Ombres & Élévation (Discipline Éditoriale Sobre) */
+  --shadow-subtle: 0 1px 3px rgba(0, 31, 62, 0.05);
+  --shadow-card: 0 4px 20px rgba(0, 31, 62, 0.06);
+  --shadow-hover: 0 12px 32px rgba(0, 31, 62, 0.12);
+  --shadow-dropdown: 0 16px 40px rgba(0, 31, 62, 0.15);
 
   /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Largeurs Maximales */
+  --container-max: 1240px;
+  --container-narrow: 900px;
 }
 
 /* --------------------------------------------------------------------------
-   2. RÉINITIALISATION & STYLES DE BASE
+   2. RÉINITIALISATION & FONDATION
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -79,56 +91,44 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #FFFFFF;
-  /* Fond Blanc Carrelé — Subtile grille architecturale de 40px */
+  background-color: var(--bg-page);
+  /* Fond Carrelé Architectural Subtil (Grille de 40px) */
   background-image: 
-    linear-gradient(to right, rgba(13, 47, 92, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(13, 47, 92, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(18, 52, 90, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 52, 90, 0.035) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center top;
   color: var(--text-body);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.68;
   overflow-x: hidden;
   width: 100%;
   position: relative;
-}
-
-/* Prévention universelle du débordement textuel multi-écrans */
-h1, h2, h3, h4, h5, h6, p, blockquote, q {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-img, svg, picture {
-  max-width: 100%;
-  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Accessibilité Clavier */
 .skip-link {
   position: absolute;
-  top: -70px;
+  top: -80px;
   left: 20px;
   background: var(--red-urhc);
   color: var(--white);
-  padding: 10px 18px;
+  padding: 12px 20px;
+  font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 0.9rem;
-  border-radius: var(--radius-sm);
-  z-index: 9999;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 99999;
   transition: top var(--transition-fast);
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 .skip-link:focus {
-  top: 20px;
-}
-
-::selection {
-  background-color: rgba(177, 11, 14, 0.2);
-  color: var(--red-urhc);
+  top: 15px;
 }
 
 :focus-visible {
@@ -136,111 +136,149 @@ img, svg, picture {
   outline-offset: 3px;
 }
 
+::selection {
+  background-color: var(--blue-urhc);
+  color: var(--white);
+}
+
+/* Prévention universelle du débordement textuel */
+h1, h2, h3, h4, h5, h6, p, blockquote, q, span, a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+img, svg, picture, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Conteneurs structurels */
+.site-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.site-container-narrow {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
 /* --------------------------------------------------------------------------
-   3. BARRE D'INFORMATIONS SUPÉRIEURE (TOP BAR)
+   3. BARRE SUPÉRIEURE D'INFORMATION (TOP BAR INSTITUTIONNELLE)
    -------------------------------------------------------------------------- */
 .top-bar {
-  background-color: var(--blue-urhc-dark);
-  color: #E2E8F0;
-  font-size: 0.78rem;
+  background-color: var(--blue-primary);
+  color: #D1D9E6;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
-  z-index: 1010;
+  z-index: 1020;
 }
 
 .top-bar-container {
-  max-width: 1240px;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 0.45rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .top-bar-left {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
-.top-bar-left .motto {
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  color: #CBD5E1;
-}
-
-.top-status-badge {
-  display: inline-flex;
+.top-motto {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(229, 57, 53, 0.16);
-  border: 1px solid rgba(229, 57, 53, 0.35);
-  padding: 0.2rem 0.65rem;
-  border-radius: var(--radius-full);
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #FF8A8C;
-  letter-spacing: 0.03em;
 }
 
-.status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--red-urhc-bright);
-  box-shadow: 0 0 6px var(--red-urhc-bright);
-  animation: pulse-dot 2.5s infinite ease-in-out;
-}
-
-@keyframes pulse-dot {
-  0%, 100% {
-    opacity: 0.45;
-    transform: scale(0.9);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
+.top-motto-dot {
+  color: var(--red-light);
+  font-size: 0.85rem;
 }
 
 .top-bar-center {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 1.2rem;
 }
 
-.top-bar-center .separator {
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.cult-time, .address {
+.top-info-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  color: #F1F5F9;
+  gap: 0.45rem;
   font-weight: 500;
 }
 
 .top-icon {
   width: 14px;
   height: 14px;
-  color: var(--red-urhc-bright);
-}
-
-.top-link-alert {
   color: #FF8A8C;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color var(--transition-fast);
+  flex-shrink: 0;
 }
 
-.top-link-alert:hover {
-  color: var(--white);
+.top-divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.top-link-solennel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.65rem;
+  background: var(--red-urhc);
+  border: 1px solid var(--red-urhc);
+  transition: all var(--transition-fast);
+}
+
+.top-link-solennel:hover {
+  background: var(--red-light);
+  border-color: var(--red-light);
+  color: #FFFFFF;
 }
 
 /* --------------------------------------------------------------------------
-   4. EN-TÊTE PRINCIPAL (STICKY NAVBAR)
+   4. NAVIGATION PRINCIPALE (EN-TÊTE SUPÉRIEUR & MENU ÉDITORIAL)
    -------------------------------------------------------------------------- */
 .site-header {
   position: sticky;
@@ -248,7 +286,7 @@ img, svg, picture {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
@@ -256,12 +294,12 @@ img, svg, picture {
 }
 
 .site-header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 31, 62, 0.08);
   background: #FFFFFF;
-  box-shadow: 0 4px 20px rgba(13, 47, 92, 0.08);
 }
 
-.header-container {
-  max-width: 1240px;
+.header-inner {
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 0.75rem 1.5rem;
   display: flex;
@@ -270,36 +308,32 @@ img, svg, picture {
   gap: 1.5rem;
 }
 
-/* Marque & Logo */
-.brand {
+/* Marque Institutionnelle */
+.brand-link {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.9rem;
   text-decoration: none;
-  color: inherit;
   flex-shrink: 0;
 }
 
-.brand-logo-badge {
-  background-color: var(--white);
-  border: 1px solid var(--border-medium);
-  padding: 3px 6px;
-  border-radius: var(--radius-sm);
+.brand-badge {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  padding: 4px 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(13, 47, 92, 0.06);
 }
 
-.brand-logo-img {
+.brand-logo {
   width: 44px;
-  height: auto;
-  max-height: 40px;
-  display: block;
+  height: 42px;
   object-fit: contain;
+  display: block;
 }
 
-.brand-text {
+.brand-titles {
   display: flex;
   flex-direction: column;
 }
@@ -307,109 +341,359 @@ img, svg, picture {
 .brand-acronym {
   font-family: var(--font-sans);
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   letter-spacing: 0.1em;
-  color: var(--blue-urhc);
-  line-height: 1.1;
+  color: var(--blue-primary);
+  line-height: 1;
 }
 
-.brand-full-name {
-  font-size: 0.74rem;
-  font-weight: 500;
+.brand-name {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
   color: var(--text-muted);
-  max-width: 320px;
-  line-height: 1.25;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-top: 3px;
+  max-width: 290px;
 }
 
-/* Statut Officiel en Conception dans l'en-tête (Sans Navbar) */
-.header-status-indicator {
+/* Navigation Ordinateur */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  background: rgba(177, 11, 14, 0.08);
-  border: 1px solid rgba(177, 11, 14, 0.28);
-  padding: 0.45rem 1rem;
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--red-urhc);
+  gap: 0.35rem;
+  padding: 0.65rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
   letter-spacing: 0.04em;
-  white-space: nowrap;
+  color: var(--text-title);
+  text-transform: uppercase;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  border-bottom: 2px solid transparent;
 }
 
-.header-status-indicator .status-text-short {
+.nav-link:hover {
+  color: var(--red-urhc);
+  background-color: var(--bg-surface);
+}
+
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  color: var(--red-urhc);
+  border-bottom-color: var(--red-urhc);
+}
+
+.nav-chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform var(--transition-fast);
+}
+
+.nav-item:hover .nav-chevron,
+.nav-item:focus-within .nav-chevron {
+  transform: rotate(180deg);
+}
+
+/* Sous-menu déroulant accessible */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-dropdown);
+  padding: 0.4rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+  z-index: 1050;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-body);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdown-link:hover,
+.dropdown-link:focus {
+  background: var(--bg-surface);
+  color: var(--red-urhc);
+  padding-left: 1.4rem;
+}
+
+/* Boutons d'Action Header */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.btn-don-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--red-urhc);
+  color: var(--white);
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--red-urhc);
+  transition: all var(--transition-fast);
+}
+
+.btn-don-header:hover {
+  background: var(--blue-primary);
+  border-color: var(--blue-primary);
+  color: var(--white);
+}
+
+/* Bouton Déclencheur Mobile */
+.mobile-toggle {
   display: none;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-primary);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
 }
 
-.header-status-indicator .status-text-full {
-  display: inline;
+.mobile-toggle:hover {
+  background-color: var(--bg-surface);
 }
 
-.header-status-indicator .status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--red-urhc-bright);
-  box-shadow: 0 0 8px var(--red-urhc-bright);
-  animation: pulse-dot 2.5s infinite ease-in-out;
+.mobile-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Menu Tiroir Mobile */
+.mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 31, 62, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1090;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+}
+
+.mobile-drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  max-width: 85vw;
+  height: 100%;
+  background: #FFFFFF;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  transition: transform var(--transition-smooth);
+  overflow-y: auto;
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-drawer-close {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-primary);
+  cursor: pointer;
+}
+
+.mobile-drawer-nav {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-title);
+  border-bottom: 1px solid #F1F4F9;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  background: var(--bg-surface);
+  color: var(--red-urhc);
+  border-left: 4px solid var(--red-urhc);
+  padding-left: calc(1.5rem - 4px);
+}
+
+.mobile-submenu-group {
+  background: #F8F9FD;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-bottom: 1px solid #EBF0F8;
+}
+
+.mobile-sub-link {
+  display: block;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.mobile-sub-link:hover,
+.mobile-sub-link.active {
+  color: var(--red-urhc);
+}
+
+.mobile-drawer-footer {
+  margin-top: auto;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
 }
 
 /* --------------------------------------------------------------------------
-   5. BOUTONS STYLISÉS (URHC)
+   5. BOUTONS STYLISÉS & COMPOSANTS D'APPEL À L'ACTION
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.65rem;
   font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   padding: 0.9rem 1.8rem;
-  border-radius: var(--radius-full);
-  text-decoration: none;
   cursor: pointer;
-  border: none;
-  transition: all var(--transition-smooth);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  min-height: 48px;
+  line-height: 1;
 }
 
 .btn-primary {
-  background: var(--red-gradient);
+  background: var(--blue-primary);
   color: var(--white);
-  box-shadow: var(--shadow-red);
+  border-color: var(--blue-primary);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #F44336 0%, #C62828 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(177, 11, 14, 0.45);
+  background: var(--red-urhc);
+  border-color: var(--red-urhc);
   color: var(--white);
 }
 
-.btn-outline-light {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--white);
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
+.btn-secondary {
+  background: transparent;
+  color: var(--blue-primary);
+  border-color: var(--blue-primary);
 }
 
-.btn-outline-light:hover {
+.btn-secondary:hover {
+  background: var(--blue-primary);
+  color: var(--white);
+}
+
+.btn-sacred {
+  background: var(--red-urhc);
+  color: var(--white);
+  border-color: var(--red-urhc);
+}
+
+.btn-sacred:hover {
+  background: var(--blue-primary);
+  border-color: var(--blue-primary);
+  color: var(--white);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline-white:hover {
   background: var(--white);
-  color: var(--blue-urhc);
+  color: var(--blue-primary);
   border-color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-.btn-sm {
-  padding: 0.6rem 1.25rem;
-  font-size: 0.85rem;
+.btn-white {
+  background: var(--white);
+  color: var(--blue-primary);
+  border-color: var(--white);
 }
 
-.btn-lg {
-  padding: 1.05rem 2.2rem;
-  font-size: 1.02rem;
+.btn-white:hover {
+  background: var(--red-urhc);
+  border-color: var(--red-urhc);
+  color: var(--white);
 }
 
 .btn-block {
@@ -427,118 +711,103 @@ img, svg, picture {
 }
 
 /* --------------------------------------------------------------------------
-   6. SECTION HERO (LANDING PAGE : SITE EN CONCEPTION)
+   6. SECTIONS HÉROÏQUES & BANNIÈRES DE PAGES
    -------------------------------------------------------------------------- */
-.hero-section {
+/* Hero Principal Accueil */
+.hero-home {
   position: relative;
-  min-height: 85vh;
+  min-height: 86vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5.5rem 1.5rem 6.5rem;
+  align-items: center;
+  background-color: var(--blue-primary);
+  color: var(--white);
+  padding: 6rem 1.5rem;
   overflow: hidden;
-  background-color: var(--blue-urhc-deep);
 }
 
-.hero-backdrop {
+.hero-home-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  overflow: hidden;
 }
 
-.hero-bg-img {
+.hero-home-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  filter: brightness(0.62) saturate(1.15);
+  filter: brightness(0.48) saturate(1.15);
 }
 
-.hero-overlay {
+.hero-home-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(7, 21, 42, 0.82) 0%,
-    rgba(10, 28, 54, 0.7) 50%,
-    rgba(7, 21, 42, 0.94) 100%
+    rgba(0, 31, 62, 0.75) 0%,
+    rgba(0, 31, 62, 0.6) 45%,
+    rgba(0, 31, 62, 0.95) 100%
   );
 }
 
-.hero-layout-container {
+.hero-home-content {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1.35fr 0.85fr;
-  align-items: center;
-  gap: 3.5rem;
 }
 
-.hero-content {
-  color: var(--white);
-}
-
-.hero-conception-badge {
+.hero-tag-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  backdrop-filter: blur(10px);
-  padding: 0.45rem 1.15rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.6rem;
+  backdrop-filter: blur(8px);
 }
 
-.hero-conception-badge .badge-dot {
+.hero-tag-dot {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background-color: var(--red-urhc-bright);
-  box-shadow: 0 0 10px rgba(229, 57, 53, 0.85);
-  animation: pulse-dot 2s infinite ease-in-out;
+  background: var(--red-light);
 }
 
-.hero-conception-badge .badge-text {
+.hero-tag-text {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--white);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  color: #FFFFFF;
 }
 
-.hero-title {
+.hero-home-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-size: clamp(2.6rem, 5.2vw, 4.5rem);
   font-weight: 600;
-  line-height: 1.14;
-  letter-spacing: -0.01em;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
   color: var(--white);
-  margin-bottom: 1.4rem;
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.6rem;
+  max-width: 950px;
 }
 
-.highlight-urhc {
-  background: linear-gradient(135deg, #FF6B6E 0%, #E53935 50%, #B10B0E 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-home-title .highlight-red {
+  color: #FF8A8C;
   font-style: italic;
-  display: inline-block;
 }
 
-.hero-description {
+.hero-home-lead {
+  font-family: var(--font-sans);
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
   color: #E2E8F0;
-  max-width: 620px;
-  margin-bottom: 2.2rem;
+  max-width: 700px;
+  margin-bottom: 2.5rem;
 }
 
 .hero-actions {
@@ -548,755 +817,789 @@ img, svg, picture {
   flex-wrap: wrap;
 }
 
-/* Carte Flottante "Plateforme en Préparation" */
-.hero-support-card {
-  background: #FFFFFF;
-  border-radius: var(--radius-lg);
-  padding: 2.4rem 2rem 2.2rem;
-  box-shadow: var(--shadow-float);
-  text-align: center;
+/* Bannières En-tête des Pages Secondaires */
+.page-banner {
   position: relative;
-  max-width: 380px;
-  margin-left: auto;
-}
-
-.support-card-badge {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--red-gradient);
+  background-color: var(--blue-primary);
   color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: -50px auto 1.2rem;
-  box-shadow: 0 6px 16px rgba(177, 11, 14, 0.35);
+  padding: 5.5rem 1.5rem 4.5rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.support-card-badge svg {
-  width: 24px;
-  height: 24px;
+.page-banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
-.support-card-title {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--blue-urhc);
-  margin-bottom: 0.7rem;
+.page-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.22;
+  filter: brightness(0.65) saturate(1.1);
 }
 
-.support-card-text {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.4rem;
+.page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 31, 62, 0.95) 0%,
+    rgba(18, 52, 90, 0.9) 100%
+  );
 }
 
-.support-card-status {
-  margin-bottom: 1.5rem;
-}
-
-.status-pill {
-  display: inline-block;
-  background: rgba(13, 47, 92, 0.06);
-  border: 1px solid rgba(13, 47, 92, 0.18);
-  color: var(--blue-urhc);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 0.35rem 0.85rem;
-  border-radius: var(--radius-full);
-}
-
-/* --------------------------------------------------------------------------
-   7. SECTION CITATION BIBLIQUE (PAROLE DE FOI)
-   -------------------------------------------------------------------------- */
-.section-scripture {
-  padding: 4.5rem 1.5rem;
-  background-color: #FFFFFF;
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.section-container {
-  max-width: 1200px;
+.page-banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
   margin: 0 auto;
 }
 
-.scripture-card {
-  max-width: 860px;
-  margin: 0 auto;
-  background: #FFFFFF;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  padding: 3.2rem 2rem;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-}
-
-.scripture-cross-emblem {
-  width: 36px;
-  height: 36px;
-  margin: 0 auto 1.4rem;
-}
-
-.scripture-quote {
-  margin: 0 auto 1.4rem;
+.breadcrumb {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-}
-
-.quote-mark {
-  font-family: var(--font-serif);
-  font-size: 2.4rem;
-  color: var(--red-urhc);
-  line-height: 1;
-  opacity: 0.85;
-}
-
-.quote-text {
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  font-weight: 600;
-  font-style: italic;
-  color: var(--blue-urhc);
-  line-height: 1.35;
-}
-
-.scripture-reference {
-  display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: var(--font-sans);
-  font-style: normal;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: var(--blue-urhc);
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9DB0C8;
+  margin-bottom: 1.2rem;
 }
 
-.ref-ornament {
-  color: var(--red-urhc);
-  font-size: 0.65rem;
+.breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumb-current {
+  color: #FFFFFF;
+}
+
+.page-banner-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+  max-width: 850px;
+}
+
+.page-banner-lead {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: #E2E8F0;
+  line-height: 1.68;
+  max-width: 720px;
+  font-weight: 300;
 }
 
 /* --------------------------------------------------------------------------
-   8. SECTION "NOTRE VISION & NOS FONDEMENTS" (3 PILIERS)
+   7. TITRAGES DE SECTIONS & SÉPARATEURS ÉDITORIAUX
    -------------------------------------------------------------------------- */
-.section-vision {
-  padding: 6.5rem 1.5rem;
-  background-color: #FFFFFF;
+.section-header {
+  margin-bottom: 3.5rem;
 }
 
 .section-header-center {
   text-align: center;
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto 3.8rem;
 }
 
 .section-tag {
-  display: inline-block;
-  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   color: var(--red-urhc);
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
 }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: var(--blue-urhc);
-  line-height: 1.22;
+  font-size: clamp(2.1rem, 3.6vw, 2.9rem);
+  font-weight: 600;
+  color: var(--blue-primary);
+  line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+.section-title-white {
+  color: var(--white);
 }
 
 .section-divider {
   width: 56px;
   height: 3px;
-  background: var(--red-gradient);
-  margin: 0 auto 1.4rem;
-  border-radius: var(--radius-full);
+  background: var(--red-urhc);
+  margin: 0 0 1.5rem;
+}
+
+.section-header-center .section-divider {
+  margin: 0 auto 1.5rem;
 }
 
 .section-subtitle {
+  font-family: var(--font-sans);
   font-size: 1.05rem;
   color: var(--text-muted);
-  font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.68;
 }
 
-.vision-grid {
+.section-subtitle-white {
+  color: #CBD5E1;
+}
+
+/* --------------------------------------------------------------------------
+   8. CITATION BIBLIQUE & CARTOUCHE D'ÉCRITURE
+   -------------------------------------------------------------------------- */
+.scripture-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--blue-urhc);
+  padding: 2.2rem 2.4rem;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.scripture-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  font-style: italic;
+  color: var(--blue-primary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.scripture-ref {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red-urhc);
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   9. CARTES, GRILLES & COMPOSANTS REUTILISABLES
+   -------------------------------------------------------------------------- */
+/* Grilles standards */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.vision-card {
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+/* Cartes Universelles Éditoriales */
+.editorial-card {
   background: #FFFFFF;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  padding: 2.6rem 2rem;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+  position: relative;
 }
 
-.vision-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--red-urhc-light);
-  box-shadow: 0 14px 34px rgba(13, 47, 92, 0.1);
-}
-
-.vision-icon-box {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: rgba(177, 11, 14, 0.08);
-  border: 1px solid rgba(177, 11, 14, 0.22);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--red-urhc);
-  margin-bottom: 1.5rem;
-}
-
-.vision-icon-box svg {
-  width: 24px;
-  height: 24px;
-}
-
-.vision-card-title {
-  font-family: var(--font-serif);
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: var(--blue-urhc);
-  margin-bottom: 0.85rem;
-}
-
-.vision-card-text {
-  font-size: 0.94rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-/* --------------------------------------------------------------------------
-   9. SECTION "LE NOUVEAU SITE EN PRÉPARATION" (4 FONCTIONNALITÉS)
-   -------------------------------------------------------------------------- */
-.section-futur-site {
-  padding: 6.5rem 1.5rem;
-  background-color: var(--bg-surface);
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.futur-features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.6rem;
-}
-
-.feature-box {
-  background: #FFFFFF;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  padding: 2.2rem 1.8rem;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-}
-
-.feature-box:hover {
+.editorial-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(13, 47, 92, 0.09);
+  border-color: var(--blue-urhc);
+  box-shadow: var(--shadow-hover);
 }
 
-.feature-icon-badge {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: var(--blue-urhc);
+.card-img-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--blue-primary);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.editorial-card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--blue-primary);
   color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-  transition: background-color var(--transition-fast);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.feature-box:hover .feature-icon-badge {
+.card-badge-sacred {
   background: var(--red-urhc);
 }
 
-.feature-icon-badge svg {
-  width: 20px;
-  height: 20px;
-}
-
-.feature-title {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--blue-urhc);
-  margin-bottom: 0.65rem;
-}
-
-.feature-text {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-  margin-bottom: 1.4rem;
+.card-body {
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
-.feature-pill {
-  font-size: 0.72rem;
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--blue-primary);
+  line-height: 1.3;
+  margin-bottom: 0.9rem;
+}
+
+.card-text {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.68;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--red-urhc);
-  background: rgba(177, 11, 14, 0.08);
-  border: 1px solid rgba(177, 11, 14, 0.25);
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
+  margin-top: auto;
+}
+
+.card-link:hover {
+  color: var(--blue-primary);
+}
+
+.card-link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition-fast);
+}
+
+.card-link:hover svg {
+  transform: translateX(4px);
 }
 
 /* --------------------------------------------------------------------------
-   10. SECTION CULTES & COORDONNÉES OFFICIELLES
+   10. SECTION CULTES & RENCONTRES (ACCUEIL & CONTACT)
    -------------------------------------------------------------------------- */
-.section-cultes {
-  position: relative;
-  background-color: var(--blue-urhc);
-  padding: 6.5rem 1.5rem;
-  overflow: hidden;
+.section-worship {
+  background-color: var(--blue-primary);
   color: var(--white);
+  padding: 6.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.cultes-backdrop {
+.worship-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.cultes-bg-img {
+.worship-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.16;
-  filter: saturate(1.2) brightness(0.9);
 }
 
-.cultes-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(13, 47, 92, 0.95) 0%,
-    rgba(10, 28, 54, 0.96) 100%
-  );
-}
-
-.cultes-layout {
+.worship-layout {
   position: relative;
   z-index: 1;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: 3.5rem;
+  gap: 4rem;
 }
 
-.cultes-tag {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+.worship-box {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.worship-box-icon {
+  font-size: 1.5rem;
   color: #FF8A8C;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  flex-shrink: 0;
 }
 
-.cultes-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 3.8vw, 3rem);
+.worship-box-title {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #CBD5E1;
+  margin-bottom: 0.2rem;
 }
 
-.highlight-time {
-  color: #FF6B6E;
-  font-style: italic;
+.worship-box-desc {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
-.cultes-divider {
-  width: 56px;
-  height: 3px;
-  background: var(--red-gradient);
-  border-radius: var(--radius-full);
+.faith-statement-card {
+  background: #FFFFFF;
+  color: var(--text-body);
+  border: 1px solid var(--border-subtle);
+  padding: 2.8rem 2.2rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.faith-statement-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.faith-statement-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--blue-primary);
+}
+
+.faith-statement-badge {
+  background: var(--red-soft);
+  color: var(--red-urhc);
+  border: 1px solid var(--red-border);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.94rem;
+}
+
+.check-bullet {
+  color: var(--red-urhc);
+  font-weight: 800;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   11. LECTEUR AUDIO & PRÉDICATIONS
+   -------------------------------------------------------------------------- */
+.sermon-player-box {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  padding: 2.2rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-card);
+}
+
+.sermon-player-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sermon-now-playing {
+  display: flex;
+  flex-direction: column;
+}
+
+.now-playing-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red-urhc);
+  margin-bottom: 0.35rem;
+}
+
+.now-playing-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--blue-primary);
+}
+
+.now-playing-preacher {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 1rem 1.4rem;
+}
+
+.btn-play-pause {
+  width: 48px;
+  height: 48px;
+  background: var(--blue-primary);
+  color: var(--white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-play-pause:hover {
+  background: var(--red-urhc);
+}
+
+.audio-progress-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 140px;
+}
+
+.audio-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #CBD5E1;
+  position: relative;
+  cursor: pointer;
+}
+
+.audio-progress-fill {
+  height: 100%;
+  width: 32%;
+  background: var(--red-urhc);
+  transition: width 0.1s linear;
+}
+
+.audio-timestamps {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+/* Filtres de catégorie */
+.filter-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  padding: 0.55rem 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-tab:hover {
+  border-color: var(--blue-primary);
+  color: var(--blue-primary);
+}
+
+.filter-tab.active {
+  background: var(--blue-primary);
+  color: var(--white);
+  border-color: var(--blue-primary);
+}
+
+/* --------------------------------------------------------------------------
+   12. FORMULAIRES ACCESSIBLES (CONTACT, DON, NOTIFICATIONS)
+   -------------------------------------------------------------------------- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.form-label {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #73777F;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: var(--text-body);
+  border-radius: var(--radius-none);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--blue-urhc);
+  outline: 2px solid var(--blue-urhc);
+  outline-offset: 1px;
+}
+
+.form-textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-help {
+  font-size: 0.76rem;
+  color: var(--text-light);
+}
+
+/* Grille de sélection des montants de don */
+.giving-amounts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
   margin-bottom: 1.5rem;
 }
 
-.cultes-lead {
-  font-size: 1.05rem;
-  color: #E2E8F0;
-  line-height: 1.7;
-  font-weight: 300;
-  margin-bottom: 2rem;
+.giving-amount-btn {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
 }
 
-.cultes-details-box {
+.giving-amount-btn:hover {
+  border-color: var(--blue-urhc);
+  background: var(--bg-surface);
+}
+
+.giving-amount-btn.active {
+  background: var(--blue-primary);
+  border-color: var(--blue-primary);
+  color: var(--white);
+}
+
+/* --------------------------------------------------------------------------
+   13. PIED DE PAGE INSTITUTIONNEL MAJEUR (4 COLONNES)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--blue-dark);
+  color: #94A3B8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto;
+  padding: 5.5rem 1.5rem calc(2.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.detail-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  padding: 0.9rem 1.2rem;
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(8px);
-}
-
-.detail-icon {
-  font-size: 1.3rem;
-  flex-shrink: 0;
-}
-
-.detail-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-label {
-  font-size: 0.76rem;
-  color: #CBD5E1;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 600;
-}
-
-.detail-value {
-  font-size: 0.98rem;
-  color: var(--white);
-  font-weight: 700;
-}
-
-.detail-link {
-  font-size: 0.98rem;
-  color: #FF8A8C;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.detail-link:hover {
-  color: var(--white);
-}
-
-/* Colonne Droite : Carte "Une Maison Pour Tous" */
-.faith-card {
-  background: #FFFFFF;
-  border-radius: var(--radius-lg);
-  padding: 2.6rem 2.2rem;
-  color: var(--text-body);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
-}
-
-.faith-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.1rem;
-}
-
-.faith-card-title {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--blue-urhc);
-}
-
-.faith-badge {
-  background: rgba(177, 11, 14, 0.1);
-  color: var(--red-urhc);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.75rem;
-  border-radius: var(--radius-full);
-}
-
-.faith-card-text {
-  font-size: 0.94rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-  margin-bottom: 1.5rem;
-}
-
-.faith-points {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.8rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-body);
-}
-
-.check-icon {
+.footer-logo-wrap {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: rgba(177, 11, 14, 0.12);
-  color: var(--red-urhc);
-  font-weight: 800;
-  font-size: 0.75rem;
-  margin-right: 0.5rem;
-}
-
-/* --------------------------------------------------------------------------
-   11. SECTION "ÊTRE NOTIFIÉ DU LANCEMENT" (NEWSLETTER)
-   -------------------------------------------------------------------------- */
-.section-notification {
-  padding: 5.5rem 1.5rem;
-  background-color: #FFFFFF;
-}
-
-.notification-card {
-  position: relative;
-  background-color: var(--blue-urhc-dark);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.notification-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.notification-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: right center;
-  opacity: 0.22;
-}
-
-.notification-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(7, 21, 42, 0.95) 0%,
-    rgba(10, 28, 54, 0.88) 60%,
-    rgba(7, 21, 42, 0.8) 100%
-  );
-}
-
-.notification-content {
-  position: relative;
-  z-index: 1;
-  padding: 4rem 3.5rem;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  align-items: center;
-  gap: 3rem;
-}
-
-.notification-tag {
-  display: inline-block;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: #FF8A8C;
-  text-transform: uppercase;
-  margin-bottom: 0.6rem;
-}
-
-.notification-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 3.5vw, 2.7rem);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.2;
-  margin-bottom: 0.8rem;
-}
-
-.notification-lead {
-  font-size: 1.02rem;
-  color: #CBD5E1;
-  line-height: 1.6;
-}
-
-.notification-form-wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-.input-row {
-  display: flex;
-  align-items: center;
-  background: #FFFFFF;
-  border-radius: var(--radius-full);
-  padding: 4px 5px 4px 1.4rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  margin-bottom: 0.8rem;
-}
-
-.notification-input {
-  border: none;
-  background: transparent;
-  font-family: var(--font-sans);
-  font-size: 1rem; /* 16px min : prévient le zoom automatique forcé sur iOS Safari */
-  color: var(--text-body);
-  flex: 1;
-  min-width: 0;
-  outline: none;
-  padding: 0.65rem 0.5rem;
-}
-
-.btn-notification {
-  padding: 0.8rem 1.6rem;
-  font-size: 0.92rem;
-  white-space: nowrap;
-}
-
-.form-disclaimer {
-  font-size: 0.76rem;
-  color: #94A3B8;
-  line-height: 1.5;
-}
-
-/* --------------------------------------------------------------------------
-   12. PIED DE PAGE INSTITUTIONNEL
-   -------------------------------------------------------------------------- */
-.site-footer {
-  background-color: var(--blue-urhc-dark);
-  color: #94A3B8;
-  padding: 4.5rem 1.5rem calc(2.5rem + env(safe-area-inset-bottom, 0px));
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  text-align: center;
-}
-
-.footer-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.footer-identity-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2.5rem;
-}
-
-.footer-logo-badge {
+  gap: 0.75rem;
   background: #FFFFFF;
   padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
+  width: fit-content;
 }
 
 .footer-logo-img {
-  width: 46px;
-  height: auto;
-  max-height: 42px;
-  display: block;
+  width: 42px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .footer-brand-title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.footer-desc {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  line-height: 1.65;
+}
+
+.footer-col-title {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 1.4rem;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--red-urhc);
+}
+
+.footer-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 0.8rem;
+  gap: 0.75rem;
 }
 
-.footer-acronym {
-  font-family: var(--font-sans);
-  font-weight: 800;
-  font-size: 1.35rem;
-  letter-spacing: 0.14em;
-  color: var(--white);
-}
-
-.footer-full-name {
-  font-size: 0.88rem;
-  color: #E2E8F0;
-  max-width: 440px;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.footer-tagline {
-  font-size: 0.88rem;
+.footer-link {
+  font-size: 0.86rem;
   color: #94A3B8;
-  font-style: italic;
-  margin-bottom: 0.5rem;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: #FFFFFF;
+  padding-left: 4px;
+}
+
+.footer-hours-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.2rem;
+  font-size: 0.84rem;
+}
+
+.footer-hours-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-hours-item:last-child {
+  border-bottom: none;
 }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 1.8rem;
+  padding-top: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 1.5rem;
   font-size: 0.82rem;
   color: #64748B;
-  text-align: center;
+  flex-wrap: wrap;
 }
 
-.domain-link {
-  color: #94A3B8;
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.domain-link:hover {
-  color: var(--white);
-}
-
-/* --------------------------------------------------------------------------
-   13. BOUTON RETOUR EN HAUT (BACK TO TOP)
-   -------------------------------------------------------------------------- */
+/* Bouton Remonter en haut de page */
 .back-to-top {
   position: fixed;
   bottom: calc(25px + env(safe-area-inset-bottom, 0px));
   right: calc(25px + env(safe-area-inset-right, 0px));
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   background: #FFFFFF;
-  border: 1px solid var(--border-medium);
-  color: var(--blue-urhc);
+  border: 1px solid var(--border-subtle);
+  color: var(--blue-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(13, 47, 92, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 31, 62, 0.15);
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
@@ -1315,7 +1618,6 @@ img, svg, picture {
   color: var(--white);
   border-color: var(--red-urhc);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(177, 11, 14, 0.4);
 }
 
 .back-to-top svg {
@@ -1323,21 +1625,19 @@ img, svg, picture {
   height: 20px;
 }
 
-/* --------------------------------------------------------------------------
-   14. TOAST NOTIFICATION
-   -------------------------------------------------------------------------- */
+/* Notification Toast */
 .toast-notification {
   position: fixed;
   bottom: calc(25px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background: var(--blue-urhc);
+  background: var(--blue-primary);
   color: var(--white);
-  padding: 0.85rem 1.6rem;
-  border-radius: var(--radius-full);
+  padding: 0.9rem 1.8rem;
   font-size: 0.9rem;
   font-weight: 600;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 3000;
   opacity: 0;
   transition: all var(--transition-smooth);
@@ -1350,9 +1650,7 @@ img, svg, picture {
   opacity: 1;
 }
 
-/* --------------------------------------------------------------------------
-   15. ANIMATIONS D'APPARITION PROGRESSIVE
-   -------------------------------------------------------------------------- */
+/* Animations d'apparition */
 .fade-in {
   opacity: 1;
   transform: none;
@@ -1360,7 +1658,7 @@ img, svg, picture {
 
 html.js .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(18px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
   will-change: opacity, transform;
 }
@@ -1371,82 +1669,34 @@ html.js .fade-in.visible {
 }
 
 /* --------------------------------------------------------------------------
-   16. RESPONSIVE DESIGN MULTI-PLATEFORMES
-   (Mobile 320px+, Smartphones, Phablettes, Tablettes, Desktop & 4K)
+   14. RESPONSIVE DESIGN MULTI-PLATEFORMES
    -------------------------------------------------------------------------- */
-
-/* Tablettes & Petits Ordinateurs Portables (<= 1100px) */
+/* Tablettes et petits écrans (<= 1100px) */
 @media (max-width: 1100px) {
-  .hero-layout-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
+  .nav-desktop {
+    display: none;
   }
 
-  .hero-content {
-    margin: 0 auto;
-    max-width: 780px;
+  .mobile-toggle {
+    display: flex;
   }
 
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero-support-card {
-    margin: 3.2rem auto 0 auto;
-    max-width: 420px;
-    width: 100%;
-  }
-
-  .futur-features-grid {
+  .grid-3 {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 720px;
-    margin: 0 auto;
   }
 
-  .cultes-layout {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .worship-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
-  .cultes-text-col {
-    text-align: center;
-  }
-
-  .cultes-divider {
-    margin: 0 auto 1.5rem;
-  }
-
-  .cultes-details-box {
-    align-items: center;
-  }
-
-  .detail-item {
-    max-width: 460px;
-    width: 100%;
-  }
-
-  .faith-card {
-    max-width: 520px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .notification-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 3.2rem 2.2rem;
-  }
-
-  .notification-lead {
-    margin: 0 auto;
-    max-width: 540px;
-  }
-
-  .notification-form-wrap {
-    max-width: 480px;
-    margin: 0 auto;
-    width: 100%;
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
   }
 }
 
@@ -1456,53 +1706,60 @@ html.js .fade-in.visible {
     display: none;
   }
 
-  .vision-grid {
+  .grid-2 {
     grid-template-columns: 1fr;
-    max-width: 540px;
-    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .giving-amounts-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Grands Téléphones & Tablettes Compactes (<= 768px) */
+/* Téléphones & Petits écrans (<= 768px) */
 @media (max-width: 768px) {
-  .hero-section {
+  .hero-home {
     padding: 4.5rem 1.25rem 5rem;
     min-height: auto;
   }
 
-  .section-vision,
-  .section-futur-site,
-  .section-cultes,
-  .section-notification {
-    padding: 4.5rem 1.25rem;
+  .page-banner {
+    padding: 4.5rem 1.25rem 3.5rem;
   }
 
-  .scripture-card {
-    padding: 2.6rem 1.4rem;
+  .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
   }
 
-  .notification-content {
-    padding: 2.6rem 1.5rem;
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
-  .notification-card {
-    border-radius: var(--radius-md);
-  }
-}
-
-/* Téléphones Moyens & Paysage (<= 680px) */
-@media (max-width: 680px) {
-  .brand-full-name {
+  .brand-name {
     display: none;
   }
 
-  .header-container {
-    padding: 0.7rem 1rem;
+  .section-header {
+    margin-bottom: 2.5rem;
   }
 
-  .header-status-indicator {
-    font-size: 0.74rem;
-    padding: 0.35rem 0.75rem;
+  .section-header-center {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Téléphones Mobiles Standards (<= 580px) */
+@media (max-width: 580px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
   }
 
   .top-bar-left {
@@ -1512,193 +1769,19 @@ html.js .fade-in.visible {
   .top-bar-container {
     justify-content: center;
     text-align: center;
-    padding: 0.45rem 1rem;
   }
 
-  .top-bar-right {
-    width: 100%;
-    text-align: center;
-  }
-
-  .futur-features-grid {
-    grid-template-columns: 1fr;
-    max-width: 440px;
-    margin: 0 auto;
+  .scripture-box {
+    padding: 1.6rem 1.4rem;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 0.8rem;
   }
 }
 
-/* Téléphones Mobiles Standards (<= 580px) */
-@media (max-width: 580px) {
-  .section-vision,
-  .section-futur-site,
-  .section-cultes,
-  .section-notification {
-    padding: 3.5rem 1rem;
-  }
-
-  .hero-section {
-    padding: 3.5rem 1rem 4.5rem;
-  }
-
-  .hero-conception-badge {
-    padding: 0.4rem 0.85rem;
-    max-width: 100%;
-    gap: 0.5rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .hero-conception-badge .badge-text {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    white-space: normal;
-    line-height: 1.35;
-  }
-
-  /* Pile verticale pleine largeur pour les actions Hero */
-  .hero-actions {
-    flex-direction: column;
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-    gap: 0.85rem;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-    justify-content: center;
-    min-height: 48px; /* Cible tactile WCAG recommandée */
-    padding: 0.95rem 1.25rem;
-  }
-
-  .hero-support-card {
-    padding: 2.5rem 1.2rem 1.8rem;
-    margin: 2.8rem auto 0 auto;
-    border-radius: var(--radius-md);
-  }
-
-  .scripture-card {
-    padding: 2rem 1rem;
-    border-radius: var(--radius-md);
-  }
-
-  .scripture-quote {
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .quote-mark {
-    font-size: 2rem;
-  }
-
-  .input-row {
-    flex-direction: column;
-    border-radius: var(--radius-md);
-    padding: 0.65rem;
-    gap: 0.65rem;
-    background: #FFFFFF;
-  }
-
-  .notification-input {
-    text-align: center;
-    padding: 0.5rem 0.25rem;
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .btn-notification {
-    width: 100%;
-    border-radius: var(--radius-full);
-    min-height: 48px;
-    justify-content: center;
-  }
-
-  .faith-card {
-    padding: 2rem 1.2rem;
-    border-radius: var(--radius-md);
-  }
-
-  .faith-card-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-
-  .detail-item {
-    padding: 0.8rem 1rem;
-  }
-
-  .site-footer {
-    padding: 3.5rem 1rem calc(2rem + env(safe-area-inset-bottom, 0px));
-  }
-}
-
-/* Petits Téléphones Mobiles (<= 380px, ex. iPhone SE, 320px screens) */
-@media (max-width: 380px) {
-  .header-container {
-    padding: 0.55rem 0.75rem;
-    gap: 0.5rem;
-  }
-
-  .brand {
-    gap: 0.55rem;
-  }
-
-  .brand-logo-badge {
-    padding: 2px 4px;
-  }
-
-  .brand-logo-img {
-    width: 34px;
-    max-height: 30px;
-  }
-
-  .brand-acronym {
-    font-size: 1.05rem;
-    letter-spacing: 0.06em;
-  }
-
-  .header-status-indicator {
-    padding: 0.28rem 0.55rem;
-    font-size: 0.68rem;
-    gap: 0.4rem;
-  }
-
-  .header-status-indicator .status-text-full {
-    display: none;
-  }
-
-  .header-status-indicator .status-text-short {
-    display: inline;
-  }
-
-  .hero-conception-badge .badge-text {
-    font-size: 0.66rem;
-    letter-spacing: 0.05em;
-  }
-
-  .detail-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.4rem;
-    padding: 0.75rem 0.7rem;
-  }
-
-  .detail-icon {
-    margin: 0 auto;
-  }
-
-  .toast-notification {
-    font-size: 0.82rem;
-    padding: 0.75rem 1.2rem;
-  }
-}
-
+/* Accessibilité pour les utilisateurs préférant la réduction de mouvement */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

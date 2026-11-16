@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}*{-webkit-border-radius:0px!important;border-radius:0px!important;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#93000f", "on-error-container": "#93000a", "primary-container": "#12345a", "on-tertiary-fixed": "#101c2a", "error-container": "#ffdad6", "on-tertiary-container": "#909cae", "on-primary-container": "#809dc9", "on-secondary-container": "#fffbff", "surface-container-high": "#dde9fd", "secondary-container": "#db3231", "on-secondary": "#ffffff", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "inverse-on-surface": "#eaf1ff", "on-error": "#ffffff", "inverse-primary": "#aac8f6", "surface-container-lowest": "#ffffff", "surface-dim": "#cfdbef", "secondary-fixed-dim": "#ffb3ac", "secondary-fixed": "#ffdad6", "outline-variant": "#c3c6cf", "tertiary": "#131f2d", "background": "#f8f9ff", "tertiary-container": "#283443", "on-surface": "#111c2b", "surface-container-low": "#eff4ff", "surface-container-highest": "#d8e3f7", "on-primary-fixed": "#001c39", "primary-fixed": "#d4e3ff", "surface-tint": "#426088", "on-primary-fixed-variant": "#29486f", "outline": "#73777f", "surface": "#f8f9ff", "on-tertiary": "#ffffff", "surface-variant": "#d8e3f7", "surface-container": "#e6eeff", "primary-fixed-dim": "#aac8f6", "on-tertiary-fixed-variant": "#3c4857", "on-secondary-fixed": "#410003", "primary": "#001f3e", "secondary": "#b7141c", "tertiary-fixed-dim": "#bbc7da", "on-surface-variant": "#43474e", "tertiary-fixed": "#d7e3f7", "inverse-surface": "#263140", "error": "#ba1a1a", "on-background": "#111c2b" }, borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px" }, spacing: { "space-sm": "0.5rem", "margin-desktop": "4rem", "margin": "1.25rem", "space-lg": "1.5rem", "gutter-desktop": "2.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.5rem" }, fontFamily: { "headline-lg-mobile": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "display-hero": ["Playfair Display"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "label-meta": ["Manrope"], "headline-sm": ["Playfair Display"], "body-sm": ["Manrope"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "label-nav": ["Manrope"] }, fontSize: { "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "600" }], "display-hero-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-nav": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Menu Principal" class="w-11 h-11 flex items-center justify-center text-primary bg-transparent hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="URHC Logo Officiel" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VcYJLWcOvqgKbswax2a10z6Ru9UATUNsSbAVhskWoekmFIzTi7LW2YvTiW6uUvZTHnCs2LNVmivLMJOI74wK6gR-Pde6xYS6k7vKtlxs1UWnI-hIxPLxpIqh7JAX37DCQ63SASIup5xGFSmQe_JsmTW1gzNMBKEkUDeTYDje5dkKnm51paqfURCdyrlZKNAcpkDD2RcD8zUdkCh7aRXeZiINeJruE-SjO-n48TIOrTzg"/><div class="flex flex-col ml-space-xs"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary leading-none">URHC</span><span class="font-label-meta text-label-meta tracking-wider text-on-surface-variant uppercase leading-none mt-0.5">Église Évangélique</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xs:block text-right mr-1"><span class="block font-headline-sm text-headline-sm text-primary leading-none">Nous Rejoindre</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfT1BYZvwUssBV5akrMTWptppS3lTOHQIHQFqzPzPCG-jdqtWWsORVGLE_uUliMVGfN0nAddtA3HsotY-A6dsv7dH8RbhG2vum_sol7BqMn73zdFBkSJcMMsp5TxydGgI28f4d2-qgwMhWbzwMBK82UALq2VjMaTcGtXRdOAHu8BJUzGyf1B8IMkpMBabmOMIRcvJGMJP7mlWxY0K7c5pLEQvmRAQPZt4K5hRlMikp"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- BANDEAU SOLEMNEL & D'ACCUEIL -->
+<section class="relative w-full bg-primary text-on-primary px-margin py-8">
+<div class="flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 self-start bg-secondary px-2.5 py-1 text-on-secondary">
+<span class="material-symbols-outlined text-[14px]">door_front</span>
+<span class="font-label-meta text-label-meta tracking-widest uppercase">Édition Visiteurs • URHC</span>
+</div>
+<h1 class="font-display-hero-mobile text-display-hero-mobile leading-tight text-surface-container-lowest">
+        Vous êtes les bienvenus parmi nous.
+      </h1>
+<p class="font-body-md text-body-md text-surface-container-highest max-w-xl">
+        Une communauté évangélique fidèle aux Saintes Écritures, chaleureuse et résolument tournée vers le service du Christ et du prochain.
+      </p>
+</div>
+</section>
+<!-- PHOTOGRAPHIE ARCHITECTURALE & CITATION -->
+<section class="w-full bg-surface-container-low px-margin py-6">
+<div class="w-full relative overflow-hidden bg-primary mb-4" style="aspect-ratio: 16/9;">
+<div class="w-full h-full bg-cover bg-center" data-alt="A modern, serene sanctuary interior with clean exposed concrete walls, warm timber rafters, and morning sunlight streaming through tall rectangular glass windows onto neat wooden benches and an open wooden cross on the altar wall, peaceful and solemn atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-7k6ogjIors9PUBCZXw7CMOd71Tjs3rjAvnaV8I3wa7ref1-y7shCUCer3ZAI-6xGDGln-67cW7XZ3qtXK46Xzb2uJcwv67lSjlYAAxeOuRCnUlpUH-bevYXqZ8Rn1Iab1FISVyLSAZoWSdPLRK2Hw-wmzpLNQXaXHdaeLUGRqOYcKxNhIMyoaAgxjHec0ahayh9GRlwazW0bYC4g3kgh_PkpzwbwpZNSwKYS1Orl')"></div>
+<div class="absolute inset-0 bg-primary/20 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 bg-primary text-on-primary px-3 py-1 font-label-meta text-label-meta uppercase tracking-widest">
+        Sanctuaire Principal • URHC
+      </div>
+</div>
+<!-- VERSET LITURGIQUE ÉDITORIAL -->
+<div class="bg-surface-container-lowest p-5">
+<div class="flex items-center gap-2 text-secondary mb-2">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span class="font-label-meta text-label-meta tracking-wider uppercase text-secondary">Hébreux 10:24-25</span>
+</div>
+<blockquote class="font-headline-sm text-headline-sm italic text-primary leading-snug">
+        « Veillons les uns sur les autres pour nous exciter à la charité et aux bonnes œuvres. N'abandonnons pas notre assemblée. »
+      </blockquote>
+</div>
+</section>
+<!-- BANDEAU HORAIRE RAPIDE & PROCHAIN RASSEMBLEMENT -->
+<section class="w-full bg-primary-container text-on-primary px-margin py-4">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 bg-secondary flex items-center justify-center text-on-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<div>
+<span class="block font-label-meta text-label-meta tracking-wider uppercase text-on-primary-container">Ce Dimanche</span>
+<span class="font-body-md text-body-md font-semibold text-surface-container-lowest">Prochain Culte : 09h00 (Francophone) • 11h30 (Célébration)</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 font-label-meta text-label-meta uppercase tracking-wider text-surface-container-high bg-primary px-3 py-2 self-stretch sm:self-auto justify-center" href="#guide-visiteur">
+<span>Préparer ma venue</span>
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</a>
+</div>
+</section>
+<!-- GUIDE DU NOUVEAU VISITEUR EN 4 ÉTAPES -->
+<section class="w-full px-margin py-8 bg-surface" id="guide-visiteur">
+<div class="flex flex-col gap-2 mb-6">
+<div class="flex items-center gap-2 text-secondary">
+<span class="w-2 h-2 bg-secondary"></span>
+<span class="font-label-meta text-label-meta tracking-wider uppercase">Protocole Liturgique</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">
+        Guide du Nouveau Visiteur
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Quatre repères structurés pour aborder sereinement votre première visite au sein de notre assemblée.
+      </p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- ÉTAPE 1 : HORAIRES -->
+<div class="bg-surface-container-lowest p-5 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">1</span>
+<div>
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-secondary">Temps Communs</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Horaires des Cultes</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">schedule</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Chaque semaine, la Parole est prêchée avec fidélité textuelle et la sainte cène célébrée chaque premier dimanche du mois.
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+<div class="bg-surface-container-low p-3.5 flex flex-col gap-1">
+<span class="font-label-meta text-label-meta text-secondary uppercase tracking-widest">Dimanche Matin</span>
+<div class="font-body-md text-body-md font-semibold text-primary">09h00 • Culte Francophone</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prédication expositive, recueillement solennel et sainte paix.</span>
+</div>
+<div class="bg-surface-container-low p-3.5 flex flex-col gap-1">
+<span class="font-label-meta text-label-meta text-secondary uppercase tracking-widest">Dimanche Matin</span>
+<div class="font-body-md text-body-md font-semibold text-primary">11h30 • Célébration Générale</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Louange fervente, chorale unie et message d'édification.</span>
+</div>
+<div class="bg-surface-container-low p-3.5 flex flex-col gap-1 sm:col-span-2">
+<span class="font-label-meta text-label-meta text-secondary uppercase tracking-widest">Mercredi Soir</span>
+<div class="font-body-md text-body-md font-semibold text-primary">18h30 • Prière, Intercession • Étude Biblique</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Un temps de supplication fervente au sanctuaire et en cellules de quartier.</span>
+</div>
+</div>
+</div>
+<!-- ÉTAPE 2 : ACCUEIL & ENFANTS -->
+<div class="bg-surface-container-lowest p-5 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">2</span>
+<div>
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-secondary">Jeunesse • Famille</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Accueil &amp; Enfants</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">child_care</span>
+</div>
+<div class="w-full relative overflow-hidden bg-primary" style="aspect-ratio: 16/7;">
+<div class="w-full h-full bg-cover bg-center" data-alt="A warm and bright modern church classroom with wooden tables and clean shelves, where young children and dedicated mentors sit together around opened illustrated Bible pages with soft sunlight, tidy and structured." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoWmHlHMQvv7mMYqKQfGkiOq072cBRYNFDfsSx7EnlJnSQTRUreWrGofdRGXr6n-kLTrCnNpCAkZBadmbU7Y6ryhcLWOQyJ5Fln7VWfdpMD0Iw_bAfCxlwe6wGVwN-8awMACeIc2gB1v8t4to2xMSgdRMA1Ki4C8dWipqfdF4JziWzzjokXY70arKfSuBynWdGsTUAnLNy2iJe4lfU5N3A-63G1evStX3i4Mb8riZ1')"></div>
+<div class="absolute inset-0 bg-primary/15"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Dès votre arrivée dans le narthex, les diacres d'accueil sont à votre écoute pour orienter vos enfants vers leurs espaces d'édification sécurisés :
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="bg-surface-container-low p-3.5">
+<div class="font-body-md text-body-md font-semibold text-primary mb-1">Garderie (0 à 3 ans)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Espace paisible avec retransmission audio en sourdine pour les mamans et bébés.</p>
+</div>
+<div class="bg-surface-container-low p-3.5">
+<div class="font-body-md text-body-md font-semibold text-primary mb-1">École du Dimanche (4 à 12 ans)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Moniteurs formés, enseignement catéchétique narratif et activités créatives.</p>
+</div>
+</div>
+</div>
+<!-- ÉTAPE 3 : CE QUI VOUS ATTEND -->
+<div class="bg-surface-container-lowest p-5 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">3</span>
+<div>
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-secondary">Liturgie Vivante</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Ce qui vous attend</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">church</span>
+</div>
+<div class="w-full relative overflow-hidden bg-primary" style="aspect-ratio: 16/7;">
+<div class="w-full h-full bg-cover bg-center" data-alt="Joyful and fervent congregation raising hands in praise inside a naturally lit contemporary church auditorium, African men and women smiling in colorful dresses and shirts, solemn worship atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDl74aa9vnkvBVWcJNnvMQwSuBpi1KK2J70jjKRBSER8ayrAaWQ1Yn5wCQd7X-772xOImbuuoEppDkPmY7IZObzXz_E88zhyP-KyAkDLSISxs1YxoDItryEiU4gcgi0V63KRH2kiXCrowU2k2Udn1WOhPj2cOtGM6Wlhxduqqa89hgX9Q5MHPu1LIj5vQjArtocLWUpu0u2BD081RVgZITHUpV5H29w2uSTv-gPgLm_')"></div>
+<div class="absolute inset-0 bg-primary/15"></div>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="bg-surface-container-low p-3.5 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5">music_note</span>
+<div>
+<div class="font-body-md text-body-md font-semibold text-primary">Louange Contemporaine &amp; Cantiques</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Un équilibre harmonieux entre chants actuels centrés sur l'Évangile et trésors hymnologiques historiques.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-3.5 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5">auto_stories</span>
+<div>
+<div class="font-body-md text-body-md font-semibold text-primary">Enseignement Textuel Solide</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Une prédication fidèle aux saintes Écritures, claire, doctrinale et directement applicable au quotidien.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-3.5 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5">diversity_3</span>
+<div>
+<div class="font-body-md text-body-md font-semibold text-primary">Agapes &amp; Communion Fraternelle</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">À la fin du culte, thé, café et rafraîchissements sont offerts au foyer des hôtes pour faire connaissance.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ÉTAPE 4 : LOCALISATION & ACCÈS -->
+<div class="bg-surface-container-lowest p-5 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">4</span>
+<div>
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-secondary">Accès • Mobilité</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Localisation &amp; Accès</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">pin_drop</span>
+</div>
+<div class="w-full bg-surface-container-high relative overflow-hidden" data-location="URHC Eglise Evangelique Temple Central, Paris, France" style="height: 200px;">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 bg-primary/90 text-on-primary text-center">
+<span class="material-symbols-outlined text-[36px] text-surface-container-high mb-1">map</span>
+<span class="font-headline-sm text-headline-sm text-on-primary font-semibold">Temple Central URHC</span>
+<span class="font-body-sm text-body-sm text-surface-variant mt-1">14, Avenue de la Grâce, Secteur Pasteur</span>
+<span class="font-label-meta text-label-meta text-on-primary-container tracking-wider uppercase mt-2">Repère : En face du Jardin des Oliviers</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="bg-surface-container-low p-3.5">
+<div class="flex items-center gap-2 text-primary font-semibold font-body-md text-body-md mb-1">
+<span class="material-symbols-outlined text-[18px] text-secondary">directions_bus</span>
+              Transports en Commun
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Ligne de bus 12 • Arrêt « Temple Évangélique » (à 120m). Métro ligne 3 • Station Espérance (6 min à pied).
+            </p>
+</div>
+<div class="bg-surface-container-low p-3.5">
+<div class="flex items-center gap-2 text-primary font-semibold font-body-md text-body-md mb-1">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_parking</span>
+              Stationnement
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Parking privé surveillé et gratuit de 140 places ouvert dès 08h00. Places réservées PMR à proximité immédiate de l'entrée.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FORMULAIRE DE PREMIER CONTACT & DEMANDE PASTORALE -->
+<section class="w-full bg-surface-container-low px-margin py-8">
+<div class="max-w-2xl mx-auto flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="w-2 h-2 bg-secondary"></span>
+<span class="font-label-meta text-label-meta tracking-wider uppercase">Contact Direct</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">
+          Premier contact &amp; Demande de prière
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Que vous soyez de passage ou désireux d'un entretien pastoral, notre collège d'anciens et de diacres reste à votre entière disposition dans la discrétion chrétienne.
+        </p>
+</div>
+<!-- FORMULAIRE -->
+<form class="bg-surface-container-lowest p-6 flex flex-col gap-4" id="visiteur-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden'); this.reset();">
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold" for="nom-complet">
+            Nom et Prénom *
+          </label>
+<input class="w-full bg-surface-container-lowest px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-low" id="nom-complet" name="nom" placeholder="Ex : Jean-Daniel Mukendi" required="" style="border-radius: 0px;" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold" for="email">
+              Adresse Courriel *
+            </label>
+<input class="w-full bg-surface-container-lowest px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-low" id="email" name="email" placeholder="votre.nom@courriel.com" required="" style="border-radius: 0px;" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold" for="telephone">
+              Téléphone / WhatsApp
+            </label>
+<input class="w-full bg-surface-container-lowest px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-low" id="telephone" name="telephone" placeholder="+33 6 12 34 56 78" style="border-radius: 0px;" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold" for="nature-demande">
+            Nature de votre démarche *
+          </label>
+<select class="w-full bg-surface-container-lowest px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-low" id="nature-demande" name="nature-demande" required="" style="border-radius: 0px;">
+<option value="visite">Je prévois de visiter un dimanche prochain</option>
+<option value="priere">Sujet de prière ou intercession confidentielle</option>
+<option value="pasteur">Demande d'entretien pastoral</option>
+<option value="bapteme">Renseignements sur le baptême et l'adhésion</option>
+<option value="autre">Autre renseignement</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold" for="message">
+            Votre Message / Sujet de prière *
+          </label>
+<textarea class="w-full bg-surface-container-lowest px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-low resize-none" id="message" name="message" placeholder="Partagez-nous brièvement votre situation ou question..." required="" rows="4" style="border-radius: 0px;"></textarea>
+</div>
+<div class="flex items-start gap-2 pt-1">
+<input class="mt-1 accent-primary" id="confidentialite" required="" style="border-radius: 0px;" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="confidentialite">
+            J'autorise l'équipe pastorale de l'URHC à me recontacter dans le strict respect de la confidentialité pastorale.
+          </label>
+</div>
+<div class="hidden bg-surface-container p-3 text-primary flex items-center gap-2" id="form-feedback">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-sm text-body-sm font-semibold">Votre message a été transmis. Le secrétariat pastoral vous répondra sous 24 à 48 heures.</span>
+</div>
+<button class="w-full bg-primary hover:bg-secondary text-on-primary font-body-md text-body-md font-bold uppercase tracking-widest py-3.5 px-6 transition-colors flex items-center justify-center gap-2 mt-2" style="border-radius: 0px;" type="submit">
+<span>Transmettre à l'équipe</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</section>
+<!-- FAQ GÉOMÉTRIQUE EN ACCORDÉON -->
+<section class="w-full bg-surface px-margin py-8">
+<div class="flex flex-col gap-2 mb-6">
+<div class="flex items-center gap-2 text-secondary">
+<span class="w-2 h-2 bg-secondary"></span>
+<span class="font-label-meta text-label-meta tracking-wider uppercase">Questions Fréquentes</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">
+        Foire aux Questions
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Tout ce que vous devez savoir pour votre première participation sans appréhension.
+      </p>
+</div>
+<div class="flex flex-col gap-2" id="faq-container">
+<!-- ITEM 1 -->
+<div class="bg-surface-container-lowest">
+<button class="faq-toggle w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-body-md text-body-md font-semibold text-primary">Comment dois-je m'habiller pour assister au culte ?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-icon text-[20px]">expand_more</span>
+</button>
+<div class="faq-body hidden px-4 pb-4 font-body-sm text-body-sm text-on-surface-variant">
+          Venez vêtu simplement et décemment. Dans notre communauté, vous verrez aussi bien des tenues traditionnelles africaines éclatantes, des complets soignés que des tenues décontractées et sobres. L'important est la sincérité du cœur devant Dieu.
+        </div>
+</div>
+<!-- ITEM 2 -->
+<div class="bg-surface-container-lowest">
+<button class="faq-toggle w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-body-md text-body-md font-semibold text-primary">Faut-il être membre pour assister à la réunion ?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-icon text-[20px]">expand_more</span>
+</button>
+<div class="faq-body hidden px-4 pb-4 font-body-sm text-body-sm text-on-surface-variant">
+          Absolument pas. Les portes du temple sont grandes ouvertes à toute personne en recherche spirituelle, curieuse ou de passage, sans obligation ni engagement d'aucune sorte.
+        </div>
+</div>
+<!-- ITEM 3 -->
+<div class="bg-surface-container-lowest">
+<button class="faq-toggle w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-body-md text-body-md font-semibold text-primary">Puis-je participer à la Sainte Cène si je suis visiteur ?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-icon text-[20px]">expand_more</span>
+</button>
+<div class="faq-body hidden px-4 pb-4 font-body-sm text-body-sm text-on-surface-variant">
+          La table du Seigneur est accessible à tout chrétien confessant sa foi en Jésus-Christ comme Sauveur et Seigneur, baptisé selon la Parole de Dieu et marchant en paix avec ses frères et sœurs.
+        </div>
+</div>
+<!-- ITEM 4 -->
+<div class="bg-surface-container-lowest">
+<button class="faq-toggle w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-body-md text-body-md font-semibold text-primary">Quelle est la durée moyenne d'un culte dominical ?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-icon text-[20px]">expand_more</span>
+</button>
+<div class="faq-body hidden px-4 pb-4 font-body-sm text-body-sm text-on-surface-variant">
+          Le culte de 09h00 dure environ 1h30. La célébration solennelle de 11h30 dure environ 1h45 à 2h00, suivie d'une collation fraternelle dans la salle de réception.
+        </div>
+</div>
+<!-- ITEM 5 -->
+<div class="bg-surface-container-lowest">
+<button class="faq-toggle w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-body-md text-body-md font-semibold text-primary">Des bibles et recueils de chants sont-ils fournis ?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-icon text-[20px]">expand_more</span>
+</button>
+<div class="faq-body hidden px-4 pb-4 font-body-sm text-body-sm text-on-surface-variant">
+          Oui, des bibles d'étude (version Louis Segond 1910 et NEG) sont mises à votre disposition à chaque rangée. Les textes bibliques et paroles de chants sont également projetés sur les grands écrans du chœur.
+        </div>
+</div>
+</div>
+</section>
+<!-- SOUTIEN & GONS EN TOUTE TRANSPARENCE -->
+<section class="w-full bg-surface-container-low px-margin py-8">
+<div class="bg-surface-container-lowest p-6 flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[16px]">volunteer_activism</span>
+<span class="font-label-meta text-label-meta tracking-wider uppercase text-secondary">Intendance Fidèle</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-semibold">
+          Soutenir l'œuvre de l'URHC
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          L'URHC vit exclusivement des dîmes, offrandes et dons volontaires des fidèles. Les comptes font l'objet d'un audit annuel indépendant et sont présentés en assemblée générale.
+        </p>
+</div>
+<!-- ONGLET DON INTERACTIF MODALITÉ -->
+<div class="flex flex-col gap-3">
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-primary text-on-primary py-2.5 px-3 font-label-meta text-label-meta uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors" id="tab-virement" onclick="selectDonMethod('virement')" type="button">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+<span>Virement RIB</span>
+</button>
+<button class="bg-surface-container text-on-surface-variant py-2.5 px-3 font-label-meta text-label-meta uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors" id="tab-en-ligne" onclick="selectDonMethod('online')" type="button">
+<span class="material-symbols-outlined text-[16px]">credit_card</span>
+<span>Don en Ligne</span>
+</button>
+</div>
+<!-- CONTENU DON : VIREMENT -->
+<div class="bg-surface-container-low p-4 flex flex-col gap-3" id="content-virement">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Coordonnées Bancaires (IBAN France)</span>
+<span class="font-label-meta text-label-meta text-secondary uppercase tracking-widest">Reçu fiscal 66%</span>
+</div>
+<div class="bg-surface-container-lowest p-3 font-mono text-[13px] text-primary flex items-center justify-between">
+<span class="break-all font-semibold select-all">FR76 3000 4001 2300 0123 4567 890</span>
+<button class="bg-surface-container px-2 py-1 text-primary text-[11px] font-sans uppercase font-bold tracking-wider ml-2 shrink-0" onclick="navigator.clipboard.writeText('FR7630004001230001234567890'); alert('IBAN copié dans le presse-papiers');" type="button">
+              Copier
+            </button>
+</div>
+<div class="grid grid-cols-2 gap-2 text-[12px] text-on-surface-variant">
+<div><strong class="text-primary font-semibold">BIC :</strong> BNPAFRPPXXX</div>
+<div><strong class="text-primary font-semibold">Banque :</strong> Banque Nationale</div>
+<div class="col-span-2"><strong class="text-primary font-semibold">Ordre :</strong> Association Cultuelle URHC</div>
+</div>
+</div>
+<!-- CONTENU DON : EN LIGNE (Initialement masqué) -->
+<div class="hidden bg-surface-container-low p-4 flex flex-col gap-3" id="content-online">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-primary font-bold">Plateforme Sécurisée</span>
+<span class="font-label-meta text-label-meta text-secondary uppercase tracking-widest">Paiement SSL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Effectuez votre don ponctuel ou mensuel par carte bancaire ou prélèvement SEPA via notre portail certifié.
+          </p>
+<div class="grid grid-cols-4 gap-2 pt-1">
+<button class="bg-surface-container-lowest hover:bg-primary hover:text-on-primary py-2 text-center font-bold text-primary transition-colors text-sm" type="button">20 €</button>
+<button class="bg-surface-container-lowest hover:bg-primary hover:text-on-primary py-2 text-center font-bold text-primary transition-colors text-sm" type="button">50 €</button>
+<button class="bg-surface-container-lowest hover:bg-primary hover:text-on-primary py-2 text-center font-bold text-primary transition-colors text-sm" type="button">100 €</button>
+<button class="bg-surface-container-lowest hover:bg-primary hover:text-on-primary py-2 text-center font-bold text-primary transition-colors text-sm" type="button">Autre</button>
+</div>
+<button class="w-full bg-secondary hover:bg-on-secondary-fixed-variant text-on-secondary font-label-meta text-label-meta uppercase tracking-widest py-3 text-center font-bold transition-colors mt-2" style="border-radius: 0px;" type="button">
+            Accéder à la caisse de soutien
+          </button>
+</div>
+</div>
+<div class="bg-surface-container p-3 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Conformément à l'article 200 du CGI, vos offrandes ouvrent droit à une réduction d'impôt égale à 66 % du montant versé dans la limite de 20 % du revenu imposable. Reçu fiscal envoyé chaque trimestre.
+        </p>
+</div>
+</div>
+</section>
+<!-- BLOC RÉCAPITULATIF PERMANENCE & COORDONNÉES RAPIDES -->
+<section class="w-full bg-primary text-on-primary px-margin py-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary"></span>
+<span class="font-label-meta text-label-meta tracking-widest uppercase text-surface-container-high">Permanence Pastorale</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-surface-container-lowest">
+        Besoin de parler immédiatement ?
+      </h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-surface-container-highest">
+<div class="flex items-center gap-3 bg-primary-container p-3">
+<span class="material-symbols-outlined text-surface-container-high">call</span>
+<div>
+<span class="block font-label-meta text-label-meta uppercase tracking-wider text-on-primary-container">Ligne Pastorale</span>
+<span class="font-body-md text-body-md font-semibold text-surface-container-lowest">+33 (0)1 42 88 90 00</span>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-primary-container p-3">
+<span class="material-symbols-outlined text-surface-container-high">mail</span>
+<div>
+<span class="block font-label-meta text-label-meta uppercase tracking-wider text-on-primary-container">Secrétariat</span>
+<span class="font-body-md text-body-md font-semibold text-surface-container-lowest">contact@urhc-eglise.org</span>
+</div>
+</div>
+</div>
+<div class="pt-2 text-center text-on-primary-container font-label-meta text-label-meta uppercase tracking-widest">
+        URHC • Union des Rachetés en Héritage de Christ • Fondée sur le Roc
+      </div>
+</div>
+</section>
+</div>
+<script>
+  function toggleFaq(button) {
+    const body = button.nextElementSibling;
+    const icon = button.querySelector('.faq-icon');
+    const isHidden = body.classList.contains('hidden');
+    
+    // Fermer les autres accordéons
+    document.querySelectorAll('#faq-container .faq-body').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('#faq-container .faq-icon').forEach(el => el.classList.remove('rotate-180'));
+
+    if (isHidden) {
+      body.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+    }
+  }
+
+  function selectDonMethod(method) {
+    const tabVirement = document.getElementById('tab-virement');
+    const tabOnline = document.getElementById('tab-en-ligne');
+    const contentVirement = document.getElementById('content-virement');
+    const contentOnline = document.getElementById('content-online');
+
+    if (method === 'virement') {
+      tabVirement.className = 'bg-primary text-on-primary py-2.5 px-3 font-label-meta text-label-meta uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors';
+      tabOnline.className = 'bg-surface-container text-on-surface-variant py-2.5 px-3 font-label-meta text-label-meta uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors';
+      contentVirement.classList.remove('hidden');
+      contentOnline.classList.add('hidden');
+    } else {
+      tabOnline.className = 'bg-primary text-on-primary py-2.5 px-3 font-label-meta text-label-meta uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors';
+      tabVirement.className = 'bg-surface-container text-on-surface-variant py-2.5 px-3 font-label-meta text-label-meta uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors';
+      contentOnline.classList.remove('hidden');
+      contentVirement.classList.add('hidden');
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary border-t-2 border-secondary bg-surface-container-low"><div class="grid grid-cols-5 items-stretch h-16 w-full"><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="accueil" href="#"><span class="material-symbols-outlined text-[20px]">church</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Accueil</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="notre-eglise" href="#"><span class="material-symbols-outlined text-[20px]">info</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Église</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="enseignements" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Sermons</span></a><a class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="activites" href="#"><span class="material-symbols-outlined text-[20px]">event</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Activités</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-full h-full min-h-[44px] min-w-[44px] transition-colors text-secondary border-t-2 border-secondary bg-surface-container-low" data-path="nous-rejoindre" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="font-label-nav text-[10px] tracking-wider uppercase mt-1">Rejoindre</span></a></div></nav></body></html>

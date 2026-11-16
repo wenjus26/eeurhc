@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.eeurhc.org/sitemap.xml
+Sitemap: https://eeurhc.org/sitemap.xml
