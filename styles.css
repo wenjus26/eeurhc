@@ -223,8 +223,12 @@ button, input, select, textarea {
 }
 
 .top-motto-dot {
-  color: var(--red-light);
-  font-size: 0.85rem;
+  width: 6px;
+  height: 6px;
+  background-color: var(--red-light);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .top-bar-center {
@@ -1166,6 +1170,22 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+}
+
+.worship-box-tag {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: rgba(217, 35, 44, 0.4);
+  border: 1px solid rgba(255, 138, 140, 0.6);
+  padding: 0.4rem 0.6rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+  text-align: center;
+  min-width: 44px;
 }
 
 .worship-box-icon {
