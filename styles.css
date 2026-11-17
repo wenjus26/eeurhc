@@ -316,7 +316,6 @@ button, input, select, textarea {
 .brand-link {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -324,15 +323,17 @@ button, input, select, textarea {
 .brand-badge {
   background: #FFFFFF;
   border: 1px solid var(--border-subtle);
-  padding: 4px 6px;
+  padding: 4px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .brand-logo {
-  width: 44px;
-  height: 42px;
+  width: auto;
+  height: 46px;
+  max-width: 52px;
   object-fit: contain;
   display: block;
 }
@@ -581,6 +582,11 @@ button, input, select, textarea {
   border-bottom: 1px solid #F1F4F9;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.mobile-nav-link.mobile-nav-don {
+  color: var(--red-urhc);
+  font-weight: 800;
 }
 
 .mobile-nav-link:hover,
@@ -1697,6 +1703,10 @@ html.js .fade-in.visible {
     display: none;
   }
 
+  .btn-don-header {
+    display: none;
+  }
+
   .mobile-toggle {
     display: flex;
   }
@@ -1724,6 +1734,15 @@ html.js .fade-in.visible {
 @media (max-width: 900px) {
   .top-bar-center {
     display: none;
+  }
+
+  .top-bar-right {
+    display: none;
+  }
+
+  .top-bar-container {
+    justify-content: center;
+    text-align: center;
   }
 
   .grid-2 {
@@ -1783,6 +1802,10 @@ html.js .fade-in.visible {
   }
 
   .top-bar-left {
+    display: flex;
+  }
+
+  .top-bar-right {
     display: none;
   }
 
