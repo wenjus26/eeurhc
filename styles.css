@@ -23,6 +23,11 @@
   --bg-surface: #F8F9FF;        
   --bg-container: #F1F4F9;      
   --bg-card: #FFFFFF;
+  --grid-line-color: rgba(0, 31, 62, 0.075);
+  --grid-pattern: 
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  --grid-size: 32px 32px;
   
   
   --border-hairline: 1px solid #E2E8F0;
@@ -83,11 +88,8 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-page);
-  /* Fond Carrelé Architectural Subtil (Grille de 40px) */
-  background-image: 
-    linear-gradient(to right, rgba(18, 52, 90, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(18, 52, 90, 0.035) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: var(--grid-pattern);
+  background-size: var(--grid-size);
   background-position: center top;
   color: var(--text-body);
   line-height: 1.68;
@@ -516,7 +518,9 @@ button, input, select, textarea {
   width: 320px;
   max-width: 85vw;
   height: 100%;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
+  background-image: var(--grid-pattern);
+  background-size: var(--grid-size);
   z-index: 1100;
   display: flex;
   flex-direction: column;
@@ -950,7 +954,11 @@ button, input, select, textarea {
 
 /* CITATION BIBLIQUE & CARTOUCHE D'ÉCRITURE */
 .scripture-box {
-  background: var(--bg-surface);
+  background-color: #FFFFFF;
+  background-image: 
+    linear-gradient(to right, rgba(0, 31, 62, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 31, 62, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
   border: 1px solid var(--border-subtle);
   border-left: 4px solid var(--blue-urhc);
   padding: 2.2rem 2.4rem;
@@ -999,7 +1007,11 @@ button, input, select, textarea {
 
 /* Cartes Universelles Éditoriales */
 .editorial-card {
-  background: #FFFFFF;
+  background-color: #FFFFFF;
+  background-image: 
+    linear-gradient(to right, rgba(0, 31, 62, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 31, 62, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
   border: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
@@ -1191,7 +1203,11 @@ button, input, select, textarea {
 }
 
 .faith-statement-card {
-  background: #FFFFFF;
+  background-color: #FFFFFF;
+  background-image: 
+    linear-gradient(to right, rgba(0, 31, 62, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 31, 62, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
   color: var(--text-body);
   border: 1px solid var(--border-subtle);
   padding: 2.8rem 2.2rem;
@@ -1246,7 +1262,11 @@ button, input, select, textarea {
 
 /* LECTEUR AUDIO & PRÉDICATIONS */
 .sermon-player-box {
-  background: #FFFFFF;
+  background-color: #FFFFFF;
+  background-image: 
+    linear-gradient(to right, rgba(0, 31, 62, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 31, 62, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
   border: 1px solid var(--border-subtle);
   padding: 2.2rem;
   margin-bottom: 3rem;
@@ -1802,4 +1822,12 @@ html.js .fade-in.visible {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+section[style*="var(--bg-surface)"],
+.section-surface-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 31, 62, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 31, 62, 0.06) 1px, transparent 1px) !important;
+  background-size: var(--grid-size) !important;
 }
