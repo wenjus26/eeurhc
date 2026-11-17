@@ -6,45 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Préchargement de l'image héroïque cinématique -->
   <link rel="preload" as="image" href="assets/images/hero-bg.jpg" fetchpriority="high">
 
-  <!-- Métadonnées Institutionnelles & SEO -->
   <title>URHC — Église Évangélique Union Renaissance d’Hommes en Christ | Site Officiel</title>
   <meta name="description" content="Site officiel de l'Église Évangélique Union Renaissance d’Hommes en Christ (URHC). Fondée en 1973 au Bénin. Une Église vivante, une foi authentique et une espérance renouvelée en Jésus-Christ.">
   <meta name="keywords" content="URHC, Église Évangélique, Union Renaissance d'Hommes en Christ, culte, louange, foi chrétienne, prédications, Bénin, église protestante">
   <meta name="author" content="Église Évangélique Union Renaissance d’Hommes en Christ">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph / Réseaux Sociaux -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="URHC — Église Évangélique Union Renaissance d’Hommes en Christ">
   <meta property="og:description" content="Une communauté unie par la foi vivante en Jésus-Christ, attachée à l'autorité des Écritures et au service de son prochain.">
   <meta property="og:image" content="assets/images/og-image.jpg">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64x64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
 
-  <!-- Typographies Google Fonts : Playfair Display & Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
-  <!-- Feuille de Styles Principale -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Lien d'évitement d'accessibilité -->
   <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
 
-  <!-- =========================================================
-       1. BARRE SUPÉRIEURE D'INFORMATION (TOP BAR)
-       ========================================================= -->
   <aside class="top-bar" aria-label="Informations générales de l'Église">
     <div class="top-bar-container">
       <div class="top-bar-left">
@@ -76,20 +66,15 @@
     </div>
   </aside>
 
-  <!-- =========================================================
-       2. EN-TÊTE PRINCIPAL & NAVIGATION ÉDITORIALE
-       ========================================================= -->
   <header class="site-header" id="header" role="banner">
     <div class="header-inner">
       
-      <!-- Logo et Identité Officielle -->
       <a href="index.html" class="brand-link" aria-label="Accueil - Église Évangélique URHC">
         <div class="brand-badge">
           <img src="assets/images/logo-urhc.jpg" alt="Logo officiel de l'Église Évangélique URHC" class="brand-logo" width="48" height="46">
         </div>
       </a>
 
-            <!-- Menu Principal pour Ordinateur -->
             <nav class="nav-desktop" aria-label="Navigation principale">
         <div class="nav-item">
           <a href="index.html" class="nav-link active" aria-current="page">Accueil</a>
@@ -128,7 +113,6 @@
         </div>
       </nav>
 
-      <!-- Actions Rapides -->
       <div class="header-actions">
         <a href="donner.html" class="btn-don-header">
           <span>Faire un don</span>
@@ -145,7 +129,6 @@
     </div>
   </header>
 
-  <!-- Tiroir Mobile Accessible -->
   <div class="mobile-drawer-overlay" id="mobileOverlay" aria-hidden="true"></div>
   <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu principal">
     <div class="mobile-drawer-header">
@@ -185,12 +168,8 @@
     </div>
   </aside>
 
-  <!-- =========================================================
-       3. CONTENU PRINCIPAL
-       ========================================================= -->
   <main id="contenu-principal">
 
-    <!-- HERO SECTION PRINCIPALE -->
     <section class="hero-home" aria-labelledby="hero-title">
       <div class="hero-home-bg" aria-hidden="true">
         <img src="assets/images/hero-bg.jpg" alt="" class="hero-home-img" fetchpriority="high">
@@ -220,7 +199,6 @@
       </div>
     </section>
 
-    <!-- SECTION CITATION BIBLIQUE PRINCIPALE -->
     <section class="site-container" style="padding-top: 3.5rem;" aria-label="Verset fondateur">
       <div class="scripture-box fade-in">
         <blockquote class="scripture-quote">
@@ -230,7 +208,6 @@
       </div>
     </section>
 
-    <!-- SECTION BIENVENUE & VOCATION -->
     <section class="site-container" style="padding: 4.5rem 1.5rem;" aria-labelledby="welcome-title">
       <div class="grid-2" style="align-items: center;">
         <div class="fade-in">
@@ -261,7 +238,6 @@
       </div>
     </section>
 
-    <!-- SECTION NOS 3 PILIERS FONDAMENTAUX -->
     <section style="background-color: var(--bg-surface); padding: 6rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);" aria-labelledby="pillars-title">
       <div class="site-container">
         <div class="section-header-center fade-in">
@@ -319,7 +295,6 @@
       </div>
     </section>
 
-    <!-- SECTION CULTES & RENCONTRES (COMMUNAUTÉ) -->
     <section class="section-worship" aria-labelledby="worship-title">
       <div class="worship-bg" aria-hidden="true">
         <img src="assets/images/church-building.jpg" alt="" class="worship-bg-img">
@@ -368,7 +343,7 @@
                 <span class="faith-statement-badge">Portes Ouvertes</span>
               </div>
               <p style="font-size: 0.94rem; color: var(--text-muted); line-height: 1.68;">
-                Que vous veniez pour la toute première fois ou que vous cherchiez un foyer spirituel durable, vous serez reçu avec bienveillance et respect fraternel.
+                Pour une première visite ou pour vous établir durablement dans notre communauté, soyez le bienvenu dans la maison de Dieu.
               </p>
               <ul class="check-list">
                 <li class="check-item"><span class="check-bullet" aria-hidden="true">—</span> Prédication centrée sur Christ et la Bible</li>
@@ -386,7 +361,6 @@
       </div>
     </section>
 
-    <!-- SECTION MINISTÈRES EN ACTION -->
     <section class="site-container" style="padding: 6.5rem 1.5rem;" aria-labelledby="ministries-home-title">
       <div class="section-header-center fade-in">
         <span class="section-tag">Service &amp; Vocation</span>
@@ -458,7 +432,6 @@
       </div>
     </section>
 
-    <!-- SECTION DERNIÈRES PRÉDICATIONS & LECTEUR AUDIO -->
     <section style="background-color: var(--bg-surface); padding: 6.5rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);" aria-labelledby="sermons-home-title">
       <div class="site-container">
         
@@ -471,7 +444,6 @@
           </p>
         </div>
 
-        <!-- Lecteur Interactif d'Écoute -->
         <div class="sermon-player-box fade-in" role="region" aria-label="Lecteur audio de prédication">
           <div class="sermon-player-header">
             <div class="sermon-now-playing">
@@ -507,7 +479,6 @@
           </div>
         </div>
 
-        <!-- Grille des Prédications Récents -->
         <div class="grid-3">
           <article class="editorial-card fade-in">
             <div class="card-body">
@@ -564,7 +535,6 @@
       </div>
     </section>
 
-    <!-- SECTION ÉVÉNEMENTS À VENIR -->
     <section class="site-container" style="padding: 6.5rem 1.5rem;" aria-labelledby="events-home-title">
       <div class="section-header-center fade-in">
         <span class="section-tag">Agenda &amp; Célébrations</span>
@@ -616,7 +586,6 @@
       </div>
     </section>
 
-    <!-- SECTION TÉMOIGNAGES ÉDIFIANTS -->
     <section style="background-color: var(--bg-surface); padding: 6.5rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);" aria-labelledby="testimonies-home-title">
       <div class="site-container">
         
@@ -685,7 +654,6 @@
       </div>
     </section>
 
-    <!-- SECTION APPEL FINAL & ENGAGEMENT (SOUTENIR L'ŒUVRE) -->
     <section style="background-color: var(--blue-primary); color: #FFFFFF; padding: 6.5rem 1.5rem; text-align: center;" aria-labelledby="cta-home-title">
       <div class="site-container-narrow fade-in">
         <span class="section-tag" style="color: #FF8A8C;">Participer à l'Avancement du Royaume</span>
@@ -708,15 +676,11 @@
 
   </main>
 
-  <!-- =========================================================
-       4. PIED DE PAGE INSTITUTIONNEL MAJEUR (4 COLONNES)
-       ========================================================= -->
   <footer class="site-footer" role="contentinfo">
     <div class="site-container">
       
       <div class="footer-top-grid">
         
-        <!-- Colonne 1 : Marque & Mission -->
         <div class="footer-brand">
           <div class="footer-logo-wrap">
             <img src="assets/images/logo-urhc.jpg" alt="Logo URHC" class="footer-logo-img" width="42" height="40">
@@ -730,7 +694,6 @@
           </p>
         </div>
 
-        <!-- Colonne 2 : L'Église -->
         <div>
           <h3 class="footer-col-title">L'Église</h3>
           <ul class="footer-links">
@@ -742,7 +705,6 @@
           </ul>
         </div>
 
-        <!-- Colonne 3 : Ressources & Médias -->
         <div>
           <h3 class="footer-col-title">Ressources</h3>
           <ul class="footer-links">
@@ -754,7 +716,6 @@
           </ul>
         </div>
 
-        <!-- Colonne 4 : Cultes & Rencontres -->
         <div>
           <h3 class="footer-col-title">Rencontres Hebdomadaires</h3>
           <div class="footer-hours-box">
@@ -791,14 +752,12 @@
     </div>
   </footer>
 
-  <!-- Bouton Remonter en haut de page -->
   <button type="button" class="back-to-top" id="backToTop" aria-label="Remonter en haut de la page">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
 
-  <!-- Script des interactions légères -->
   <script src="script.js"></script>
 </body>
 </html>

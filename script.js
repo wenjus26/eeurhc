@@ -1,13 +1,10 @@
-/**
- * ÉGLISE ÉVANGÉLIQUE UNION RENAISSANCE D'HOMMES EN CHRIST (URHC)
- * Script Principal des Interactions & Fonctionnalités (100% en Français)
- */
+/* URHC - Interactions & Navigation */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Détection de JavaScript pour les animations
+  // Détection de JavaScript
   document.documentElement.classList.replace('no-js', 'js');
 
-  // 2. Gestion de l'En-tête Collant (Sticky Header Elevation)
+  // En-tête fixe au défilement
   const header = document.getElementById('header');
   const handleScroll = () => {
     if (window.scrollY > 40) {
@@ -19,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // 3. Tiroir de Navigation Mobile Accessible
+  // Tiroir de navigation mobile
   const mobileToggle = document.getElementById('mobileToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
   const mobileOverlay = document.getElementById('mobileOverlay');
@@ -51,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Système de Notification Toast
+  // Notifications toast
   const showToast = (message) => {
     let toast = document.getElementById('toastNotification');
     if (!toast) {
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.showToast = showToast;
 
-  // 5. Lecteur Audio Interactif pour les Prédications
+  // Lecteur audio
   const playPauseBtn = document.getElementById('btnPlayPause');
   const progressFill = document.getElementById('audioProgressFill');
   const currentTimeEl = document.getElementById('audioCurrentTime');
@@ -134,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // 6. Filtrage Interactif des Prédications & Événements
+  // Filtres de catégories
   const filterTabs = document.querySelectorAll('.filter-tab');
   filterTabs.forEach((tab) => {
     tab.addEventListener('click', function () {
@@ -160,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Sélection des Montants de Don
+  // Sélection des montants
   const givingBtns = document.querySelectorAll('.giving-amount-btn');
   const customAmountInput = document.getElementById('customAmount');
 
@@ -180,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Gestionnaires de Formulaires (Contact, Don, Prière, Témoignage)
+  // Soumission des formulaires
   window.handleGeneralSubmit = (e, successMessage) => {
     e.preventDefault();
     const form = e.target;
@@ -188,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
   };
 
-  // 9. Bouton Remonter en Haut de Page
+  // Retour en haut de page
   const backToTopBtn = document.getElementById('backToTop');
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
@@ -207,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 10. Animations d'Apparition Progressive (IntersectionObserver)
+  // Apparition progressive au défilement
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!prefersReducedMotion && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {

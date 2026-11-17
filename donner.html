@@ -12,20 +12,17 @@
   <meta name="author" content="Église Évangélique Union Renaissance d’Hommes en Christ">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Soutenir l'Œuvre &amp; Offrandes — Église Évangélique URHC">
   <meta property="og:description" content="Donner avec joie pour soutenir l'annonce de l'Évangile et l'action sociale.">
   <meta property="og:image" content="assets/images/og-image.jpg">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64x64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -36,7 +33,6 @@
 
   <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
 
-  <!-- BARRE SUPÉRIEURE -->
   <aside class="top-bar" aria-label="Informations générales de l'Église">
     <div class="top-bar-container">
       <div class="top-bar-left">
@@ -53,7 +49,6 @@
     </div>
   </aside>
 
-  <!-- EN-TÊTE PRINCIPAL -->
   <header class="site-header" id="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="brand-link" aria-label="Accueil - Église Évangélique URHC">
@@ -111,7 +106,6 @@
     </div>
   </header>
 
-  <!-- Tiroir Mobile -->
   <div class="mobile-drawer-overlay" id="mobileOverlay" aria-hidden="true"></div>
   <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu principal">
     <div class="mobile-drawer-header">
@@ -148,7 +142,6 @@
 
   <main id="contenu-principal">
 
-    <!-- BANNIÈRE -->
     <section class="page-banner" aria-labelledby="giving-banner-title">
       <div class="page-banner-bg" aria-hidden="true">
         <img src="assets/images/church-building.jpg" alt="" class="page-banner-img">
@@ -167,7 +160,6 @@
       </div>
     </section>
 
-    <!-- SECTION CITATION -->
     <section class="site-container" style="padding-top: 3.5rem;" aria-label="Parole sur la fidélité des offrandes">
       <div class="scripture-box fade-in">
         <blockquote class="scripture-quote">
@@ -177,11 +169,9 @@
       </div>
     </section>
 
-    <!-- SECTION DESTINATION DES FONDS & FORMULAIRE DE PROMESSE -->
     <section class="site-container" style="padding: 4.5rem 1.5rem 6.5rem;" aria-labelledby="destinations-title">
       <div class="grid-2">
         
-        <!-- Colonne Gauche : Destinations des dons -->
         <div class="fade-in">
           <span class="section-tag">Une Intendance Transparente</span>
           <h2 class="section-title" id="destinations-title">À Quoi Servent Vos Dons et Offrandes ?</h2>
@@ -216,7 +206,6 @@
           </div>
         </div>
 
-        <!-- Colonne Droite : Formulaire Interactif de Don -->
         <div class="fade-in">
           <form class="faith-statement-card" onsubmit="handleGeneralSubmit(event, 'Votre promesse d\'offrande a été enregistrée avec succès. Vous recevrez les instructions par message. Que Dieu bénisse votre générosité !')">
             <span class="section-tag" style="color: var(--red-urhc);">Participer</span>
@@ -224,7 +213,6 @@
               Faire une Offrande ou Régler sa Dîme
             </h3>
 
-            <!-- Choix du type de contribution -->
             <div class="form-group">
               <label for="giving-type" class="form-label">Nature de la Contribution *</label>
               <select id="giving-type" class="form-select" required>
@@ -236,7 +224,6 @@
               </select>
             </div>
 
-            <!-- Grille de montants rapides (FCFA) -->
             <div class="form-group">
               <label class="form-label">Sélectionnez un Montant (FCFA)</label>
               <div class="giving-amounts-grid">
@@ -247,13 +234,11 @@
               </div>
             </div>
 
-            <!-- Montant personnalisé -->
             <div class="form-group">
               <label for="customAmount" class="form-label">Montant Personnalisé (FCFA) *</label>
               <input type="number" id="customAmount" class="form-input" value="10000" min="500" step="100" required>
             </div>
 
-            <!-- Identité -->
             <div class="form-group">
               <label for="donor-name" class="form-label">Nom et Prénom *</label>
               <input type="text" id="donor-name" class="form-input" placeholder="Ex. Frère Paul" required>
@@ -264,7 +249,6 @@
               <input type="text" id="donor-contact" class="form-input" placeholder="Pour recevoir l'accusé de réception" required>
             </div>
 
-            <!-- Modalité de versement souhaitée -->
             <div class="form-group">
               <label for="donor-method" class="form-label">Mode de Versement Préféré *</label>
               <select id="donor-method" class="form-select" required>
@@ -287,7 +271,6 @@
       </div>
     </section>
 
-    <!-- SECTION MODALITÉS DE VERSEMENT OFFICIELLES -->
     <section style="background-color: var(--bg-surface); padding: 6.5rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);" aria-labelledby="methods-title">
       <div class="site-container">
         
@@ -348,7 +331,6 @@
 
   </main>
 
-  <!-- PIED DE PAGE -->
   <footer class="site-footer" role="contentinfo">
     <div class="site-container">
       <div class="footer-top-grid">
@@ -362,7 +344,6 @@
           </p>
         </div>
 
-                <!-- Colonne 2 : L'Église -->
         <div>
           <h3 class="footer-col-title">L'Église</h3>
           <ul class="footer-links">
@@ -374,7 +355,6 @@
           </ul>
         </div>
 
-        <!-- Colonne 3 : Ressources & Médias -->
         <div>
           <h3 class="footer-col-title">Ressources</h3>
           <ul class="footer-links">

@@ -1,78 +1,69 @@
-/* ==========================================================================
-   ÉGLISE ÉVANGÉLIQUE UNION RENAISSANCE D'HOMMES EN CHRIST (URHC)
-   Système de Design Officiel : Éditorial Sacré & Rigueur Institutionnelle
-   Palette Officielle : Bleu Roi URHC (#001F3E / #12345A), Rouge Sacré (#B10B0E / #B5121B), Blanc Pur (#FFFFFF)
-   Typographie : Playfair Display (Monuments & Écritures) & Manrope (Clarté Institutionnelle)
-   ========================================================================== */
+/* URHC - Stylesheet */
 
-/* --------------------------------------------------------------------------
-   1. VARIABLES CSS (TOKENS DU SYSTÈME DE DESIGN OFFICIEL)
-   -------------------------------------------------------------------------- */
+/* VARIABLES CSS (TOKENS DU SYSTÈME DE DESIGN OFFICIEL) */
 :root {
-  /* Couleurs Primaires Institutionnelles */
-  --blue-primary: #001F3E;       /* Bleu Nuit Sacré - Profondeur et Autorité */
-  --blue-urhc: #12345A;          /* Bleu Roi Institutionnel - Teinte Majeure URHC */
-  --blue-dark: #07152A;          /* Arrière-plans nocturnes et pieds de page */
-  --blue-light: #1D5BB0;         /* Accents et surbrillance */
-  --blue-soft: #E6EEFF;          /* Fond doux bleuté pour conteneurs */
-  --blue-surface: #F0F4FC;       /* Surface claire institutionnelle */
+  
+  --blue-primary: #001F3E;       
+  --blue-urhc: #12345A;          
+  --blue-dark: #07152A;          
+  --blue-light: #1D5BB0;         
+  --blue-soft: #E6EEFF;          
+  --blue-surface: #F0F4FC;       
 
-  /* Couleurs Secondaires Sacrées */
-  --red-urhc: #B10B0E;           /* Rouge Sacré URHC - Ferveur et Don */
-  --red-accent: #B5121B;         /* Rouge Éditorial vif */
-  --red-light: #E53935;          /* Direct, alertes et indicateurs */
-  --red-soft: rgba(177, 11, 14, 0.08); /* Fonds d'étiquettes et badges */
+  
+  --red-urhc: #B10B0E;           
+  --red-accent: #B5121B;         
+  --red-light: #E53935;          
+  --red-soft: rgba(177, 11, 14, 0.08); 
   --red-border: rgba(177, 11, 14, 0.25);
 
-  /* Neutres, Vélin & Surfaces */
+  
   --white: #FFFFFF;
   --bg-page: #FFFFFF;
-  --bg-surface: #F8F9FF;        /* Fond écru très doux type papier vélin */
-  --bg-container: #F1F4F9;      /* Conteneurs secondaires */
+  --bg-surface: #F8F9FF;        
+  --bg-container: #F1F4F9;      
   --bg-card: #FFFFFF;
   
-  /* Lignes de Fuite & Filets Hairline (1px) */
+  
   --border-hairline: 1px solid #E2E8F0;
   --border-subtle: #E2E8F0;
   --border-blue: 1px solid #12345A;
   --border-strong: #CBD5E1;
   --border-dark: rgba(255, 255, 255, 0.12);
 
-  /* Typographies */
+  
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Typométrie & Hiérarchie */
+  
   --text-title: #001F3E;
   --text-body: #202B3A;
   --text-muted: #5A6A80;
   --text-light: #7E8C9F;
   --text-white: #FFFFFF;
 
-  /* Structure Géométrique & Règle des Bordures (Orthogonalité Pure) */
+  
   --radius-none: 0px;
   --radius-sm: 2px;
-  --radius-full: 9999px; /* Réservé aux pastilles de direct */
+  --radius-full: 9999px; 
 
-  /* Ombres & Élévation (Discipline Éditoriale Sobre) */
+  
   --shadow-subtle: 0 1px 3px rgba(0, 31, 62, 0.05);
   --shadow-card: 0 4px 20px rgba(0, 31, 62, 0.06);
   --shadow-hover: 0 12px 32px rgba(0, 31, 62, 0.12);
   --shadow-dropdown: 0 16px 40px rgba(0, 31, 62, 0.15);
 
-  /* Transitions */
+  
   --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Largeurs Maximales */
+  
   --container-max: 1240px;
   --container-narrow: 900px;
 }
 
-/* --------------------------------------------------------------------------
-   2. RÉINITIALISATION & FONDATION
-   -------------------------------------------------------------------------- */
+/* RÉINITIALISATION & FONDATION */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -183,9 +174,7 @@ button, input, select, textarea {
   width: 100%;
 }
 
-/* --------------------------------------------------------------------------
-   3. BARRE SUPÉRIEURE D'INFORMATION (TOP BAR INSTITUTIONNELLE)
-   -------------------------------------------------------------------------- */
+/* BARRE SUPÉRIEURE D'INFORMATION (TOP BAR INSTITUTIONNELLE) */
 .top-bar {
   background-color: var(--blue-primary);
   color: #D1D9E6;
@@ -281,9 +270,7 @@ button, input, select, textarea {
   color: #FFFFFF;
 }
 
-/* --------------------------------------------------------------------------
-   4. NAVIGATION PRINCIPALE (EN-TÊTE SUPÉRIEUR & MENU ÉDITORIAL)
-   -------------------------------------------------------------------------- */
+/* NAVIGATION PRINCIPALE (EN-TÊTE SUPÉRIEUR & MENU ÉDITORIAL) */
 .site-header {
   position: sticky;
   top: 0;
@@ -363,7 +350,6 @@ button, input, select, textarea {
   max-width: 290px;
 }
 
-/* Navigation Ordinateur */
 .nav-desktop {
   display: flex;
   align-items: center;
@@ -625,9 +611,7 @@ button, input, select, textarea {
   gap: 0.85rem;
 }
 
-/* --------------------------------------------------------------------------
-   5. BOUTONS STYLISÉS & COMPOSANTS D'APPEL À L'ACTION
-   -------------------------------------------------------------------------- */
+/* BOUTONS STYLISÉS & COMPOSANTS D'APPEL À L'ACTION */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -720,9 +704,7 @@ button, input, select, textarea {
   transform: translateX(4px);
 }
 
-/* --------------------------------------------------------------------------
-   6. SECTIONS HÉROÏQUES & BANNIÈRES DE PAGES
-   -------------------------------------------------------------------------- */
+/* SECTIONS HÉROÏQUES & BANNIÈRES DE PAGES */
 /* Hero Principal Accueil */
 .hero-home {
   position: relative;
@@ -907,9 +889,7 @@ button, input, select, textarea {
   font-weight: 300;
 }
 
-/* --------------------------------------------------------------------------
-   7. TITRAGES DE SECTIONS & SÉPARATEURS ÉDITORIAUX
-   -------------------------------------------------------------------------- */
+/* TITRAGES DE SECTIONS & SÉPARATEURS ÉDITORIAUX */
 .section-header {
   margin-bottom: 3.5rem;
 }
@@ -968,9 +948,7 @@ button, input, select, textarea {
   color: #CBD5E1;
 }
 
-/* --------------------------------------------------------------------------
-   8. CITATION BIBLIQUE & CARTOUCHE D'ÉCRITURE
-   -------------------------------------------------------------------------- */
+/* CITATION BIBLIQUE & CARTOUCHE D'ÉCRITURE */
 .scripture-box {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -999,9 +977,7 @@ button, input, select, textarea {
   display: block;
 }
 
-/* --------------------------------------------------------------------------
-   9. CARTES, GRILLES & COMPOSANTS REUTILISABLES
-   -------------------------------------------------------------------------- */
+/* CARTES, GRILLES & COMPOSANTS REUTILISABLES */
 /* Grilles standards */
 .grid-2 {
   display: grid;
@@ -1135,9 +1111,7 @@ button, input, select, textarea {
   transform: translateX(4px);
 }
 
-/* --------------------------------------------------------------------------
-   10. SECTION CULTES & RENCONTRES (ACCUEIL & CONTACT)
-   -------------------------------------------------------------------------- */
+/* SECTION CULTES & RENCONTRES (ACCUEIL & CONTACT) */
 .section-worship {
   background-color: var(--blue-primary);
   color: var(--white);
@@ -1270,9 +1244,7 @@ button, input, select, textarea {
   flex-shrink: 0;
 }
 
-/* --------------------------------------------------------------------------
-   11. LECTEUR AUDIO & PRÉDICATIONS
-   -------------------------------------------------------------------------- */
+/* LECTEUR AUDIO & PRÉDICATIONS */
 .sermon-player-box {
   background: #FFFFFF;
   border: 1px solid var(--border-subtle);
@@ -1407,9 +1379,7 @@ button, input, select, textarea {
   border-color: var(--blue-primary);
 }
 
-/* --------------------------------------------------------------------------
-   12. FORMULAIRES ACCESSIBLES (CONTACT, DON, NOTIFICATIONS)
-   -------------------------------------------------------------------------- */
+/* FORMULAIRES ACCESSIBLES (CONTACT, DON, NOTIFICATIONS) */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -1489,9 +1459,7 @@ button, input, select, textarea {
   color: var(--white);
 }
 
-/* --------------------------------------------------------------------------
-   13. PIED DE PAGE INSTITUTIONNEL MAJEUR (4 COLONNES)
-   -------------------------------------------------------------------------- */
+/* PIED DE PAGE INSTITUTIONNEL MAJEUR (4 COLONNES) */
 .site-footer {
   background-color: var(--blue-dark);
   color: #94A3B8;
@@ -1694,9 +1662,7 @@ html.js .fade-in.visible {
   transform: translateY(0);
 }
 
-/* --------------------------------------------------------------------------
-   14. RESPONSIVE DESIGN MULTI-PLATEFORMES
-   -------------------------------------------------------------------------- */
+/* RESPONSIVE DESIGN MULTI-PLATEFORMES */
 /* Tablettes et petits écrans (<= 1100px) */
 @media (max-width: 1100px) {
   .nav-desktop {
@@ -1824,7 +1790,6 @@ html.js .fade-in.visible {
   }
 }
 
-/* Accessibilité pour les utilisateurs préférant la réduction de mouvement */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
