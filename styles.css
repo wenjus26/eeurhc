@@ -201,6 +201,95 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+
+/* Bande d'Annonce Défilante (Ticker Plateforme e-Talents URHC) */
+.top-ticker-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+.ticker-badge {
+  background: var(--red-urhc);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.ticker-track {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  mask-image: linear-gradient(to right, transparent, black 15px, black calc(100% - 15px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15px, black calc(100% - 15px), transparent);
+}
+
+.ticker-content {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: tickerScroll 26s linear infinite;
+  will-change: transform;
+}
+
+.top-ticker-wrap:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+.ticker-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ticker-link:hover {
+  color: #FF8A8C;
+}
+
+.ticker-url {
+  color: #FF8A8C;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ticker-separator {
+  margin: 0 1.5rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .top-motto {
@@ -226,6 +315,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  flex-shrink: 0;
 }
 
 .top-info-item {
@@ -250,6 +340,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 0.85rem;
+  flex-shrink: 0;
 }
 
 .top-link-solennel {
@@ -1726,9 +1817,16 @@ html.js .fade-in.visible {
     display: none;
   }
 
+  .top-bar-left {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-width: 0;
+  }
+
   .top-bar-container {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    padding: 0.45rem 1rem;
   }
 
   .grid-2 {
@@ -1789,6 +1887,9 @@ html.js .fade-in.visible {
 
   .top-bar-left {
     display: flex;
+    width: 100%;
+    flex: 1;
+    min-width: 0;
   }
 
   .top-bar-right {
@@ -1796,8 +1897,8 @@ html.js .fade-in.visible {
   }
 
   .top-bar-container {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    padding: 0.45rem 0.75rem;
   }
 
   .scripture-box {
